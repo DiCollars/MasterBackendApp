@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace RepositoryImplimentationDb.ContractImplimentation
 {
-    public class TestService : TestServiceInterface
+    public class TestService : ITestServiceInterface
     {
         private readonly Context _context;
 

@@ -2,7 +2,7 @@
 
 namespace RepositoryContractsDb.Contracts
 {
-    public interface TestServiceInterface
+    public interface ITestServiceInterface
     {
         Test Get(int id);
 

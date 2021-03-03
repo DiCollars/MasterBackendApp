@@ -8,9 +8,9 @@ namespace CoordinationOfServiceDeliveryAPI.Controllers
     [Route("[controller]")]
     public class TestController : Controller
     {
-        private TestServiceInterface _test;
+        private ITestServiceInterface _test;
 
-        public TestController(TestServiceInterface test)
+        public TestController(ITestServiceInterface test)
         {
             _test = test;
         }

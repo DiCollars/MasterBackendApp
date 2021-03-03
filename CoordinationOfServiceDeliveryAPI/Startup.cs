@@ -24,7 +24,7 @@ namespace CoordinationOfServiceDeliveryAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddTransient<TestServiceInterface, TestService>();
+            services.AddTransient<ITestServiceInterface, TestService>();
 
             services.AddDbContext<Context>(options =>
             options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
