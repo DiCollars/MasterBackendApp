@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "QA+1ss40RLFegKDwZv4j9BO5UZpFlG0f6c88+Baju9h/1/XdAdPgKjOkgwqUw90f+lfqUsl4b5/iAh7//DB5hw==",
+  "success": true,
+  "projectFilePath": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\CoordinationOfServiceDelivery\\ServicesImplimentation\\ServicesImplimentation.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Di\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Di\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "43RYhWZ2H1MDuLlCONrnBuS6j+fwvlQVcI4G3gRyQSSc2ADMdxwPKlDbjs7Yte7EpioZqk8xsl4PGv50C6YVrQ==",
+  "success": true,
+  "projectFilePath": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\CoordinationOfServiceDelivery\\CoordinationOfServiceDeliveryAPI\\CoordinationOfServiceDeliveryAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Di\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512"
+  ],
+  "logs": []
+}
