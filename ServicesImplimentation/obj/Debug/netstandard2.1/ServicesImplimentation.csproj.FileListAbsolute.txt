@@ -1,0 +1,8 @@
+F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\ServicesImplimentation\bin\Debug\netstandard2.1\ServicesImplimentation.deps.json
+F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\ServicesImplimentation\bin\Debug\netstandard2.1\ServicesImplimentation.dll
+F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\ServicesImplimentation\bin\Debug\netstandard2.1\ServicesImplimentation.pdb
+F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\ServicesImplimentation\obj\Debug\netstandard2.1\ServicesImplimentation.AssemblyInfoInputs.cache
+F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\ServicesImplimentation\obj\Debug\netstandard2.1\ServicesImplimentation.AssemblyInfo.cs
+F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\ServicesImplimentation\obj\Debug\netstandard2.1\ServicesImplimentation.csproj.CoreCompileInputs.cache
+F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\ServicesImplimentation\obj\Debug\netstandard2.1\ServicesImplimentation.dll
+F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\ServicesImplimentation\obj\Debug\netstandard2.1\ServicesImplimentation.pdb

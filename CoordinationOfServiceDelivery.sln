@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoordinationOfServiceDelive
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MigrationLaunch", "MigrationLaunch\MigrationLaunch.csproj", "{22AFD23C-FEDA-453B-B91C-4538797B49B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContractsRepositoryDb", "ContractsRepository\ContractsRepositoryDb.csproj", "{71548F30-8C9D-45AE-9725-AAF3EBEFF17E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryContractsDb", "ContractsRepository\RepositoryContractsDb.csproj", "{71548F30-8C9D-45AE-9725-AAF3EBEFF17E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DbRepository", "DbRepository", "{429E2F09-32B2-4E11-B80E-C8BD4E604FDE}"
 EndProject

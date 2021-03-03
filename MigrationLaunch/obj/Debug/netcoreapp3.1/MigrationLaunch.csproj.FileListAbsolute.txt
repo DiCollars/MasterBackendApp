@@ -1,0 +1,13 @@
+F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\MigrationLaunch\bin\Debug\netcoreapp3.1\MigrationLaunch.exe
+F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\MigrationLaunch\bin\Debug\netcoreapp3.1\MigrationLaunch.deps.json
+F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\MigrationLaunch\bin\Debug\netcoreapp3.1\MigrationLaunch.runtimeconfig.json
+F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\MigrationLaunch\bin\Debug\netcoreapp3.1\MigrationLaunch.runtimeconfig.dev.json
+F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\MigrationLaunch\bin\Debug\netcoreapp3.1\MigrationLaunch.dll
+F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\MigrationLaunch\bin\Debug\netcoreapp3.1\MigrationLaunch.pdb
+F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\MigrationLaunch\obj\Debug\netcoreapp3.1\MigrationLaunch.csprojAssemblyReference.cache
+F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\MigrationLaunch\obj\Debug\netcoreapp3.1\MigrationLaunch.AssemblyInfoInputs.cache
+F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\MigrationLaunch\obj\Debug\netcoreapp3.1\MigrationLaunch.AssemblyInfo.cs
+F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\MigrationLaunch\obj\Debug\netcoreapp3.1\MigrationLaunch.csproj.CoreCompileInputs.cache
+F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\MigrationLaunch\obj\Debug\netcoreapp3.1\MigrationLaunch.dll
+F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\MigrationLaunch\obj\Debug\netcoreapp3.1\MigrationLaunch.pdb
+F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\MigrationLaunch\obj\Debug\netcoreapp3.1\MigrationLaunch.genruntimeconfig.cache

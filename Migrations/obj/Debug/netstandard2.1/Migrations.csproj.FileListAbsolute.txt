@@ -1,0 +1,9 @@
+F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\Migrations\bin\Debug\netstandard2.1\Migrations.deps.json
+F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\Migrations\bin\Debug\netstandard2.1\Migrations.dll
+F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\Migrations\bin\Debug\netstandard2.1\Migrations.pdb
+F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\Migrations\obj\Debug\netstandard2.1\Migrations.csprojAssemblyReference.cache
+F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\Migrations\obj\Debug\netstandard2.1\Migrations.AssemblyInfoInputs.cache
+F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\Migrations\obj\Debug\netstandard2.1\Migrations.AssemblyInfo.cs
+F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\Migrations\obj\Debug\netstandard2.1\Migrations.csproj.CoreCompileInputs.cache
+F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\Migrations\obj\Debug\netstandard2.1\Migrations.dll
+F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\Migrations\obj\Debug\netstandard2.1\Migrations.pdb

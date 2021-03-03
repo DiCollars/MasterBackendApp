@@ -1,11 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EQKSgkjAVwZJvyskn2Eos1JdvVp/sJnzLwIeD0FC1wlGqeiDqTNFoHnEGu8PplZv1guKMsGghwbW7uIan+iCtg==",
+  "dgSpecHash": "4SNono4CwXiZq8ivjT6wfW3+i3vpkpeqdiGN/djcQ3QRuDyri9BvZ5GKsTvytTqVXoRzVDnYCNV4irgSlJJ1XA==",
   "success": true,
   "projectFilePath": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\CoordinationOfServiceDelivery\\Migrations\\Migrations.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Di\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\Di\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

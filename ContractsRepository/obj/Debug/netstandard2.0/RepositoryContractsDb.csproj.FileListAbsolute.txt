@@ -1,0 +1,9 @@
+F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\ContractsRepository\bin\Debug\netstandard2.0\RepositoryContractsDb.deps.json
+F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\ContractsRepository\bin\Debug\netstandard2.0\RepositoryContractsDb.dll
+F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\ContractsRepository\bin\Debug\netstandard2.0\RepositoryContractsDb.pdb
+F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\ContractsRepository\obj\Debug\netstandard2.0\RepositoryContractsDb.csprojAssemblyReference.cache
+F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\ContractsRepository\obj\Debug\netstandard2.0\RepositoryContractsDb.AssemblyInfoInputs.cache
+F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\ContractsRepository\obj\Debug\netstandard2.0\RepositoryContractsDb.AssemblyInfo.cs
+F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\ContractsRepository\obj\Debug\netstandard2.0\RepositoryContractsDb.csproj.CoreCompileInputs.cache
+F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\ContractsRepository\obj\Debug\netstandard2.0\RepositoryContractsDb.dll
+F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\ContractsRepository\obj\Debug\netstandard2.0\RepositoryContractsDb.pdb

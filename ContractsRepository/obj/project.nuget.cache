@@ -1,11 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mLytBpnyvs9LEbTJo8OgzEDLbwxZ1Xuwo5vng6/0qwB1or8qM0J9kt8wC433EgEdG4jgdZXX1TNEuwD65goHCQ==",
+  "dgSpecHash": "/GSZUMjcsfCeDu4zVmbujW7saxrGepS+EyTikgWFoFTDx9i/yJuJLOCup1Vf75nYUeHG+eZ+fd3VHOCzTvoXqw==",
   "success": true,
   "projectFilePath": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\CoordinationOfServiceDelivery\\ContractsRepository\\RepositoryContractsDb.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Di\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\Di\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
