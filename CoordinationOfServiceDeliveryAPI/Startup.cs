@@ -3,12 +3,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using RepositoryContractsDb.Contracts;
-using RepositoryImplimentationDb.ContractImplimentation;
 using Microsoft.OpenApi.Models;
 using CoordinationOfServiceDeliveryAPI.SwaggerStaff;
-using RepositoryImplimentationDb;
-using Microsoft.EntityFrameworkCore;
+using RepositoryImplimentationDb.ContractsImplimentations;
+using RepositoryContractsDb.Contracts;
 
 namespace CoordinationOfServiceDeliveryAPI
 {
@@ -24,10 +22,10 @@ namespace CoordinationOfServiceDeliveryAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddTransient<ITestServiceInterface, TestService>();
 
-            services.AddDbContext<Context>(options =>
-            options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
+            var connectionStrings = Configuration.GetSection("ConnectionStrings").Get<ConnectionStrings>();
+
+            services.AddTransient<IRoleRepository, RoleRepository>(provider => new RoleRepository(connectionStrings.DefaultConnection));
 
             services.AddSwaggerGen(c =>
             {
