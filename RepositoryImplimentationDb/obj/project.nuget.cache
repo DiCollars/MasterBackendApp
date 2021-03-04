@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3ShI+6t1keKKJ59NQsvLBjZTTbXHBN7q6QwktzHFcoB+T+OqftKwEyNhCLWu5AT3M29ZNfPCr0bHS6Uno/ubUA==",
+  "dgSpecHash": "3Cf1JvvEbZTu8dEvMBbcFIznt52ws5ltqmInX+ERviBTPVyQLFE/krqtLGbUetbHsHpfKg5XN9iCl/js2eEv2A==",
   "success": true,
-  "projectFilePath": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\CoordinationOfServiceDelivery\\RepositoryImplimentationDb\\RepositoryImplimentationDb.csproj",
+  "projectFilePath": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\3task\\MasterBackendApp\\RepositoryImplimentationDb\\RepositoryImplimentationDb.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Di\\.nuget\\packages\\dapper\\2.0.78\\dapper.2.0.78.nupkg.sha512",
     "C:\\Users\\Di\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\5.0.0\\microsoft.bcl.asyncinterfaces.5.0.0.nupkg.sha512",

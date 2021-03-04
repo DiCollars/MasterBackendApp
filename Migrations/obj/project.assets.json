@@ -647,11 +647,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\CoordinationOfServiceDelivery\\Migrations\\Migrations.csproj",
+      "projectUniqueName": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\3task\\MasterBackendApp\\Migrations\\Migrations.csproj",
       "projectName": "Migrations",
-      "projectPath": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\CoordinationOfServiceDelivery\\Migrations\\Migrations.csproj",
+      "projectPath": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\3task\\MasterBackendApp\\Migrations\\Migrations.csproj",
       "packagesPath": "C:\\Users\\Di\\.nuget\\packages\\",
-      "outputPath": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\CoordinationOfServiceDelivery\\Migrations\\obj\\",
+      "outputPath": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\3task\\MasterBackendApp\\Migrations\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Di\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -668,8 +668,8 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "projectReferences": {
-            "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\CoordinationOfServiceDelivery\\RepositoryImplimentationDb\\RepositoryImplimentationDb.csproj": {
-              "projectPath": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\CoordinationOfServiceDelivery\\RepositoryImplimentationDb\\RepositoryImplimentationDb.csproj"
+            "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\3task\\MasterBackendApp\\RepositoryImplimentationDb\\RepositoryImplimentationDb.csproj": {
+              "projectPath": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\3task\\MasterBackendApp\\RepositoryImplimentationDb\\RepositoryImplimentationDb.csproj"
             }
           }
         }

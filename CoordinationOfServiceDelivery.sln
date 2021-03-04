@@ -3,25 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoordinationOfServiceDeliveryAPI", "CoordinationOfServiceDeliveryAPI\CoordinationOfServiceDeliveryAPI.csproj", "{954A4FEF-C3F5-4504-835B-5AD6CB872574}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoordinationOfServiceDeliveryAPI", "CoordinationOfServiceDeliveryAPI\CoordinationOfServiceDeliveryAPI.csproj", "{954A4FEF-C3F5-4504-835B-5AD6CB872574}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MigrationLaunch", "MigrationLaunch\MigrationLaunch.csproj", "{22AFD23C-FEDA-453B-B91C-4538797B49B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MigrationLaunch", "MigrationLaunch\MigrationLaunch.csproj", "{22AFD23C-FEDA-453B-B91C-4538797B49B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryContractsDb", "ContractsRepository\RepositoryContractsDb.csproj", "{71548F30-8C9D-45AE-9725-AAF3EBEFF17E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryContractsDb", "ContractsRepository\RepositoryContractsDb.csproj", "{71548F30-8C9D-45AE-9725-AAF3EBEFF17E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DbRepository", "DbRepository", "{429E2F09-32B2-4E11-B80E-C8BD4E604FDE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryImplimentationDb", "RepositoryImplimentationDb\RepositoryImplimentationDb.csproj", "{A6739E99-4C08-400A-8B5D-4456680B9966}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryImplimentationDb", "RepositoryImplimentationDb\RepositoryImplimentationDb.csproj", "{A6739E99-4C08-400A-8B5D-4456680B9966}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Migration", "Migration", "{54B4D6E6-2CBA-4AB8-9A18-8A4C760889CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Migrations", "Migrations\Migrations.csproj", "{AB8F779F-77CB-4CDA-ADCB-347E3CDF9844}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Migrations", "Migrations\Migrations.csproj", "{AB8F779F-77CB-4CDA-ADCB-347E3CDF9844}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusinessLogics", "BusinessLogics", "{E99388AE-C1C1-4858-A9D7-84F5895D3FE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicesContracts", "ServicesContracts\ServicesContracts.csproj", "{4BE4A94A-1C4D-4796-B66A-EEBEDFE498A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServicesContracts", "ServicesContracts\ServicesContracts.csproj", "{4BE4A94A-1C4D-4796-B66A-EEBEDFE498A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicesImplimentation", "ServicesImplimentation\ServicesImplimentation.csproj", "{6009BC5B-3FA8-4ED3-B697-1EDB767C22C7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicesImplimentation", "ServicesImplimenattion\ServicesImplimentation.csproj", "{33E921B5-EC0B-44FD-86C8-6012CD9B0C07}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,10 +53,10 @@ Global
 		{4BE4A94A-1C4D-4796-B66A-EEBEDFE498A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4BE4A94A-1C4D-4796-B66A-EEBEDFE498A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4BE4A94A-1C4D-4796-B66A-EEBEDFE498A5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6009BC5B-3FA8-4ED3-B697-1EDB767C22C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6009BC5B-3FA8-4ED3-B697-1EDB767C22C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6009BC5B-3FA8-4ED3-B697-1EDB767C22C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6009BC5B-3FA8-4ED3-B697-1EDB767C22C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33E921B5-EC0B-44FD-86C8-6012CD9B0C07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33E921B5-EC0B-44FD-86C8-6012CD9B0C07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33E921B5-EC0B-44FD-86C8-6012CD9B0C07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33E921B5-EC0B-44FD-86C8-6012CD9B0C07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,7 +67,7 @@ Global
 		{A6739E99-4C08-400A-8B5D-4456680B9966} = {429E2F09-32B2-4E11-B80E-C8BD4E604FDE}
 		{AB8F779F-77CB-4CDA-ADCB-347E3CDF9844} = {54B4D6E6-2CBA-4AB8-9A18-8A4C760889CC}
 		{4BE4A94A-1C4D-4796-B66A-EEBEDFE498A5} = {E99388AE-C1C1-4858-A9D7-84F5895D3FE0}
-		{6009BC5B-3FA8-4ED3-B697-1EDB767C22C7} = {E99388AE-C1C1-4858-A9D7-84F5895D3FE0}
+		{33E921B5-EC0B-44FD-86C8-6012CD9B0C07} = {E99388AE-C1C1-4858-A9D7-84F5895D3FE0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2C939D03-5856-4C37-BBF8-86B2384A64ED}

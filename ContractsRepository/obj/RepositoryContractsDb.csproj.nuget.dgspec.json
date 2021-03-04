@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\CoordinationOfServiceDelivery\\ContractsRepository\\RepositoryContractsDb.csproj": {}
+    "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\3task\\MasterBackendApp\\ContractsRepository\\RepositoryContractsDb.csproj": {}
   },
   "projects": {
-    "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\CoordinationOfServiceDelivery\\ContractsRepository\\RepositoryContractsDb.csproj": {
+    "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\3task\\MasterBackendApp\\ContractsRepository\\RepositoryContractsDb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\CoordinationOfServiceDelivery\\ContractsRepository\\RepositoryContractsDb.csproj",
+        "projectUniqueName": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\3task\\MasterBackendApp\\ContractsRepository\\RepositoryContractsDb.csproj",
         "projectName": "RepositoryContractsDb",
-        "projectPath": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\CoordinationOfServiceDelivery\\ContractsRepository\\RepositoryContractsDb.csproj",
+        "projectPath": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\3task\\MasterBackendApp\\ContractsRepository\\RepositoryContractsDb.csproj",
         "packagesPath": "C:\\Users\\Di\\.nuget\\packages\\",
-        "outputPath": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\CoordinationOfServiceDelivery\\ContractsRepository\\obj\\",
+        "outputPath": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\3task\\MasterBackendApp\\ContractsRepository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Di\\AppData\\Roaming\\NuGet\\NuGet.Config",

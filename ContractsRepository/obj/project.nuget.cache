@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "smGMN1EYA0R3ruPCdDGdBcguR9+yvwVV2khRLRqiaHeExPuJQsGD7mkUBmEEdHS3Ay4x9BTTqatoVIUcP/uCAQ==",
+  "dgSpecHash": "02UdGfVCj6bZ8jjf2v7aL/GZYSm6xJA7ozro9gzKG0ndmiEUuz0r7RwGR+8vvTFYQPAlP6qjtY8o+Fj1StSGhQ==",
   "success": true,
-  "projectFilePath": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\CoordinationOfServiceDelivery\\ContractsRepository\\RepositoryContractsDb.csproj",
+  "projectFilePath": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\3task\\MasterBackendApp\\ContractsRepository\\RepositoryContractsDb.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Di\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\5.0.0\\microsoft.bcl.asyncinterfaces.5.0.0.nupkg.sha512",
     "C:\\Users\\Di\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",

@@ -629,11 +629,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\CoordinationOfServiceDelivery\\RepositoryImplimentationDb\\RepositoryImplimentationDb.csproj",
+      "projectUniqueName": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\3task\\MasterBackendApp\\RepositoryImplimentationDb\\RepositoryImplimentationDb.csproj",
       "projectName": "RepositoryImplimentationDb",
-      "projectPath": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\CoordinationOfServiceDelivery\\RepositoryImplimentationDb\\RepositoryImplimentationDb.csproj",
+      "projectPath": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\3task\\MasterBackendApp\\RepositoryImplimentationDb\\RepositoryImplimentationDb.csproj",
       "packagesPath": "C:\\Users\\Di\\.nuget\\packages\\",
-      "outputPath": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\CoordinationOfServiceDelivery\\RepositoryImplimentationDb\\obj\\",
+      "outputPath": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\3task\\MasterBackendApp\\RepositoryImplimentationDb\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Di\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -650,8 +650,8 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "projectReferences": {
-            "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\CoordinationOfServiceDelivery\\ContractsRepository\\RepositoryContractsDb.csproj": {
-              "projectPath": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\CoordinationOfServiceDelivery\\ContractsRepository\\RepositoryContractsDb.csproj"
+            "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\3task\\MasterBackendApp\\ContractsRepository\\RepositoryContractsDb.csproj": {
+              "projectPath": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\3task\\MasterBackendApp\\ContractsRepository\\RepositoryContractsDb.csproj"
             }
           }
         }

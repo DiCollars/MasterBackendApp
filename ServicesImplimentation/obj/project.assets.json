@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\CoordinationOfServiceDelivery\\ServicesImplimentation\\ServicesImplimentation.csproj",
+      "projectUniqueName": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\3task\\MasterBackendApp\\ServicesImplimentation\\ServicesImplimentation.csproj",
       "projectName": "ServicesImplimentation",
-      "projectPath": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\CoordinationOfServiceDelivery\\ServicesImplimentation\\ServicesImplimentation.csproj",
+      "projectPath": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\3task\\MasterBackendApp\\ServicesImplimentation\\ServicesImplimentation.csproj",
       "packagesPath": "C:\\Users\\Di\\.nuget\\packages\\",
-      "outputPath": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\CoordinationOfServiceDelivery\\ServicesImplimentation\\obj\\",
+      "outputPath": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\3task\\MasterBackendApp\\ServicesImplimentation\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Di\\AppData\\Roaming\\NuGet\\NuGet.Config",

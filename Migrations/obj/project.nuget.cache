@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3ttKILxl//3ww5/fzFe8Boqe3/T52n65sKkxrSjbzHBFwcg97wuThaZCrPejWxWDxd2rtuTWhW20RtZf2zz/QQ==",
+  "dgSpecHash": "3KiG+2cbu5+w4LrTp7CUxUgU29S+OeAL4MhpM5NZsez9Dye9300r2gAPboMUUNnnM2J8P7zlD+rG6X1E48yzvA==",
   "success": true,
-  "projectFilePath": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\CoordinationOfServiceDelivery\\Migrations\\Migrations.csproj",
+  "projectFilePath": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\3task\\MasterBackendApp\\Migrations\\Migrations.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Di\\.nuget\\packages\\dapper\\2.0.78\\dapper.2.0.78.nupkg.sha512",
     "C:\\Users\\Di\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\5.0.0\\microsoft.bcl.asyncinterfaces.5.0.0.nupkg.sha512",

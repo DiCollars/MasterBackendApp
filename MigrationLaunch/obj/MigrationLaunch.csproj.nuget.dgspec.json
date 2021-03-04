@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\CoordinationOfServiceDelivery\\MigrationLaunch\\MigrationLaunch.csproj": {}
+    "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\3task\\MasterBackendApp\\MigrationLaunch\\MigrationLaunch.csproj": {}
   },
   "projects": {
-    "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\CoordinationOfServiceDelivery\\MigrationLaunch\\MigrationLaunch.csproj": {
+    "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\3task\\MasterBackendApp\\MigrationLaunch\\MigrationLaunch.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\CoordinationOfServiceDelivery\\MigrationLaunch\\MigrationLaunch.csproj",
+        "projectUniqueName": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\3task\\MasterBackendApp\\MigrationLaunch\\MigrationLaunch.csproj",
         "projectName": "MigrationLaunch",
-        "projectPath": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\CoordinationOfServiceDelivery\\MigrationLaunch\\MigrationLaunch.csproj",
+        "projectPath": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\3task\\MasterBackendApp\\MigrationLaunch\\MigrationLaunch.csproj",
         "packagesPath": "C:\\Users\\Di\\.nuget\\packages\\",
-        "outputPath": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\CoordinationOfServiceDelivery\\MigrationLaunch\\obj\\",
+        "outputPath": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\3task\\MasterBackendApp\\MigrationLaunch\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Di\\AppData\\Roaming\\NuGet\\NuGet.Config",
