@@ -7,6 +7,11 @@ using Microsoft.OpenApi.Models;
 using CoordinationOfServiceDeliveryAPI.SwaggerStaff;
 using RepositoryImplimentationDb.ContractsImplimentations;
 using RepositoryContractsDb.Contracts;
+using ServicesContracts.ServiceInterfaces;
+using ServicesImplimentation.ServiceImplimentations;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using ServicesContracts;
 
 namespace CoordinationOfServiceDeliveryAPI
 {
@@ -25,7 +30,31 @@ namespace CoordinationOfServiceDeliveryAPI
 
             var connectionStrings = Configuration.GetSection("ConnectionStrings").Get<ConnectionStrings>();
 
-            services.AddTransient<IRoleRepository, RoleRepository>(provider => new RoleRepository(connectionStrings.DefaultConnection));
+            services.AddTransient<ISqlRepositoryBase, SqlRepositoryBase>(provider => new SqlRepositoryBase(connectionStrings.DefaultConnection));
+
+            services.AddTransient<IRoleRepository, RoleRepository>();
+            services.AddTransient<IUserRepository, UserRepository>();
+
+            services.AddTransient<IHashPasswordService, HashPasswordService>();
+            services.AddTransient<IAuthUserService, AuthUserService>();
+            services.AddTransient<ITokenService, TokenService>();
+            services.AddScoped<IUserService, UserService>();
+
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                    .AddJwtBearer(options =>
+                    {
+                        options.RequireHttpsMetadata = false;
+                        options.TokenValidationParameters = new TokenValidationParameters
+                        {
+                            ValidateIssuer = true,
+                            ValidIssuer = AuthOptions.ISSUER,
+                            ValidateAudience = true,
+                            ValidAudience = AuthOptions.AUDIENCE,
+                            ValidateLifetime = true,
+                            IssuerSigningKey = AuthOptions.GetSymmetricSecurityKey(),
+                            ValidateIssuerSigningKey = true,
+                        };
+                    });
 
             services.AddSwaggerGen(c =>
             {
@@ -73,6 +102,7 @@ namespace CoordinationOfServiceDeliveryAPI
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

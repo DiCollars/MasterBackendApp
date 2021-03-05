@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 namespace CoordinationOfServiceDeliveryAPI.Controllers
 {
+    //TODO: Контроллер для теста - исправить, логика работы с базой должна быть в слое бизнес логики
     [ApiController]
     [Route("[controller]")]
     public class RoleController : Controller

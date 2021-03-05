@@ -1,14 +1,17 @@
-﻿using ServicesContracts.Models;
+﻿using RepositoryContractsDb.Contracts;
+using ServicesContracts.Models;
 using ServicesContracts.ServiceInterfaces;
 using System;
-using System.Threading.Tasks;
 
 namespace ServicesImplimentation.ServiceImplimentations
 {
     public class HashPasswordService : IHashPasswordService
     {
-        public HashPasswordService()
+        private readonly IUserService _userRepository;
+
+        public HashPasswordService(IUserService userRepository)
         {
+            _userRepository = userRepository;
         }
 
         public string HashPassword(string password)
@@ -16,9 +19,9 @@ namespace ServicesImplimentation.ServiceImplimentations
             return BCrypt.Net.BCrypt.HashPassword(password, 13);
         }
 
-        public async Task<User> Logging(string userName, string userPassword)
+        public UserShort Logging(string userName, string userPassword)
         {
-            User user = null; // await _context.Users.FirstOrDefaultAsync(u => u.Login == userName); TODO: Сделать метод ищущий в базе такого пользователя.
+            UserShort user = _userRepository.GetUserShort(userName);
 
             if (user == null)
             {

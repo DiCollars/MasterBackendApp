@@ -4,10 +4,7 @@ using ServicesContracts.ServiceInterfaces;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
 using System.Security.Claims;
-using System.Text;
-using System.Threading.Tasks;
 using ServicesContracts.Models;
 
 namespace ServicesImplimentation.ServiceImplimentations
@@ -21,9 +18,9 @@ namespace ServicesImplimentation.ServiceImplimentations
             _hashPasswordService = hashPasswordService;
         }
 
-        public async Task<string> GenerateToken(string username, string password)
+        public string GenerateToken(string username, string password)
         {
-            var identity = await GetIdentity(username, password);
+            var identity = GetIdentity(username, password);
 
             if (identity == null)
             {
@@ -45,9 +42,9 @@ namespace ServicesImplimentation.ServiceImplimentations
             return (encodedJwt);
         }
 
-        private async Task<ClaimsIdentity> GetIdentity(string username, string password)
+        private ClaimsIdentity GetIdentity(string username, string password)
         {
-            User user = await _hashPasswordService.Logging(username, password);
+            UserShort user =  _hashPasswordService.Logging(username, password);
 
             if (user != null)
             {

@@ -1,0 +1,14 @@
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ServicesImplimenattion\bin\Debug\netcoreapp3.1\ServicesImplimentation.deps.json
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ServicesImplimenattion\bin\Debug\netcoreapp3.1\ServicesImplimentation.dll
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ServicesImplimenattion\bin\Debug\netcoreapp3.1\ServicesImplimentation.pdb
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ServicesImplimenattion\bin\Debug\netcoreapp3.1\RepositoryContractsDb.dll
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ServicesImplimenattion\bin\Debug\netcoreapp3.1\ServicesContracts.dll
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ServicesImplimenattion\bin\Debug\netcoreapp3.1\RepositoryContractsDb.pdb
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ServicesImplimenattion\bin\Debug\netcoreapp3.1\ServicesContracts.pdb
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ServicesImplimenattion\obj\Debug\netcoreapp3.1\ServicesImplimentation.csprojAssemblyReference.cache
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ServicesImplimenattion\obj\Debug\netcoreapp3.1\ServicesImplimentation.AssemblyInfoInputs.cache
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ServicesImplimenattion\obj\Debug\netcoreapp3.1\ServicesImplimentation.AssemblyInfo.cs
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ServicesImplimenattion\obj\Debug\netcoreapp3.1\ServicesImplimentation.csproj.CoreCompileInputs.cache
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ServicesImplimenattion\obj\Debug\netcoreapp3.1\ServicesImplimentation.csproj.CopyComplete
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ServicesImplimenattion\obj\Debug\netcoreapp3.1\ServicesImplimentation.dll
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ServicesImplimenattion\obj\Debug\netcoreapp3.1\ServicesImplimentation.pdb

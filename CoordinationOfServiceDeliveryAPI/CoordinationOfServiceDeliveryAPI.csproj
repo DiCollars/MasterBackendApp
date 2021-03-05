@@ -12,6 +12,8 @@
   <ItemGroup>
     <ProjectReference Include="..\ContractsRepository\RepositoryContractsDb.csproj" />
     <ProjectReference Include="..\RepositoryImplimentationDb\RepositoryImplimentationDb.csproj" />
+    <ProjectReference Include="..\ServicesContracts\ServicesContracts.csproj" />
+    <ProjectReference Include="..\ServicesImplimenattion\ServicesImplimentation.csproj" />
   </ItemGroup>
 
 

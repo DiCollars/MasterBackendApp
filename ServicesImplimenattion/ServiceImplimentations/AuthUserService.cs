@@ -1,22 +1,27 @@
 ﻿using Microsoft.AspNetCore.Http;
+using RepositoryContractsDb.Contracts;
 using ServicesContracts.Models;
 using ServicesContracts.ServiceInterfaces;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ServicesImplimentation.ServiceImplimentations
 {
     public class AuthUserService : IAuthUserService
     {
-        public async Task<User> GetLoggedUser(HttpContext httpContext)
+        private readonly IUserService _userRepository;
+
+        public AuthUserService(IUserService userRepository)
+        {
+            _userRepository = userRepository;
+        }
+
+        public UserShort GetLoggedUser(HttpContext httpContext)
         {
             var userLogin = httpContext.User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Name).Value;
             var userRole = httpContext.User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role).Value;
-            User logedUser = null; // await _context.Users.FirstOrDefaultAsync(U => U.Login == userLogin && U.Role == userRole); TODO: Сделать метод для проверки наличия пользователя в базе.
+            UserShort logedUser = _userRepository.GetUserShort(userLogin); //_userRepository.GetShortUserByLoginAndRole(userLogin, userRole); //TODO: Тут использовать метод который достаёт из базы роли и юзера и мапит их в шортюзера
 
             if (logedUser == null)
             {

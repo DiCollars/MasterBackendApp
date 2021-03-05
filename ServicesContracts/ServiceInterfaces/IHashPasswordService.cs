@@ -1,5 +1,4 @@
 ﻿using ServicesContracts.Models;
-using System.Threading.Tasks;
 
 namespace ServicesContracts.ServiceInterfaces
 {
@@ -7,6 +6,6 @@ namespace ServicesContracts.ServiceInterfaces
     {
         string HashPassword(string password);
 
-        Task<User> Logging(string userName, string userPassword);
+        UserShort Logging(string userName, string userPassword);
     }
 }

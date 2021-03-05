@@ -1,0 +1,17 @@
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ServicesImplimenattion\bin\Debug\net5.0\ServicesImplimentation.deps.json
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ServicesImplimenattion\bin\Debug\net5.0\ServicesImplimentation.dll
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ServicesImplimenattion\bin\Debug\net5.0\ref\ServicesImplimentation.dll
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ServicesImplimenattion\bin\Debug\net5.0\ServicesImplimentation.pdb
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ServicesImplimenattion\bin\Debug\net5.0\RepositoryContractsDb.dll
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ServicesImplimenattion\bin\Debug\net5.0\ServicesContracts.dll
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ServicesImplimenattion\bin\Debug\net5.0\RepositoryContractsDb.pdb
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ServicesImplimenattion\bin\Debug\net5.0\ServicesContracts.pdb
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ServicesImplimenattion\obj\Debug\net5.0\ServicesImplimentation.csprojAssemblyReference.cache
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ServicesImplimenattion\obj\Debug\net5.0\ServicesImplimentation.GeneratedMSBuildEditorConfig.editorconfig
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ServicesImplimenattion\obj\Debug\net5.0\ServicesImplimentation.AssemblyInfoInputs.cache
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ServicesImplimenattion\obj\Debug\net5.0\ServicesImplimentation.AssemblyInfo.cs
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ServicesImplimenattion\obj\Debug\net5.0\ServicesImplimentation.csproj.CoreCompileInputs.cache
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ServicesImplimenattion\obj\Debug\net5.0\ServicesImplimentation.csproj.CopyComplete
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ServicesImplimenattion\obj\Debug\net5.0\ServicesImplimentation.dll
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ServicesImplimenattion\obj\Debug\net5.0\ref\ServicesImplimentation.dll
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ServicesImplimenattion\obj\Debug\net5.0\ServicesImplimentation.pdb

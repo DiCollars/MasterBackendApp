@@ -1,6 +1,6 @@
 ﻿namespace ServicesContracts.Models
 {
-    public class User
+    public class UserShort
     {
         public string Login { get; set; }
 
