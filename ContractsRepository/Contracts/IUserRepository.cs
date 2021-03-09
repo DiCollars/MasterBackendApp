@@ -13,6 +13,8 @@ namespace RepositoryContractsDb.Contracts
 
         User GetUserByLogin(string login);
 
+        User GetUserByLoginStrict(string login);
+
         void UpdateUser(User user);
 
         void DeleteUser(int id);

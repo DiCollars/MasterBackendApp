@@ -1425,7 +1425,9 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
-          "Microsoft.AspNetCore.Http": "2.2.2"
+          "Microsoft.AspNetCore.Http": "2.2.2",
+          "RepositoryContractsDb": "1.0.0",
+          "System.Text.Json": "5.0.1"
         },
         "compile": {
           "bin/placeholder/ServicesContracts.dll": {}
@@ -5205,6 +5207,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Microsoft.AspNetCore.Mvc.Abstractions >= 2.2.0",
       "RepositoryContractsDb >= 1.0.0",
       "RepositoryImplimentationDb >= 1.0.0",
       "ServicesContracts >= 1.0.0",
@@ -5264,6 +5267,10 @@
       "netcoreapp3.1": {
         "targetAlias": "netcoreapp3.1",
         "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Abstractions": {
+            "target": "Package",
+            "version": "[2.2.0, )"
+          },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[5.6.3, )"

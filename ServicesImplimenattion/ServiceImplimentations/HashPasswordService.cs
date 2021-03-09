@@ -1,5 +1,4 @@
-﻿using RepositoryContractsDb.Contracts;
-using ServicesContracts.Models;
+﻿using ServicesContracts.Models;
 using ServicesContracts.ServiceInterfaces;
 using System;
 
@@ -21,7 +20,7 @@ namespace ServicesImplimentation.ServiceImplimentations
 
         public UserShort Logging(string userName, string userPassword)
         {
-            UserShort user = _userRepository.GetUserShort(userName);
+            UserShort user = _userRepository.GetUserShortStrict(userName);
 
             if (user == null)
             {

@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentMigrator" Version="3.2.15" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\RepositoryImplimentationDb\RepositoryImplimentationDb.csproj" />
   </ItemGroup>
 

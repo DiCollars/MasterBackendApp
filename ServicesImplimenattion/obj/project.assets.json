@@ -993,7 +993,9 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
-          "Microsoft.AspNetCore.Http": "2.2.2"
+          "Microsoft.AspNetCore.Http": "2.2.2",
+          "RepositoryContractsDb": "1.0.0",
+          "System.Text.Json": "5.0.1"
         },
         "compile": {
           "bin/placeholder/ServicesContracts.dll": {}

@@ -38,17 +38,17 @@ namespace CoordinationOfServiceDeliveryAPI.Controllers
             }
         }
 
-        [HttpGet("get-me")]
-        public UserShort GetMe()
-        {
-            try
-            {
-                return _authUserService.GetLoggedUser(HttpContext);
-            }
-            catch (Exception)
-            {
-                return new UserShort();
-            }
-        }
+        //[HttpGet("get-me")]
+        //public UserShort GetMe()
+        //{
+        //    try
+        //    {
+        //        return _authUserService.GetLoggedUser(HttpContext);
+        //    }
+        //    catch (Exception)
+        //    {
+        //        return new UserShort();
+        //    }
+        //}
     }
 }

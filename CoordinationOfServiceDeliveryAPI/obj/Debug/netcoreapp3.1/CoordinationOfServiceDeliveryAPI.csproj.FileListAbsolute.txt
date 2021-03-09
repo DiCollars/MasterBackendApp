@@ -32,12 +32,6 @@ F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\Coordi
 F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\CoordinationOfServiceDeliveryAPI\obj\Debug\netcoreapp3.1\CoordinationOfServiceDeliveryAPI.genruntimeconfig.cache
 F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\Dapper.dll
 F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\Npgsql.dll
-F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\obj\Debug\netcoreapp3.1\CoordinationOfServiceDeliveryAPI.csprojAssemblyReference.cache
-F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\obj\Debug\netcoreapp3.1\CoordinationOfServiceDeliveryAPI.AssemblyInfoInputs.cache
-F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\obj\Debug\netcoreapp3.1\CoordinationOfServiceDeliveryAPI.AssemblyInfo.cs
-F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\obj\Debug\netcoreapp3.1\CoordinationOfServiceDeliveryAPI.csproj.CoreCompileInputs.cache
-F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\obj\Debug\netcoreapp3.1\CoordinationOfServiceDeliveryAPI.MvcApplicationPartsAssemblyInfo.cs
-F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\obj\Debug\netcoreapp3.1\CoordinationOfServiceDeliveryAPI.MvcApplicationPartsAssemblyInfo.cache
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\appsettings.Development.json
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\appsettings.json
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\CoordinationOfServiceDeliveryAPI.exe
@@ -46,9 +40,12 @@ F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationO
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\CoordinationOfServiceDeliveryAPI.runtimeconfig.dev.json
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\CoordinationOfServiceDeliveryAPI.dll
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\CoordinationOfServiceDeliveryAPI.pdb
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\AutoMapper.dll
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\BCrypt.Net-Next.dll
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\Dapper.dll
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
@@ -71,6 +68,12 @@ F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationO
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\RepositoryImplimentationDb.pdb
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\ServicesContracts.pdb
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\ServicesImplimentation.pdb
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\obj\Debug\netcoreapp3.1\CoordinationOfServiceDeliveryAPI.csprojAssemblyReference.cache
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\obj\Debug\netcoreapp3.1\CoordinationOfServiceDeliveryAPI.AssemblyInfoInputs.cache
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\obj\Debug\netcoreapp3.1\CoordinationOfServiceDeliveryAPI.AssemblyInfo.cs
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\obj\Debug\netcoreapp3.1\CoordinationOfServiceDeliveryAPI.csproj.CoreCompileInputs.cache
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\obj\Debug\netcoreapp3.1\CoordinationOfServiceDeliveryAPI.MvcApplicationPartsAssemblyInfo.cs
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\obj\Debug\netcoreapp3.1\CoordinationOfServiceDeliveryAPI.MvcApplicationPartsAssemblyInfo.cache
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\obj\Debug\netcoreapp3.1\staticwebassets\CoordinationOfServiceDeliveryAPI.StaticWebAssets.Manifest.cache
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\obj\Debug\netcoreapp3.1\staticwebassets\CoordinationOfServiceDeliveryAPI.StaticWebAssets.xml
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\obj\Debug\netcoreapp3.1\scopedcss\bundle\CoordinationOfServiceDeliveryAPI.styles.css
@@ -79,6 +82,3 @@ F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationO
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\obj\Debug\netcoreapp3.1\CoordinationOfServiceDeliveryAPI.dll
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\obj\Debug\netcoreapp3.1\CoordinationOfServiceDeliveryAPI.pdb
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\obj\Debug\netcoreapp3.1\CoordinationOfServiceDeliveryAPI.genruntimeconfig.cache
-F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
-F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
-F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\AutoMapper.dll

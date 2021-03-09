@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Http;
-using RepositoryContractsDb.Contracts;
 using ServicesContracts.Models;
 using ServicesContracts.ServiceInterfaces;
 using System;
@@ -21,7 +20,7 @@ namespace ServicesImplimentation.ServiceImplimentations
         {
             var userLogin = httpContext.User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Name).Value;
             var userRole = httpContext.User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role).Value;
-            UserShort logedUser = _userRepository.GetUserShort(userLogin); //_userRepository.GetShortUserByLoginAndRole(userLogin, userRole); //TODO: Тут использовать метод который достаёт из базы роли и юзера и мапит их в шортюзера
+            UserShort logedUser = _userRepository.GetUserShortStrict(userLogin);
 
             if (logedUser == null)
             {

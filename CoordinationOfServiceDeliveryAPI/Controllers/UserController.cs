@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using RepositoryContractsDb.Contracts;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using RepositoryContractsDb.Models;
 using ServicesContracts.Models;
 using ServicesContracts.ServiceInterfaces;
@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace CoordinationOfServiceDeliveryAPI.Controllers
 {
-    //TODO: Контроллер для теста - исправить, логика работы с базой должна быть в слое бизнес логики
+    [Authorize(Roles = "ADMIN")]
     [ApiController]
     [Route("[controller]")]
     public class UserController : Controller
@@ -19,11 +19,11 @@ namespace CoordinationOfServiceDeliveryAPI.Controllers
             _userService = userService;
         }
 
-        //[HttpPost("add-user")]
-        //public void AddUser(User user)
-        //{
-        //    _userService.CreateUser(user);
-        //}
+        [HttpPost("add-user")]
+        public void AddUser(User user)
+        {
+            _userService.CreateUser(user);
+        }
 
         [HttpGet("get-user")]
         public UserShort GetUser([FromHeader] string login)
@@ -31,28 +31,22 @@ namespace CoordinationOfServiceDeliveryAPI.Controllers
             return _userService.GetUserShort(login);
         }
 
-        //[HttpGet("get-shortuser")]
-        //public User GetShortUser(string login)
-        //{
-        //    return _userService.GetUserByLogin(login);
-        //}
+        [HttpGet("get-users")]
+        public List<UserShort> GetUsers()
+        {
+            return _userService.GetAllUsersShort();
+        }
 
-        //[HttpGet("get-users")]
-        //public List<User> GetUsers()
-        //{
-        //    return _userService.GetUsers();
-        //}
+        [HttpPut("edit-user")]
+        public void EditUser(User user)
+        {
+            _userService.UpdateUser(user);
+        }
 
-        //[HttpPut("edit-user")]
-        //public void EditUser(User user)
-        //{
-        //    _userService.UpdateUser(user);
-        //}
-
-        //[HttpDelete("delete-user")]
-        //public void DeleteUser(int id)
-        //{
-        //    _userService.DeleteUser(id);
-        //}
+        [HttpDelete("delete-user")]
+        public void DeleteUser(int id)
+        {
+            _userService.DeleteUser(id);
+        }
     }
 }

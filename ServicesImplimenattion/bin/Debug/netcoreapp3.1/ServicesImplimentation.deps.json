@@ -608,7 +608,9 @@
       },
       "ServicesContracts/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Http": "2.2.2"
+          "Microsoft.AspNetCore.Http": "2.2.2",
+          "RepositoryContractsDb": "1.0.0",
+          "System.Text.Json": "5.0.1"
         },
         "runtime": {
           "ServicesContracts.dll": {}

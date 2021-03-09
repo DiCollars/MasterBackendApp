@@ -5,7 +5,7 @@
         MASTER = 1,
         OPERATOR,
         CLIENT,
-        ADMIN,
-        MASTER_DADDY
+        MASTER_DADDY,
+        ADMIN
     }
 }
