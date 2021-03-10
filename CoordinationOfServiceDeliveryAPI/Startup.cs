@@ -34,11 +34,21 @@ namespace CoordinationOfServiceDeliveryAPI
 
             services.AddTransient<IRoleRepository, RoleRepository>();
             services.AddTransient<IUserRepository, UserRepository>();
+            services.AddScoped<IScheduleRepository, ScheduleRepository>();
+            services.AddScoped<IMasterRepository, MasterRepository>();
+            services.AddTransient<ILocationRepository, LocationRepository>();
+            services.AddTransient<ILocationTypeRepository, LocationTypeRepository>();
+            services.AddTransient<IAddressRepository, AddressRepository>();
+            services.AddTransient<IOrderRepository, OrderRepository>();
+            services.AddTransient<IServiceRepository, ServiceRepository>();
+            services.AddTransient<ISpecializationRepository, SpecializationRepository>();
 
             services.AddTransient<IHashPasswordService, HashPasswordService>();
             services.AddTransient<IAuthUserService, AuthUserService>();
             services.AddTransient<ITokenService, TokenService>();
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IScheduleService, ScheduleService>();
+
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                     .AddJwtBearer(options =>

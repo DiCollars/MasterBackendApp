@@ -29,5 +29,19 @@ namespace ServicesImplimentation.ServiceImplimentations
 
             return logedUser;
         }
+
+        public UserFull GetLoggedUserFull(HttpContext httpContext)
+        {
+            var userLogin = httpContext.User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Name).Value;
+            var userRole = httpContext.User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role).Value;
+            UserFull logedUser = _userRepository.GetUserFull(userLogin);
+
+            if (logedUser == null)
+            {
+                throw new Exception("Login or password is invalid.");
+            }
+
+            return logedUser;
+        }
     }
 }

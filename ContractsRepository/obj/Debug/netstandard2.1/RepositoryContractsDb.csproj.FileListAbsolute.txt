@@ -10,9 +10,9 @@ F:\Stack\Projects\Trainee_education\Tasks\3\CoordinationOfServiceDelivery\Contra
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ContractsRepository\bin\Debug\netstandard2.1\RepositoryContractsDb.deps.json
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ContractsRepository\bin\Debug\netstandard2.1\RepositoryContractsDb.dll
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ContractsRepository\bin\Debug\netstandard2.1\RepositoryContractsDb.pdb
-F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ContractsRepository\obj\Debug\netstandard2.1\RepositoryContractsDb.csprojAssemblyReference.cache
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ContractsRepository\obj\Debug\netstandard2.1\RepositoryContractsDb.AssemblyInfoInputs.cache
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ContractsRepository\obj\Debug\netstandard2.1\RepositoryContractsDb.AssemblyInfo.cs
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ContractsRepository\obj\Debug\netstandard2.1\RepositoryContractsDb.csproj.CoreCompileInputs.cache
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ContractsRepository\obj\Debug\netstandard2.1\RepositoryContractsDb.dll
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ContractsRepository\obj\Debug\netstandard2.1\RepositoryContractsDb.pdb
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ContractsRepository\obj\Debug\netstandard2.1\RepositoryContractsDb.csprojAssemblyReference.cache

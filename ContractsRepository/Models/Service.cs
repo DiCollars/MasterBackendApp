@@ -10,6 +10,6 @@
 
         public int Long { get; set; }
 
-        public string Specialization { get; set; }
+        public int SpecializationId { get; set; }
     }
 }

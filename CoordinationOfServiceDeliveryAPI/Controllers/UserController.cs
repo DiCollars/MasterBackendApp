@@ -20,7 +20,7 @@ namespace CoordinationOfServiceDeliveryAPI.Controllers
         }
 
         [HttpPost("add-user")]
-        public void AddUser(User user)
+        public void AddUser([FromBody] User user)
         {
             _userService.CreateUser(user);
         }
@@ -38,13 +38,13 @@ namespace CoordinationOfServiceDeliveryAPI.Controllers
         }
 
         [HttpPut("edit-user")]
-        public void EditUser(User user)
+        public void EditUser([FromBody] User user)
         {
             _userService.UpdateUser(user);
         }
 
         [HttpDelete("delete-user")]
-        public void DeleteUser(int id)
+        public void DeleteUser([FromQuery] int id)
         {
             _userService.DeleteUser(id);
         }

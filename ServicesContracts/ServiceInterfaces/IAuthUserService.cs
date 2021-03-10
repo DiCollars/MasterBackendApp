@@ -6,5 +6,7 @@ namespace ServicesContracts.ServiceInterfaces
     public interface IAuthUserService
     {
         UserShort GetLoggedUser(HttpContext httpContext);
+
+        UserFull GetLoggedUserFull(HttpContext httpContext);
     }
 }

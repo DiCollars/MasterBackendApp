@@ -112,10 +112,10 @@ namespace Migrations
             {
                 Create.Table("Locations")
                   .WithColumn("Id").AsInt32().NotNullable().PrimaryKey().Identity()
-                  .WithColumn("LocationId").AsInt32()
+                  .WithColumn("LocationId").AsInt32().Nullable()
                   .WithColumn("LocationTypeId").AsInt32().NotNullable()
                   .WithColumn("LocationName").AsString(50).NotNullable()
-                  .WithColumn("Coordinates").AsString(15);
+                  .WithColumn("Coordinates").AsString(15).Nullable();
 
                 Create.ForeignKey("fk_Locations_LocationId_Locations_Id")
                     .FromTable("Locations").ForeignColumn("LocationId")
@@ -145,9 +145,9 @@ namespace Migrations
                   .WithColumn("Id").AsInt32().NotNullable().PrimaryKey().Identity()
                   .WithColumn("LocationId").AsInt32().NotNullable()
                   .WithColumn("City").AsString(25).NotNullable()
-                  .WithColumn("Street").AsString(50).NotNullable()
-                  .WithColumn("House").AsString(30).NotNullable()
-                  .WithColumn("Flat").AsString(30).NotNullable();
+                  .WithColumn("Street").AsString(50).Nullable()
+                  .WithColumn("House").AsString(30).Nullable()
+                  .WithColumn("Flat").AsString(30).Nullable();
 
                 Create.ForeignKey("fk_Addresses_LocationId_Locations_Id")
                     .FromTable("Addresses").ForeignColumn("LocationId")

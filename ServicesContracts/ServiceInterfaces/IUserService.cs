@@ -8,6 +8,8 @@ namespace ServicesContracts.ServiceInterfaces
     {
         UserShort GetUserShort(string login);
 
+        UserFull GetUserFull(string login);
+
         UserShort GetUserShortStrict(string login);
 
         List<UserShort> GetAllUsersShort();

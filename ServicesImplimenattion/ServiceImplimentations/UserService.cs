@@ -42,6 +42,29 @@ namespace ServicesImplimentation.ServiceImplimentations
             return null;
         }
 
+        public UserFull GetUserFull(string login)
+        {
+            var currentUser = _userRepository.GetUserByLoginStrict(login);
+            Role usersRole = null;
+
+            if (currentUser != null)
+            {
+                usersRole = _roleRepository.GetRole(currentUser.RoleId);
+            }
+
+            if (currentUser != null && usersRole != null)
+            {
+                var mapper = new Mapper(new MapperConfiguration(cfg => cfg.CreateMap<User, UserFull>()));
+                var user = mapper.Map<UserFull>(currentUser);
+                user.RoleName = usersRole.RoleName;
+                user.AccessRight = usersRole.AccessRight;
+
+                return user;
+            }
+
+            return null;
+        }
+
         public UserShort GetUserShortStrict(string login)
         {
             var currentUser = _userRepository.GetUserByLoginStrict(login);
