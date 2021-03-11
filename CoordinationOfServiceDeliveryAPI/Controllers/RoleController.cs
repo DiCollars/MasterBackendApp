@@ -1,48 +1,51 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using RepositoryContractsDb.Contracts;
 using RepositoryContractsDb.Models;
+using ServicesContracts.ServiceInterfaces;
 using System.Collections.Generic;
 
 namespace CoordinationOfServiceDeliveryAPI.Controllers
 {
-    [Authorize(Roles = "ADMIN")]
     [ApiController]
     [Route("[controller]")]
     public class RoleController : Controller
     {
-        //TODO: Исправить - вынести работу с БД в слой бизнес логики
-        private readonly IRoleRepository _roleService;
+        private readonly IRoleService _roleService;
 
-        public RoleController(IRoleRepository roleService)
+        public RoleController(IRoleService roleService)
         {
             _roleService = roleService;
         }
 
+        [Authorize(Roles = "ADMIN")]
         [HttpPost("add-role")]
         public void AddRole([FromBody] Role role)
         {
             _roleService.CreateRole(role);
         }
 
+        [Authorize(Roles = "ADMIN")]
         [HttpGet("get-role")]
         public Role GetRole([FromQuery] int id)
         {
             return _roleService.GetRole(id);
         }
 
+        [Authorize(Roles = "ADMIN")]
         [HttpGet("get-roles")]
         public List<Role> GetRoles()
         {
             return _roleService.GetRoles();
         }
 
+        [Authorize(Roles = "ADMIN")]
         [HttpPut("edit-role")]
         public void EditRole([FromBody] Role role)
         {
             _roleService.UpdateRole(role);
         }
 
+        [Authorize(Roles = "ADMIN")]
         [HttpDelete("delete-role")]
         public void DeleteRole([FromQuery] int id)
         {

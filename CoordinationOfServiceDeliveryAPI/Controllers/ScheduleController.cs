@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using RepositoryContractsDb.Models;
-using ServicesContracts.Models;
 using ServicesContracts.ServiceInterfaces;
 using System.Collections.Generic;
 
@@ -27,21 +26,21 @@ namespace CoordinationOfServiceDeliveryAPI.Controllers
 
         [Authorize(Roles = "ADMIN")]
         [HttpGet("get-schedule")]
-        public ScheduleShort GetSchedule([FromQuery] int id)
+        public Schedule GetSchedule([FromQuery] int id)
         {
             return _scheduleService.GetSchedule(id);
         }
 
         [Authorize(Roles = "ADMIN, MASTER")]
         [HttpGet("get-masters-schedules")]
-        public List<ScheduleShort> GetSchedules()
+        public List<Schedule> GetSchedules()
         {
             return _scheduleService.GetSchedulesByMasterId(HttpContext);
         }
 
         [Authorize(Roles = "ADMIN, MASTER, CLIENT, OPERATOR")]
         [HttpGet("get-all-schedules")]
-        public List<ScheduleShort> GetAllSchedules()
+        public List<Schedule> GetAllSchedules()
         {
             return _scheduleService.GetSchedules();
         }

@@ -230,17 +230,17 @@ namespace Migrations
             {
                 Create.Table("Orders")
                   .WithColumn("Id").AsInt32().NotNullable().PrimaryKey().Identity()
-                  .WithColumn("MasterId").AsInt32().NotNullable()
-                  .WithColumn("UserId").AsInt32().NotNullable()
+                  .WithColumn("MasterId").AsInt32().Nullable()
+                  .WithColumn("UserId").AsInt32().Nullable()
                   .WithColumn("ServiceId").AsInt32().NotNullable()
                   .WithColumn("AddressId").AsInt32().NotNullable()
                   .WithColumn("Decription").AsString(120).NotNullable()
                   .WithColumn("StartDate").AsDateTime().NotNullable()
                   .WithColumn("EndDate").AsDateTime().NotNullable()
-                  .WithColumn("Status").AsString(10).NotNullable()
-                  .WithColumn("StatusColor").AsString(10).NotNullable()
+                  .WithColumn("Status").AsString(15).NotNullable()
+                  .WithColumn("StatusColor").AsString(15).NotNullable()
                   .WithColumn("Comment").AsString(120).NotNullable()
-                  .WithColumn("Picture").AsString(10).NotNullable();
+                  .WithColumn("Picture").AsString(70).NotNullable();
 
                 Create.ForeignKey("fk_Orders_MasterId_Masters_Id")
                     .FromTable("Orders").ForeignColumn("MasterId")

@@ -17,5 +17,9 @@
     <ProjectReference Include="..\ServicesImplimenattion\ServicesImplimentation.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\pictures\" />
+  </ItemGroup>
+
 
 </Project>

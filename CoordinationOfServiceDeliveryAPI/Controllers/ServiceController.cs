@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using RepositoryContractsDb.Contracts;
 using RepositoryContractsDb.Models;
+using ServicesContracts.ServiceInterfaces;
 using System.Collections.Generic;
 
 namespace CoordinationOfServiceDeliveryAPI.Controllers
@@ -9,42 +9,41 @@ namespace CoordinationOfServiceDeliveryAPI.Controllers
     [Route("[controller]")]
     public class ServiceController : Controller
     {
-        //TODO: Исправить - вынести работу с БД в слой бизнес логики
-        private readonly IServiceRepository _serviceRepository;
+        private readonly IServiceService _serviceService;
 
-        public ServiceController(IServiceRepository serviceRepository)
+        public ServiceController(IServiceService serviceService)
         {
-            _serviceRepository = serviceRepository;
+            _serviceService = serviceService;
         }
 
         [HttpPost("add-service")]
         public void AddService([FromBody] Service service)
         {
-            _serviceRepository.CreateService(service);
+            _serviceService.CreateService(service);
         }
 
         [HttpGet("get-service")]
         public Service GetService([FromQuery] int id)
         {
-            return _serviceRepository.GetService(id);
+            return _serviceService.GetService(id);
         }
 
         [HttpGet("get-services")]
         public List<Service> GetServices()
         {
-            return _serviceRepository.GetServices();
+            return _serviceService.GetServices();
         }
 
         [HttpPut("edit-service")]
         public void EditService([FromBody] Service service)
         {
-            _serviceRepository.UpdateService(service);
+            _serviceService.UpdateService(service);
         }
 
         [HttpDelete("delete-service")]
         public void DeleteService([FromQuery] int id)
         {
-            _serviceRepository.DeleteService(id);
+            _serviceService.DeleteService(id);
         }
     }
 }

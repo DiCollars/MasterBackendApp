@@ -1,8 +1,11 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using RepositoryContractsDb.Models;
 using ServicesContracts.Models;
 using ServicesContracts.ServiceInterfaces;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace CoordinationOfServiceDeliveryAPI.Controllers
 {
@@ -11,10 +14,24 @@ namespace CoordinationOfServiceDeliveryAPI.Controllers
     public class OrderController : Controller
     {
         private readonly IOrderService _orderService;
-
+        
         public OrderController(IOrderService orderService)
         {
             _orderService = orderService;
+        }
+
+        [Authorize(Roles = "ADMIN, CLIENT")]
+        [HttpPost("create-order")]
+        public async Task CreateOrder([FromBody] Order order)
+        {
+            await _orderService.CreateOrderByClient(order, HttpContext);
+        }
+
+        [Authorize(Roles = "ADMIN, CLIENT")]
+        [HttpPost("add-order-picture")]
+        public async Task AddPictureOrder(IFormFile uploadedFile, [FromForm] int orderId)
+        {
+            await _orderService.AddPictureToOrder(uploadedFile, orderId, HttpContext);
         }
 
         [Authorize(Roles = "ADMIN, MASTER")]
@@ -22,6 +39,16 @@ namespace CoordinationOfServiceDeliveryAPI.Controllers
         public List<OrderShort> GetOrders()
         {
             return _orderService.GetAllOrdersByMasterId(HttpContext);
+        }
+
+
+        [Authorize(Roles = "ADMIN, MASTER, CLIENT, OPERATOR")]
+        [HttpGet("get-picture-from-order")]
+        public IActionResult GetPictureOrder(int orderId)
+        {
+            var data = _orderService.GetPictureFromOrder(orderId, HttpContext);
+
+            return PhysicalFile(data.Item1, data.Item2, data.Item3);
         }
 
         [Authorize(Roles = "ADMIN, MASTER, CLIENT, OPERATOR")]
@@ -57,6 +84,62 @@ namespace CoordinationOfServiceDeliveryAPI.Controllers
         public void NotAgreeOrder([FromQuery] int orderId)
         {
             _orderService.NotAgreeOrderByMaster(orderId, HttpContext);
+        }
+
+        [Authorize(Roles = "ADMIN, CLIENT")]
+        [HttpPut("reject-order")]
+        public void RejectOrder([FromQuery] int orderId)
+        {
+            _orderService.RejectOrderByClient(orderId, HttpContext);
+        }
+
+        [Authorize(Roles = "ADMIN, CLIENT")]
+        [HttpPut("not-done-order")]
+        public void NotDoneOrder([FromQuery] int orderId)
+        {
+            _orderService.NotDoneOrderByClient(orderId, HttpContext);
+        }
+
+        [Authorize(Roles = "ADMIN, CLIENT")]
+        [HttpPut("accept-order")]
+        public void AcceptOrder([FromQuery] int orderId)
+        {
+            _orderService.AcceptOrderByClient(orderId, HttpContext);
+        }
+
+        [Authorize(Roles = "ADMIN, CLIENT")]
+        [HttpPut("not-accept-order")]
+        public void NotAcceptOrder([FromQuery] int orderId)
+        {
+            _orderService.NotAcceptOrderByClient(orderId, HttpContext);
+        }
+
+        [Authorize(Roles = "ADMIN, CLIENT")]
+        [HttpGet("get-all-orders-by-client-id")]
+        public List<OrderShort> GetAllOrdersByClientId()
+        {
+            return _orderService.GetAllOrdersByClientId(HttpContext);
+        }
+
+        [Authorize(Roles = "ADMIN, OPERATOR")]
+        [HttpPut("update-order")]
+        public void UpdateOrder([FromBody] Order order)
+        {
+            _orderService.UpdateOrder(order);
+        }
+
+        [Authorize(Roles = "ADMIN, OPERATOR")]
+        [HttpDelete("delete-order")]
+        public void DeleteOrder([FromQuery] int id)
+        {
+            _orderService.DeleteOrder(id);
+        }
+
+        [Authorize(Roles = "ADMIN, OPERATOR")]
+        [HttpGet("get-all-orders-for-operator")]
+        public List<OrderShort> GetAllOrdersForOperator()
+        {
+            return _orderService.GetAllOrdersForOperator();
         }
     }
 }

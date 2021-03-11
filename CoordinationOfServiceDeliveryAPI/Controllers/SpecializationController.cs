@@ -1,6 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using RepositoryContractsDb.Contracts;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using RepositoryContractsDb.Models;
+using ServicesContracts.ServiceInterfaces;
 using System.Collections.Generic;
 
 namespace CoordinationOfServiceDeliveryAPI.Controllers
@@ -9,42 +10,46 @@ namespace CoordinationOfServiceDeliveryAPI.Controllers
     [Route("[controller]")]
     public class SpecializationController : Controller
     {
-        //TODO: Исправить - вынести работу с БД в слой бизнес логики
-        private readonly ISpecializationRepository _specializationRepository;
+        private readonly ISpecializationService _specializationService;
 
-        public SpecializationController(ISpecializationRepository specializationRepository)
+        public SpecializationController(ISpecializationService specializationService)
         {
-            _specializationRepository = specializationRepository;
+            _specializationService = specializationService;
         }
 
+        [Authorize(Roles = "ADMIN, MASTER_DADDY")]
         [HttpPost("add-specialization")]
         public void AddSpecialization([FromBody] Specialization specialization)
         {
-            _specializationRepository.CreateSpecialization(specialization);
+            _specializationService.CreateSpecialization(specialization);
         }
 
+        [Authorize(Roles = "ADMIN, MASTER_DADDY")]
         [HttpGet("get-specialization")]
         public Specialization GetSpecialization([FromQuery] int id)
         {
-            return _specializationRepository.GetSpecialization(id);
+            return _specializationService.GetSpecialization(id);
         }
 
+        [Authorize(Roles = "ADMIN, MASTER_DADDY")]
         [HttpGet("get-specializations")]
         public List<Specialization> GetSpecializations()
         {
-            return _specializationRepository.GetSpecializations();
+            return _specializationService.GetSpecializations();
         }
 
+        [Authorize(Roles = "ADMIN, MASTER_DADDY")]
         [HttpPut("edit-specialization")]
         public void EditSpecialization([FromBody] Specialization specialization)
         {
-            _specializationRepository.UpdateSpecialization(specialization);
+            _specializationService.UpdateSpecialization(specialization);
         }
 
+        [Authorize(Roles = "ADMIN, MASTER_DADDY")]
         [HttpDelete("delete-specialization")]
         public void DeleteSpecialization([FromQuery] int id)
         {
-            _specializationRepository.DeleteSpecialization(id);
+            _specializationService.DeleteSpecialization(id);
         }
     }
 }

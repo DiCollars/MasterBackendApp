@@ -1,6 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using RepositoryContractsDb.Contracts;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using RepositoryContractsDb.Models;
+using ServicesContracts.ServiceInterfaces;
 using System.Collections.Generic;
 
 namespace CoordinationOfServiceDeliveryAPI.Controllers
@@ -9,42 +10,46 @@ namespace CoordinationOfServiceDeliveryAPI.Controllers
     [Route("[controller]")]
     public class MasterController : Controller
     {
-        //TODO: Исправить - вынести работу с БД в слой бизнес логики
-        private readonly IMasterRepository _masterRepository;
+        private readonly IMasterService _masterService;
 
-        public MasterController(IMasterRepository masterRepository)
+        public MasterController(IMasterService masterService)
         {
-            _masterRepository = masterRepository;
+            _masterService = masterService;
         }
 
+        [Authorize(Roles = "ADMIN")]
         [HttpPost("add-master")]
         public void AddMaster([FromBody] Master master)
         {
-            _masterRepository.CreateMaster(master);
+            _masterService.CreateMaster(master);
         }
 
+        [Authorize(Roles = "ADMIN")]
         [HttpGet("get-master")]
         public Master GetMaster([FromQuery] int id)
         {
-            return _masterRepository.GetMaster(id);
+            return _masterService.GetMaster(id);
         }
 
+        [Authorize(Roles = "ADMIN")]
         [HttpGet("get-masters")]
         public List<Master> GetMasters()
         {
-            return _masterRepository.GetMasters();
+            return _masterService.GetMasters();
         }
 
+        [Authorize(Roles = "ADMIN")]
         [HttpPut("edit-master")]
         public void EditMaster([FromBody] Master master)
         {
-            _masterRepository.UpdateMaster(master);
+            _masterService.UpdateMaster(master);
         }
 
+        [Authorize(Roles = "ADMIN")]
         [HttpDelete("delete-master")]
         public void DeleteMaster([FromQuery] int id)
         {
-            _masterRepository.DeleteMaster(id);
+            _masterService.DeleteMaster(id);
         }
     }
 }

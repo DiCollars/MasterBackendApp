@@ -10,6 +10,8 @@
 
         public static string WAIT_OPERATOR = "WAIT_OPERATOR";
 
+        public static string WAIT_MASTER = "WAIT_MASTER";
+
         public static string REJECT = "REJECT";
 
         public static string AGREED = "AGREED";

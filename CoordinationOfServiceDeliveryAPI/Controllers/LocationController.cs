@@ -1,6 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using RepositoryContractsDb.Contracts;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using RepositoryContractsDb.Models;
+using ServicesContracts.ServiceInterfaces;
 using System.Collections.Generic;
 
 namespace CoordinationOfServiceDeliveryAPI.Controllers
@@ -9,42 +10,46 @@ namespace CoordinationOfServiceDeliveryAPI.Controllers
     [Route("[controller]")]
     public class LocationController : Controller
     {
-        //TODO: Исправить - вынести работу с БД в слой бизнес логики
-        private readonly ILocationRepository _locationRepository;
+        private readonly ILocationService _locationService;
 
-        public LocationController(ILocationRepository locationRepository)
+        public LocationController(ILocationService locationService)
         {
-            _locationRepository = locationRepository;
+            _locationService = locationService;
         }
 
+        [Authorize(Roles = "ADMIN, MASTER_DADDY")]
         [HttpPost("add-location")]
         public void AddLocation([FromBody] Location location)
         {
-            _locationRepository.CreateLocation(location);
+            _locationService.CreateLocation(location);
         }
 
+        [Authorize(Roles = "ADMIN, MASTER_DADDY")]
         [HttpGet("get-location")]
         public Location GetLocation([FromQuery] int id)
         {
-            return _locationRepository.GetLocation(id);
+            return _locationService.GetLocation(id);
         }
 
+        [Authorize(Roles = "ADMIN, MASTER_DADDY")]
         [HttpGet("get-locations")]
         public List<Location> GetLocations()
         {
-            return _locationRepository.GetLocations();
+            return _locationService.GetLocations();
         }
 
+        [Authorize(Roles = "ADMIN, MASTER_DADDY")]
         [HttpPut("edit-location")]
         public void EditLocation([FromBody] Location location)
         {
-            _locationRepository.UpdateLocation(location);
+            _locationService.UpdateLocation(location);
         }
 
+        [Authorize(Roles = "ADMIN, MASTER_DADDY")]
         [HttpDelete("delete-location")]
         public void DeleteLocation([FromQuery] int id)
         {
-            _locationRepository.DeleteLocation(id);
+            _locationService.DeleteLocation(id);
         }
     }
 }

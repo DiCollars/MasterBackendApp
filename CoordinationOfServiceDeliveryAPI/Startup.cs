@@ -48,7 +48,14 @@ namespace CoordinationOfServiceDeliveryAPI
             services.AddTransient<ITokenService, TokenService>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IScheduleService, ScheduleService>();
-
+            services.AddScoped<IOrderService, OrderService>();
+            services.AddScoped<ISpecializationService, SpecializationService>();
+            services.AddScoped<ILocationService, LocationService>();
+            services.AddScoped<IServiceService, ServiceService>();
+            services.AddScoped<IRoleService, RoleService>();
+            services.AddScoped<IMasterService, MasterService>();
+            services.AddScoped<ILocationTypeService, LocationTypeService>();
+            services.AddScoped<IAddressService, AddressService>();
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                     .AddJwtBearer(options =>

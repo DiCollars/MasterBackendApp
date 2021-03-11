@@ -44,7 +44,19 @@ namespace RepositoryImplimentationDb.ContractsImplimentations
         public List<Order> GetOrdersByMasterId(int masterId)
         {
             using var db = _sqlRepositoryBase.Connection();
-            return db.Query<Order>("SELECT \"Id\", \"MasterId\", \"UserId\", \"ServiceId\", \"AddressId\", \"Decription\", \"StartDate\", \"EndDate\", \"Status\", \"StatusColor\", \"Comment\", \"Picture\" FROM \"Orders\" WHERE \"MasterId\" = @masterId", new { masterId }).ToList();
+            return db.Query<Order>("SELECT \"Id\", \"MasterId\", \"UserId\", \"ServiceId\", \"AddressId\", \"Decription\", \"StartDate\", \"EndDate\", \"Status\", \"StatusColor\", \"Comment\", \"Picture\" FROM \"Orders\" WHERE \"MasterId\" = @masterId AND \"Status\" != 'WAIT_OPERATOR'", new { masterId }).ToList();
+        }
+
+        public List<Order> GetOrdersForOperator()
+        {
+            using var db = _sqlRepositoryBase.Connection();
+            return db.Query<Order>("SELECT \"Id\", \"MasterId\", \"UserId\", \"ServiceId\", \"AddressId\", \"Decription\", \"StartDate\", \"EndDate\", \"Status\", \"StatusColor\", \"Comment\", \"Picture\" FROM \"Orders\" WHERE \"Status\" != 'WAIT_OPERATOR'").ToList();
+        }
+
+        public List<Order> GetOrdersByUserId(int userId)
+        {
+            using var db = _sqlRepositoryBase.Connection();
+            return db.Query<Order>("SELECT \"Id\", \"MasterId\", \"UserId\", \"ServiceId\", \"AddressId\", \"Decription\", \"StartDate\", \"EndDate\", \"Status\", \"StatusColor\", \"Comment\", \"Picture\" FROM \"Orders\" WHERE \"UserId\" = @userId", new { userId }).ToList();
         }
 
         public void UpdateOrder(Order order)

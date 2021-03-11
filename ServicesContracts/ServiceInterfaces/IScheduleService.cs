@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
 using RepositoryContractsDb.Models;
-using ServicesContracts.Models;
 using System.Collections.Generic;
 
 namespace ServicesContracts.ServiceInterfaces
@@ -13,10 +12,10 @@ namespace ServicesContracts.ServiceInterfaces
 
         void DeleteSchedule(int id, HttpContext httpContext);
 
-        List<ScheduleShort> GetSchedulesByMasterId(HttpContext httpContext);
+        List<Schedule> GetSchedulesByMasterId(HttpContext httpContext);
 
-        List<ScheduleShort> GetSchedules();
+        List<Schedule> GetSchedules();
 
-        ScheduleShort GetSchedule(int id);
+        Schedule GetSchedule(int id);
     }
 }

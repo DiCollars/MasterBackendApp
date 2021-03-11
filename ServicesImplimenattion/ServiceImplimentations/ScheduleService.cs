@@ -29,13 +29,10 @@ namespace ServicesImplimentation.ServiceImplimentations
         {
             var authUser = _authUserService.GetLoggedUser(httpContext);
 
-            if (authUser.Role == "MASTER")
-            {
-                var masterId = _masterRepository.GetMasterByUserId(authUser.Id).Id;
-                schedule.MasterId = masterId;
-                schedule.Status = ScheduleStatus.READY;
-                _scheduleRepository.CreateSchedule(schedule);
-            }
+            var masterId = _masterRepository.GetMasterByUserId(authUser.Id).Id;
+            schedule.MasterId = masterId;
+            schedule.Status = ScheduleStatus.READY;
+            _scheduleRepository.CreateSchedule(schedule);
         }
 
         public void UpdateSchedule(Schedule schedule, HttpContext httpContext)
@@ -47,7 +44,6 @@ namespace ServicesImplimentation.ServiceImplimentations
             {
                 _scheduleRepository.UpdateSchedule(schedule);
             }
-            
         }
 
         public void DeleteSchedule(int id, HttpContext httpContext)
@@ -62,41 +58,32 @@ namespace ServicesImplimentation.ServiceImplimentations
             }
         }
 
-        public List<ScheduleShort> GetSchedulesByMasterId(HttpContext httpContext)
+        public List<Schedule> GetSchedulesByMasterId(HttpContext httpContext)
         {
             var authUser = _authUserService.GetLoggedUserFull(httpContext);
             var master = _masterRepository.GetMasterByUserId(authUser.Id);
-            List<ScheduleShort> mappedSchedules = null;
+            List<Schedule> schedules = null;
 
             if (master != null)
             {
-                var schedules = _scheduleRepository.GetMastersSchedule(master.Id);
-
-                var mapper = new Mapper(new MapperConfiguration(cfg => cfg.CreateMap<Schedule, ScheduleShort>()));
-                mappedSchedules = mapper.Map<List<ScheduleShort>>(schedules);
+                schedules = _scheduleRepository.GetMastersSchedule(master.Id);
             }
-          
-            return mappedSchedules;
+
+            return schedules;
         }
 
-        public List<ScheduleShort> GetSchedules()
+        public List<Schedule> GetSchedules()
         {
             var schedules = _scheduleRepository.GetSchedules();
 
-            var mapper = new Mapper(new MapperConfiguration(cfg => cfg.CreateMap<Schedule, ScheduleShort>()));
-            var mappedSchedules = mapper.Map<List<ScheduleShort>>(schedules);
-
-            return mappedSchedules;
+            return schedules;
         }
 
-        public ScheduleShort GetSchedule(int id)
+        public Schedule GetSchedule(int id)
         {
-            var schedules = _scheduleRepository.GetSchedule(id);
+            var schedule = _scheduleRepository.GetSchedule(id);
 
-            var mapper = new Mapper(new MapperConfiguration(cfg => cfg.CreateMap<Schedule, ScheduleShort>()));
-            var mappedSchedule = mapper.Map<ScheduleShort>(schedules);
-
-            return mappedSchedule;
+            return schedule;
         }
     }
 }

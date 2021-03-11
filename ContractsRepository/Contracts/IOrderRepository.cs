@@ -9,9 +9,13 @@ namespace RepositoryContractsDb.Contracts
 
         Order GetOrder(int id);
 
+        List<Order> GetOrdersForOperator();
+
         List<Order> GetOrders();
 
         List<Order> GetOrdersByMasterId(int masterId);
+
+        List<Order> GetOrdersByUserId(int userId);
 
         void UpdateOrder(Order order);
 

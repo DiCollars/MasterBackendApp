@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using RepositoryContractsDb.Contracts;
 using RepositoryContractsDb.Models;
+using ServicesContracts.ServiceInterfaces;
 using System.Collections.Generic;
 
 namespace CoordinationOfServiceDeliveryAPI.Controllers
@@ -9,42 +11,46 @@ namespace CoordinationOfServiceDeliveryAPI.Controllers
     [Route("[controller]")]
     public class LocationTypeController : Controller
     {
-        //TODO: Исправить - вынести работу с БД в слой бизнес логики
-        private readonly ILocationTypeRepository _locationTypeRepository;
+        private readonly ILocationTypeService _locationTypeService;
 
-        public LocationTypeController(ILocationTypeRepository locationTypeRepository)
+        public LocationTypeController(ILocationTypeService locationTypeService)
         {
-            _locationTypeRepository = locationTypeRepository;
+            _locationTypeService = locationTypeService;
         }
 
+        [Authorize(Roles = "ADMIN, MASTER_DADDY")]
         [HttpPost("add-locationType")]
         public void AddLocationType([FromBody] LocationType locationType)
         {
-            _locationTypeRepository.CreateLocationType(locationType);
+            _locationTypeService.CreateLocationType(locationType);
         }
 
+        [Authorize(Roles = "ADMIN, MASTER_DADDY")]
         [HttpGet("get-locationType")]
         public LocationType GetLocationType([FromQuery] int id)
         {
-            return _locationTypeRepository.GetLocationType(id);
+            return _locationTypeService.GetLocationType(id);
         }
 
+        [Authorize(Roles = "ADMIN, MASTER_DADDY")]
         [HttpGet("get-locationTypes")]
         public List<LocationType> GetLocationTypes()
         {
-            return _locationTypeRepository.GetLocationTypes();
+            return _locationTypeService.GetLocationTypes();
         }
 
+        [Authorize(Roles = "ADMIN, MASTER_DADDY")]
         [HttpPut("edit-locationType")]
         public void EditLocationType([FromBody] LocationType locationType)
         {
-            _locationTypeRepository.UpdateLocationType(locationType);
+            _locationTypeService.UpdateLocationType(locationType);
         }
 
+        [Authorize(Roles = "ADMIN, MASTER_DADDY")]
         [HttpDelete("delete-locationType")]
         public void DeleteLocationType([FromQuery] int id)
         {
-            _locationTypeRepository.DeleteLocationType(id);
+            _locationTypeService.DeleteLocationType(id);
         }
     }
 }
