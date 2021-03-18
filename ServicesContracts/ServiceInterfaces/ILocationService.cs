@@ -7,6 +7,8 @@ namespace ServicesContracts.ServiceInterfaces
     {
         Location GetLocation(int id);
 
+        List<Location> GetInnerLocations(int id);
+
         List<Location> GetLocations();
 
         void UpdateLocation(Location location);

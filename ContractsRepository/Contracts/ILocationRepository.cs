@@ -11,6 +11,8 @@ namespace RepositoryContractsDb.Contracts
 
         List<Location> GetLocations();
 
+        List<Location> GetInnerLocations(int id);
+
         void UpdateLocation(Location location);
 
         void DeleteLocation(int id);

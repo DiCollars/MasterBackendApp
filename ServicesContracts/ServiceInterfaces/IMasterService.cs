@@ -1,4 +1,5 @@
 ﻿using RepositoryContractsDb.Models;
+using ServicesContracts.Models;
 using System.Collections.Generic;
 
 namespace ServicesContracts.ServiceInterfaces
@@ -8,6 +9,8 @@ namespace ServicesContracts.ServiceInterfaces
         Master GetMaster(int id);
 
         List<Master> GetMasters();
+
+        List<MasterFull> GetMastersByServiceId(int SpecializationId);
 
         void UpdateMaster(Master master);
 

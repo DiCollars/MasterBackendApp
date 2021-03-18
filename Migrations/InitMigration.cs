@@ -15,11 +15,11 @@ namespace Migrations
                   .WithColumn("AccessRight").AsInt32();
 
                 Insert.IntoTable("Roles")
-                  .Row(new { RoleName = "MASTER", AccessRight = 1 })
-                  .Row(new { RoleName = "OPERATOR", AccessRight = 2 })
-                  .Row(new { RoleName = "CLIENT", AccessRight = 3 })
+                  .Row(new { RoleName = "MASTER",       AccessRight = 1 })
+                  .Row(new { RoleName = "OPERATOR",     AccessRight = 2 })
+                  .Row(new { RoleName = "CLIENT",       AccessRight = 3 })
                   .Row(new { RoleName = "MASTER_DADDY", AccessRight = 4 })
-                  .Row(new { RoleName = "ADMIN", AccessRight = 5 });
+                  .Row(new { RoleName = "ADMIN",        AccessRight = 5 });
             }
 
             if (!Schema.Table("LocationTypes").Exists())
@@ -45,15 +45,15 @@ namespace Migrations
                   .WithColumn("Icon").AsString(30).NotNullable();
 
                 Insert.IntoTable("Specializations")
-                  .Row(new { SpecializationName = "Грузоперевозки", Icon = "fas fa-dolly-flatbed" })
-                  .Row(new { SpecializationName = "Мебельщик", Icon = "fas fa-couch" })
-                  .Row(new { SpecializationName = "Сантехник", Icon = "fas fa-faucet" })
-                  .Row(new { SpecializationName = "Дракон", Icon = "fas fa-dragon" })
-                  .Row(new { SpecializationName = "Строитель", Icon = "fas fa-home" })
-                  .Row(new { SpecializationName = "Компьютерщик", Icon = "fas fa-laptop" })
-                  .Row(new { SpecializationName = "Электрик", Icon = "far fa-lightbulb" })
+                  .Row(new { SpecializationName = "Грузоперевозки",            Icon = "fas fa-dolly-flatbed" })
+                  .Row(new { SpecializationName = "Мебельщик",                 Icon = "fas fa-couch" })
+                  .Row(new { SpecializationName = "Сантехник",                 Icon = "fas fa-faucet" })
+                  .Row(new { SpecializationName = "Дракон",                    Icon = "fas fa-dragon" })
+                  .Row(new { SpecializationName = "Строитель",                 Icon = "fas fa-home" })
+                  .Row(new { SpecializationName = "Компьютерщик",              Icon = "fas fa-laptop" })
+                  .Row(new { SpecializationName = "Электрик",                  Icon = "far fa-lightbulb" })
                   .Row(new { SpecializationName = "Аварийное открытие замков", Icon = "fas fa-lock-open" })
-                  .Row(new { SpecializationName = "Маляр", Icon = "fas fa-paint-roller" });
+                  .Row(new { SpecializationName = "Маляр",                     Icon = "fas fa-paint-roller" });
             }
 
             if (!Schema.Table("Services").Exists())
@@ -70,15 +70,15 @@ namespace Migrations
                    .ToTable("Specializations").PrimaryColumn("Id");
 
                 Insert.IntoTable("Services")
-                  .Row(new { Name = "Перевоз груза", Cost = 5000, Long = 2, SpecializationId = 1 })
-                  .Row(new { Name = "Мебельные работы", Cost = 4000, Long = 1, SpecializationId = 2 })
-                  .Row(new { Name = "Сантехнические работы", Cost = 8000, Long = 2, SpecializationId = 3 })
-                  .Row(new { Name = "Осада замков", Cost = 30000, Long = 1, SpecializationId = 4 })
-                  .Row(new { Name = "Строительные работы", Cost = 12000, Long = 3, SpecializationId = 5 })
-                  .Row(new { Name = "Компьютерные работы", Cost = 8000, Long = 1, SpecializationId = 6 })
-                  .Row(new { Name = "Электронные работы", Cost = 3000, Long = 1, SpecializationId = 7 })
+                  .Row(new { Name = "Перевоз груза",         Cost = 5000,  Long = 2, SpecializationId = 1 })
+                  .Row(new { Name = "Мебельные работы",      Cost = 4000,  Long = 1, SpecializationId = 2 })
+                  .Row(new { Name = "Сантехнические работы", Cost = 8000,  Long = 2, SpecializationId = 3 })
+                  .Row(new { Name = "Осада замков",          Cost = 30000, Long = 1, SpecializationId = 4 })
+                  .Row(new { Name = "Строительные работы",   Cost = 12000, Long = 3, SpecializationId = 5 })
+                  .Row(new { Name = "Компьютерные работы",   Cost = 8000,  Long = 1, SpecializationId = 6 })
+                  .Row(new { Name = "Электронные работы",    Cost = 3000,  Long = 1, SpecializationId = 7 })
                   .Row(new { Name = "Открытие ваших замков", Cost = 10000, Long = 1, SpecializationId = 8 })
-                  .Row(new { Name = "Малярные работы", Cost = 6000, Long = 3, SpecializationId = 9 });
+                  .Row(new { Name = "Малярные работы",       Cost = 6000,  Long = 3, SpecializationId = 9 });
             }
 
             if (!Schema.Table("Users").Exists())
@@ -99,8 +99,44 @@ namespace Migrations
                 Insert.IntoTable("Users")
                   .Row(new
                   {
+                      RoleId = 1,
+                      Login = "master",
+                      Password = "$2a$13$CttizhvgFMkAVKGROm08wulHGPvmoo/NQgR7mHXsk91NCN.19m3g6",
+                      LastName = "null",
+                      FirstName = "null",
+                      MiddleName = "null"
+                  })
+                  .Row(new
+                  {
+                      RoleId = 2,
+                      Login = "operator",
+                      Password = "$2a$13$CttizhvgFMkAVKGROm08wulHGPvmoo/NQgR7mHXsk91NCN.19m3g6",
+                      LastName = "null",
+                      FirstName = "null",
+                      MiddleName = "null"
+                  })
+                  .Row(new
+                  {
+                      RoleId = 3,
+                      Login = "client",
+                      Password = "$2a$13$CttizhvgFMkAVKGROm08wulHGPvmoo/NQgR7mHXsk91NCN.19m3g6",
+                      LastName = "null",
+                      FirstName = "null",
+                      MiddleName = "null"
+                  })
+                  .Row(new
+                  {
+                      RoleId = 4,
+                      Login = "daddy",
+                      Password = "$2a$13$CttizhvgFMkAVKGROm08wulHGPvmoo/NQgR7mHXsk91NCN.19m3g6",
+                      LastName = "null",
+                      FirstName = "null",
+                      MiddleName = "null"
+                  })
+                  .Row(new
+                  {
                       RoleId = 5,
-                      Login = "di",
+                      Login = "admin",
                       Password = "$2a$13$CttizhvgFMkAVKGROm08wulHGPvmoo/NQgR7mHXsk91NCN.19m3g6",
                       LastName = "null",
                       FirstName = "null",
@@ -137,52 +173,6 @@ namespace Migrations
 
                 Insert.IntoTable("Locations")
                     .Row(new { LocationId = 2, LocationTypeId = 4, LocationName = "Проклятый", Coordinates = "51.6683 39.1919" });
-            }
-
-            if (!Schema.Table("Addresses").Exists())
-            {
-                Create.Table("Addresses")
-                  .WithColumn("Id").AsInt32().NotNullable().PrimaryKey().Identity()
-                  .WithColumn("LocationId").AsInt32().NotNullable()
-                  .WithColumn("City").AsString(25).NotNullable()
-                  .WithColumn("Street").AsString(50).Nullable()
-                  .WithColumn("House").AsString(30).Nullable()
-                  .WithColumn("Flat").AsString(30).Nullable();
-
-                Create.ForeignKey("fk_Addresses_LocationId_Locations_Id")
-                    .FromTable("Addresses").ForeignColumn("LocationId")
-                    .ToTable("Locations").PrimaryColumn("Id");
-
-                Insert.IntoTable("Addresses")
-                  .Row(new { LocationId = 1, City = "Воронеж", Street = "Мойдодырова", House = "33/В", Flat = "15/1" })
-                  .Row(new { LocationId = 1, City = "Воронеж", Street = "Мойдодырова", House = "66", Flat = "88/А" })
-                  .Row(new { LocationId = 1, City = "Воронеж", Street = "Мойдодырова", House = "103", Flat = "200" })
-
-                  .Row(new { LocationId = 2, City = "Воронеж", Street = "Степана Разина", House = "11", Flat = "55" })
-                  .Row(new { LocationId = 2, City = "Воронеж", Street = "Степана Разина", House = "10", Flat = "9" })
-                  .Row(new { LocationId = 2, City = "Воронеж", Street = "Степана Разина", House = "23", Flat = "15/1" })
-
-                  .Row(new { LocationId = 3, City = "Воронеж", Street = "Прохорова", House = "33/1" })
-                  .Row(new { LocationId = 3, City = "Воронеж", Street = "Прохорова", House = "33/2" })
-
-                  .Row(new { LocationId = 4, City = "Воронеж", Street = "Двигателево", House = "17", Flat = "6" })
-
-                  .Row(new { LocationId = 5, City = "Воронеж", Street = "У опушки", House = "Первая с права" })
-                  .Row(new { LocationId = 5, City = "Воронеж", Street = "У опушки", House = "Последняя с права" })
-                  .Row(new { LocationId = 5, City = "Воронеж", Street = "У опушки", House = "По середине" })
-
-                  .Row(new { LocationId = 6, City = "Воронеж", Street = "Расола-Кроу", })
-                  .Row(new { LocationId = 6, City = "Воронеж", Street = "Расола-Кроу", })
-                  .Row(new { LocationId = 6, City = "Воронеж", Street = "Расола-Кроу", })
-
-                  .Row(new { LocationId = 3, City = "Воронеж", House = "11" })
-                  .Row(new { LocationId = 3, City = "Воронеж", House = "15" })
-                  .Row(new { LocationId = 3, City = "Воронеж", House = "26" })
-
-                  .Row(new { LocationId = 8, City = "Воронеж", Street = "Настасьи Олежевной", House = "9/В", Flat = "31" })
-                  .Row(new { LocationId = 8, City = "Воронеж", Street = "Настасьи Олежевной", House = "7", Flat = "1" })
-
-                  .Row(new { LocationId = 9, City = "Воронеж", House = "7", Flat = "3" });
             }
 
             if (!Schema.Table("Masters").Exists())
@@ -233,12 +223,12 @@ namespace Migrations
                   .WithColumn("MasterId").AsInt32().Nullable()
                   .WithColumn("UserId").AsInt32().Nullable()
                   .WithColumn("ServiceId").AsInt32().NotNullable()
-                  .WithColumn("AddressId").AsInt32().NotNullable()
                   .WithColumn("Decription").AsString(120).NotNullable()
                   .WithColumn("StartDate").AsDateTime().NotNullable()
                   .WithColumn("EndDate").AsDateTime().NotNullable()
                   .WithColumn("Status").AsString(15).NotNullable()
                   .WithColumn("StatusColor").AsString(15).NotNullable()
+                  .WithColumn("Address").AsString(60).NotNullable()
                   .WithColumn("Comment").AsString(120).NotNullable()
                   .WithColumn("Picture").AsString(70).NotNullable();
 
@@ -253,10 +243,6 @@ namespace Migrations
                 Create.ForeignKey("fk_Orders_ServiceId_Services_Id")
                     .FromTable("Orders").ForeignColumn("ServiceId")
                     .ToTable("Services").PrimaryColumn("Id");
-
-                Create.ForeignKey("fk_Orders_AddressId_Addresses_Id")
-                    .FromTable("Orders").ForeignColumn("AddressId")
-                    .ToTable("Addresses").PrimaryColumn("Id");
 
                 //Insert.IntoTable("Orders")
                 //  .Row(new { Id = , });
@@ -293,11 +279,6 @@ namespace Migrations
             if (Schema.Table("Locations").Exists())
             {
                 Delete.Table("Locations");
-            }
-
-            if (Schema.Table("Addresses").Exists())
-            {
-                Delete.Table("Addresses");
             }
 
             if (Schema.Table("Masters").Exists())

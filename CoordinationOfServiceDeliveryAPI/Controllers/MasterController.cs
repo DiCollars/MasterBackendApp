@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using RepositoryContractsDb.Models;
+using ServicesContracts.Models;
 using ServicesContracts.ServiceInterfaces;
 using System.Collections.Generic;
 
@@ -31,11 +32,18 @@ namespace CoordinationOfServiceDeliveryAPI.Controllers
             return _masterService.GetMaster(id);
         }
 
-        [Authorize(Roles = "ADMIN")]
+        [Authorize(Roles = "ADMIN, CLIENT")]
         [HttpGet("get-masters")]
         public List<Master> GetMasters()
         {
             return _masterService.GetMasters();
+        }
+
+        [Authorize(Roles = "ADMIN, CLIENT")]
+        [HttpGet("get-masters-by-services/{serviceId}")]
+        public List<MasterFull> GetMastersByServices(int serviceId)
+        {
+            return _masterService.GetMastersByServiceId(serviceId);
         }
 
         [Authorize(Roles = "ADMIN")]

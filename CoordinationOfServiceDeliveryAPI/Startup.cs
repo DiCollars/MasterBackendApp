@@ -38,7 +38,6 @@ namespace CoordinationOfServiceDeliveryAPI
             services.AddScoped<IMasterRepository, MasterRepository>();
             services.AddTransient<ILocationRepository, LocationRepository>();
             services.AddTransient<ILocationTypeRepository, LocationTypeRepository>();
-            services.AddTransient<IAddressRepository, AddressRepository>();
             services.AddTransient<IOrderRepository, OrderRepository>();
             services.AddTransient<IServiceRepository, ServiceRepository>();
             services.AddTransient<ISpecializationRepository, SpecializationRepository>();
@@ -55,7 +54,6 @@ namespace CoordinationOfServiceDeliveryAPI
             services.AddScoped<IRoleService, RoleService>();
             services.AddScoped<IMasterService, MasterService>();
             services.AddScoped<ILocationTypeService, LocationTypeService>();
-            services.AddScoped<IAddressService, AddressService>();
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                     .AddJwtBearer(options =>
@@ -100,6 +98,13 @@ namespace CoordinationOfServiceDeliveryAPI
                     }
                 });
             });
+
+            services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
+            {
+                builder.AllowAnyOrigin()
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+            }));
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -118,6 +123,8 @@ namespace CoordinationOfServiceDeliveryAPI
 
 
             app.UseRouting();
+
+            app.UseCors("MyPolicy");
 
             app.UseAuthentication();
             app.UseAuthorization();

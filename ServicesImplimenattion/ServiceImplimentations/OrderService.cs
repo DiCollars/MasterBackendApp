@@ -95,7 +95,7 @@ namespace ServicesImplimentation.ServiceImplimentations
                                 select new OrderShort()
                                 {
                                     Id = order.Id,
-                                    AddressId = order.AddressId,
+                                    AddressName = order.Address,
                                     Comment = order.Comment,
                                     EndDate = order.EndDate,
                                     StartDate = order.StartDate,
@@ -123,8 +123,8 @@ namespace ServicesImplimentation.ServiceImplimentations
                                 select new OrderShort()
                                 {
                                     Id = order.Id,
-                                    AddressId = order.AddressId,
                                     Comment = order.Comment,
+                                    AddressName = order.Address,
                                     EndDate = order.EndDate,
                                     StartDate = order.StartDate,
                                     Decription = order.Decription,
@@ -157,9 +157,9 @@ namespace ServicesImplimentation.ServiceImplimentations
                                 select new OrderShort()
                                 {
                                     Id = order.Id,
-                                    AddressId = order.AddressId,
                                     Comment = order.Comment,
                                     EndDate = order.EndDate,
+                                    AddressName = order.Address,
                                     StartDate = order.StartDate,
                                     Decription = order.Decription,
                                     StatusColor = order.StatusColor,
@@ -189,7 +189,7 @@ namespace ServicesImplimentation.ServiceImplimentations
             return mappedOrder;
         }
 
-        public async Task CreateOrderByClient(Order order, HttpContext httpContext)
+        public void CreateOrderByClient(Order order, HttpContext httpContext)
         {
             var authedUser = _authUserService.GetLoggedUser(httpContext);
             order.UserId = authedUser.Id;
@@ -271,7 +271,7 @@ namespace ServicesImplimentation.ServiceImplimentations
                                 select new OrderShort()
                                 {
                                     Id = order.Id,
-                                    AddressId = order.AddressId,
+                                    AddressName = order.Address,
                                     Comment = order.Comment,
                                     EndDate = order.EndDate,
                                     StartDate = order.StartDate,

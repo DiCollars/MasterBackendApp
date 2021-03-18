@@ -12,7 +12,7 @@ namespace ServicesContracts.Models
 
         public decimal ServiceCost { get; set; }
 
-        public int AddressId { get; set; }
+        public string AddressName { get; set; }
 
         public string Decription { get; set; }
 

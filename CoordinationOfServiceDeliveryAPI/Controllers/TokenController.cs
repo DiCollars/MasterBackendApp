@@ -18,12 +18,12 @@ namespace CoordinationOfServiceDeliveryAPI.Controllers
             _authUserService = authUserService;
         }
 
-        [HttpGet("get-token")]
-        public IActionResult GetToken([FromHeader] string login, [FromHeader] string password)
+        [HttpPost("get-token")]
+        public IActionResult GetToken([FromBody] UserAuth userShort)
         {
             try
             {
-                var access_token = _tokenService.GenerateToken(login, password);
+                var access_token = _tokenService.GenerateToken(userShort.Login, userShort.Password);
 
                 if (access_token == null)
                 {

@@ -13,10 +13,10 @@ namespace RepositoryContractsDb.Models
         public int UserId { get; set; }
 
         public int ServiceId { get; set; }
-        
-        public int AddressId { get; set; }
 
         public string Decription { get; set; }
+
+        public string Address { get; set; }
 
         public DateTime StartDate { get; set; }
 

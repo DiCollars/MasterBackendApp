@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
 using RepositoryContractsDb.Models;
 using ServicesContracts.Models;
 using System.Collections.Generic;
@@ -37,7 +36,7 @@ namespace ServicesContracts.ServiceInterfaces
 
         List<OrderShort> GetAllOrdersForOperator();
 
-        Task CreateOrderByClient(Order order, HttpContext httpContext);
+        void CreateOrderByClient(Order order, HttpContext httpContext);
 
         Task AddPictureToOrder(IFormFile uploadedFile, int orderId, HttpContext httpContext);
 

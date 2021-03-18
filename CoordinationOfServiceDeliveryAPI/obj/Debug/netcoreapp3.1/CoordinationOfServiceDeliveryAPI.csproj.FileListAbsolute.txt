@@ -44,6 +44,12 @@ F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationO
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\BCrypt.Net-Next.dll
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\Dapper.dll
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
@@ -53,6 +59,7 @@ F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationO
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\Npgsql.dll
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
@@ -82,10 +89,3 @@ F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationO
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\obj\Debug\netcoreapp3.1\CoordinationOfServiceDeliveryAPI.dll
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\obj\Debug\netcoreapp3.1\CoordinationOfServiceDeliveryAPI.pdb
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\obj\Debug\netcoreapp3.1\CoordinationOfServiceDeliveryAPI.genruntimeconfig.cache
-F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
-F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
-F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
-F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
-F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
-F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
-F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\CoordinationOfServiceDeliveryAPI\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll

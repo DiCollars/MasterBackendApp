@@ -22,9 +22,9 @@ namespace CoordinationOfServiceDeliveryAPI.Controllers
 
         [Authorize(Roles = "ADMIN, CLIENT")]
         [HttpPost("create-order")]
-        public async Task CreateOrder([FromBody] Order order)
+        public void CreateOrder([FromBody] Order order)
         {
-            await _orderService.CreateOrderByClient(order, HttpContext);
+             _orderService.CreateOrderByClient(order, HttpContext);
         }
 
         [Authorize(Roles = "ADMIN, CLIENT")]

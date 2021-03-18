@@ -29,6 +29,11 @@ namespace ServicesImplimentation.ServiceImplimentations
             return _locationRepository.GetLocation(id);
         }
 
+        public List<Location> GetInnerLocations(int id)
+        {
+            return _locationRepository.GetInnerLocations(id);
+        }
+
         public List<Location> GetLocations()
         {
             return _locationRepository.GetLocations();
