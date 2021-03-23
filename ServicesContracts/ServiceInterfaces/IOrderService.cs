@@ -36,10 +36,10 @@ namespace ServicesContracts.ServiceInterfaces
 
         List<OrderShort> GetAllOrdersForOperator();
 
-        void CreateOrderByClient(Order order, HttpContext httpContext);
-
         Task AddPictureToOrder(IFormFile uploadedFile, int orderId, HttpContext httpContext);
 
         (string, string, string) GetPictureFromOrder(int orderId, HttpContext httpContext);
+
+        int CreateOrderByClient(Order order, HttpContext httpContext);
     }
 }

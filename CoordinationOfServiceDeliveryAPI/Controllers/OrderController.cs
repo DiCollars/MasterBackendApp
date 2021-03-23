@@ -4,11 +4,19 @@ using Microsoft.AspNetCore.Mvc;
 using RepositoryContractsDb.Models;
 using ServicesContracts.Models;
 using ServicesContracts.ServiceInterfaces;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace CoordinationOfServiceDeliveryAPI.Controllers
 {
+    public class FileModel
+    {
+        public IFormFile FormFile { get; set; }
+
+        public string Id { get; set; }
+    }
+
     [ApiController]
     [Route("[controller]")]
     public class OrderController : Controller
@@ -22,16 +30,16 @@ namespace CoordinationOfServiceDeliveryAPI.Controllers
 
         [Authorize(Roles = "ADMIN, CLIENT")]
         [HttpPost("create-order")]
-        public void CreateOrder([FromBody] Order order)
+        public int CreateOrder([FromBody] Order order)
         {
-             _orderService.CreateOrderByClient(order, HttpContext);
+             return _orderService.CreateOrderByClient(order, HttpContext);
         }
 
         [Authorize(Roles = "ADMIN, CLIENT")]
         [HttpPost("add-order-picture")]
-        public async Task AddPictureOrder(IFormFile uploadedFile, [FromForm] int orderId)
+        public async Task AddPictureOrder([FromForm] FileModel uploadedFile)
         {
-            await _orderService.AddPictureToOrder(uploadedFile, orderId, HttpContext);
+            await _orderService.AddPictureToOrder(uploadedFile.FormFile, Convert.ToInt32(uploadedFile.Id), HttpContext);
         }
 
         [Authorize(Roles = "ADMIN, MASTER")]

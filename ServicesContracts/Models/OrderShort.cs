@@ -22,6 +22,8 @@ namespace ServicesContracts.Models
 
         public string Status { get; set; }
 
+        public string Icon { get; set; }
+
         public string StatusColor { get; set; }
 
         public string Comment { get; set; }

@@ -15,6 +15,7 @@ namespace ServicesImplimentation.ServiceImplimentations
 {
     public class OrderService : IOrderService
     {
+        private readonly ISpecializationRepository _specializationRepository;
         private readonly IOrderRepository _orderRepository;
         private readonly IAuthUserService _authUserService;
         private readonly IServiceRepository _serviceRepository;
@@ -22,7 +23,7 @@ namespace ServicesImplimentation.ServiceImplimentations
         private readonly IUserRepository _userRepository;
         private readonly IWebHostEnvironment _appEnvironment;
 
-        public OrderService(IOrderRepository orderRepository, IAuthUserService authUserService, IServiceRepository serviceRepository, IMasterRepository masterRepository, IUserRepository userRepository, IWebHostEnvironment appEnvironment)
+        public OrderService(IOrderRepository orderRepository, IAuthUserService authUserService, IServiceRepository serviceRepository, IMasterRepository masterRepository, IUserRepository userRepository, IWebHostEnvironment appEnvironment, ISpecializationRepository specializationRepository)
         {
             _orderRepository = orderRepository;
             _authUserService = authUserService;
@@ -30,6 +31,7 @@ namespace ServicesImplimentation.ServiceImplimentations
             _masterRepository = masterRepository;
             _userRepository = userRepository;
             _appEnvironment = appEnvironment;
+            _specializationRepository = specializationRepository;
         }
 
         public void FinishedOrderByMaster(int orderId, HttpContext httpContext)
@@ -189,7 +191,7 @@ namespace ServicesImplimentation.ServiceImplimentations
             return mappedOrder;
         }
 
-        public void CreateOrderByClient(Order order, HttpContext httpContext)
+        public int CreateOrderByClient(Order order, HttpContext httpContext)
         {
             var authedUser = _authUserService.GetLoggedUser(httpContext);
             order.UserId = authedUser.Id;
@@ -198,7 +200,9 @@ namespace ServicesImplimentation.ServiceImplimentations
             var ordersService = _serviceRepository.GetService(order.ServiceId);
             order.EndDate = order.StartDate.AddHours(ordersService.Long);
 
-            _orderRepository.CreateOrder(order);
+            var currentOrderId =_orderRepository.CreateOrder(order);
+
+            return currentOrderId;
         }
 
         public void RejectOrderByClient(int orderId, HttpContext httpContext)
@@ -263,10 +267,12 @@ namespace ServicesImplimentation.ServiceImplimentations
                 var allServices = _serviceRepository.GetServices();
                 var allUsers = _userRepository.GetUsers();
                 var allMasters = _masterRepository.GetMasters();
+                var allSpecializations = _specializationRepository.GetSpecializations();
 
                 mappedOrders = (from order in allOrders
                                 join service in allServices on order.ServiceId equals service.Id
                                 join master in allMasters on order.MasterId equals master.Id
+                                join spec in allSpecializations on master.SpecializationId equals spec.Id
                                 join user in allUsers on master.UserId equals user.Id
                                 select new OrderShort()
                                 {
@@ -281,6 +287,7 @@ namespace ServicesImplimentation.ServiceImplimentations
                                     Picture = order.Picture,
                                     ServiceCost = service.Cost,
                                     ServiceName = service.Name,
+                                    Icon = spec.Icon,
                                     MasterFullName = $"{user.FirstName} {user.MiddleName} {user.LastName}"
                                 }).ToList();
             }

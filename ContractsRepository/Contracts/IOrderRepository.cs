@@ -5,7 +5,7 @@ namespace RepositoryContractsDb.Contracts
 {
     public interface IOrderRepository
     {
-        void CreateOrder(Order order);
+        int CreateOrder(Order order);
 
         Order GetOrder(int id);
 
