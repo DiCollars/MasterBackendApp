@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
 using RepositoryContractsDb.Contracts;
 using RepositoryContractsDb.Models;
 using ServicesContracts.Models;
 using ServicesContracts.ServiceInterfaces;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -89,10 +89,12 @@ namespace ServicesImplimentation.ServiceImplimentations
             var allServices = _serviceRepository.GetServices();
             var allMasters = _masterRepository.GetMasters();
             var allUsers = _userRepository.GetUsers();
+            var allSpecializations = _specializationRepository.GetSpecializations();
 
             var mappedOrders = (from order in allOrders
                                 join service in allServices on order.ServiceId equals service.Id
                                 join master in allMasters on order.MasterId equals master.Id
+                                join spec in allSpecializations on master.SpecializationId equals spec.Id
                                 join user in allUsers on order.UserId equals user.Id
                                 select new OrderShort()
                                 {
@@ -107,6 +109,7 @@ namespace ServicesImplimentation.ServiceImplimentations
                                     Picture = order.Picture,
                                     ServiceCost = service.Cost,
                                     ServiceName = service.Name,
+                                    Icon = spec.Icon,
                                     MasterFullName = $"{user.FirstName} {user.MiddleName} {user.LastName}"
                                 }).ToList();
 
@@ -118,10 +121,14 @@ namespace ServicesImplimentation.ServiceImplimentations
             var allOrders = _orderRepository.GetOrdersForOperator();
             var allServices = _serviceRepository.GetServices();
             var allUsers = _userRepository.GetUsers();
+            var allSpecializations = _specializationRepository.GetSpecializations();
+            var allMasters = _masterRepository.GetMasters();
 
             var mappedOrders = (from order in allOrders
                                 join service in allServices on order.ServiceId equals service.Id
                                 join user in allUsers on order.UserId equals user.Id
+                                join master in allMasters on order.MasterId equals master.Id
+                                join spec in allSpecializations on master.SpecializationId equals spec.Id
                                 select new OrderShort()
                                 {
                                     Id = order.Id,
@@ -135,6 +142,7 @@ namespace ServicesImplimentation.ServiceImplimentations
                                     Picture = order.Picture,
                                     ServiceCost = service.Cost,
                                     ServiceName = service.Name,
+                                    Icon = spec.Icon,
                                     MasterFullName = $"{user.FirstName} {user.MiddleName} {user.LastName}"
                                 }).ToList();
 
@@ -152,9 +160,13 @@ namespace ServicesImplimentation.ServiceImplimentations
                 var allOrders = _orderRepository.GetOrdersByMasterId(authMaster.Id);
                 var allServices = _serviceRepository.GetServices();
                 var allUsers = _userRepository.GetUsers();
+                var allSpecializations = _specializationRepository.GetSpecializations();
+                var allMasters = _masterRepository.GetMasters();
 
                 mappedOrders = (from order in allOrders
                                 join service in allServices on order.ServiceId equals service.Id
+                                join master in allMasters on order.MasterId equals master.Id
+                                join spec in allSpecializations on master.SpecializationId equals spec.Id
                                 join user in allUsers on order.UserId equals user.Id
                                 select new OrderShort()
                                 {
@@ -169,6 +181,7 @@ namespace ServicesImplimentation.ServiceImplimentations
                                     Picture = order.Picture,
                                     ServiceCost = service.Cost,
                                     ServiceName = service.Name,
+                                    Icon = spec.Icon,
                                     MasterFullName = $"{user.FirstName} {user.MiddleName} {user.LastName}"
                                 }).ToList();
             }
@@ -200,7 +213,7 @@ namespace ServicesImplimentation.ServiceImplimentations
             var ordersService = _serviceRepository.GetService(order.ServiceId);
             order.EndDate = order.StartDate.AddHours(ordersService.Long);
 
-            var currentOrderId =_orderRepository.CreateOrder(order);
+            var currentOrderId = _orderRepository.CreateOrder(order);
 
             return currentOrderId;
         }
@@ -321,7 +334,23 @@ namespace ServicesImplimentation.ServiceImplimentations
             }
         }
 
-        public (string, string, string) GetPictureFromOrder(int orderId, HttpContext httpContext)
+        public string GetAndConvertPictureToBase64(int orderId)
+        {
+            var path = GetPictureFromOrder(orderId).Item1;
+
+            using (FileStream fstream = File.OpenRead(path))
+            {
+                byte[] array = new byte[fstream.Length];
+
+                fstream.Read(array, 0, array.Length);
+
+                string base64 = Convert.ToBase64String(array);
+
+                return base64;
+            }
+        }
+
+        public (string, string, string) GetPictureFromOrder(int orderId)
         {
             var order = _orderRepository.GetOrder(orderId);
 
@@ -334,6 +363,16 @@ namespace ServicesImplimentation.ServiceImplimentations
             string pictureName = order.Picture.Split("\\").Last();
 
             return (file_path, file_type, pictureName);
+        }
+
+        public void AddMasterAccess(int orderId, HttpContext httpContext)
+        {
+            var orderForChange = _orderRepository.GetOrder(orderId);
+            if (orderForChange.Status == OrderStatus.WAIT_OPERATOR)
+            {
+                orderForChange.Status = OrderStatus.WAIT_MASTER;
+                _orderRepository.UpdateOrder(orderForChange);
+            }
         }
     }
 }

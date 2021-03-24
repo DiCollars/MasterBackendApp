@@ -51,12 +51,19 @@ namespace CoordinationOfServiceDeliveryAPI.Controllers
 
 
         [Authorize(Roles = "ADMIN, MASTER, CLIENT, OPERATOR")]
-        [HttpGet("get-picture-from-order")]
+        [HttpGet("get-picture-from-order/{orderId}")]
         public IActionResult GetPictureOrder(int orderId)
         {
-            var data = _orderService.GetPictureFromOrder(orderId, HttpContext);
-
+            var data = _orderService.GetPictureFromOrder(orderId);
             return PhysicalFile(data.Item1, data.Item2, data.Item3);
+        }
+
+        [Authorize(Roles = "ADMIN, MASTER, CLIENT, OPERATOR")]
+        [HttpGet("get-picture-from-order2/{orderId}")]
+        public string GetPictureOrder2(int orderId)
+        {
+            var data = _orderService.GetAndConvertPictureToBase64(orderId);
+            return data;
         }
 
         [Authorize(Roles = "ADMIN, MASTER, CLIENT, OPERATOR")]
@@ -74,22 +81,22 @@ namespace CoordinationOfServiceDeliveryAPI.Controllers
         }
 
         [Authorize(Roles = "ADMIN, MASTER")]
-        [HttpPut("finished-order")]
-        public void FinishedOrder([FromQuery] int orderId)
+        [HttpPut("finished-order/{orderId}")]
+        public void FinishedOrder(int orderId)
         {
             _orderService.FinishedOrderByMaster(orderId, HttpContext);
         }
 
         [Authorize(Roles = "ADMIN, MASTER")]
-        [HttpPut("take-order")]
-        public void TakeOrder([FromQuery] int orderId)
+        [HttpPut("take-order/{orderId}")]
+        public void TakeOrder(int orderId)
         {
             _orderService.TakeOrderByMaster(orderId, HttpContext);
         }
 
         [Authorize(Roles = "ADMIN, MASTER")]
-        [HttpPut("not-agree-order")]
-        public void NotAgreeOrder([FromQuery] int orderId)
+        [HttpPut("not-agree-order/{orderId}")]
+        public void NotAgreeOrder(int orderId)
         {
             _orderService.NotAgreeOrderByMaster(orderId, HttpContext);
         }
@@ -134,6 +141,13 @@ namespace CoordinationOfServiceDeliveryAPI.Controllers
         public void UpdateOrder([FromBody] Order order)
         {
             _orderService.UpdateOrder(order);
+        }
+
+        [Authorize(Roles = "ADMIN, OPERATOR")]
+        [HttpPut("add-master-access/{orderId}")]
+        public void AddMasterAccess(int orderId)
+        {
+            _orderService.AddMasterAccess(orderId, HttpContext);
         }
 
         [Authorize(Roles = "ADMIN, OPERATOR")]

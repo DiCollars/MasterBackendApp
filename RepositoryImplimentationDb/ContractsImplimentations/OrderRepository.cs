@@ -46,13 +46,13 @@ namespace RepositoryImplimentationDb.ContractsImplimentations
         public List<Order> GetOrdersByMasterId(int masterId)
         {
             using var db = _sqlRepositoryBase.Connection();
-            return db.Query<Order>("SELECT \"Id\", \"MasterId\", \"UserId\", \"ServiceId\", \"Address\", \"Decription\", \"StartDate\", \"EndDate\", \"Status\", \"StatusColor\", \"Comment\", \"Picture\" FROM \"Orders\" WHERE \"MasterId\" = @masterId AND \"Status\" != 'WAIT_OPERATOR'", new { masterId }).ToList();
+            return db.Query<Order>("SELECT \"Id\", \"MasterId\", \"UserId\", \"ServiceId\", \"Address\", \"Decription\", \"StartDate\", \"EndDate\", \"Status\", \"StatusColor\", \"Comment\", \"Picture\" FROM \"Orders\" WHERE \"MasterId\" = @masterId AND \"Status\" LIKE 'WAIT_MASTER' OR \"Status\" LIKE 'TAKE' OR \"Status\" LIKE 'FINISHED' OR \"Status\" LIKE 'NOT_AGREE'", new { masterId }).ToList();
         }
 
         public List<Order> GetOrdersForOperator()
         {
             using var db = _sqlRepositoryBase.Connection();
-            return db.Query<Order>("SELECT \"Id\", \"MasterId\", \"UserId\", \"ServiceId\", \"Address\", \"Decription\", \"StartDate\", \"EndDate\", \"Status\", \"StatusColor\", \"Comment\", \"Picture\" FROM \"Orders\" WHERE \"Status\" != 'WAIT_OPERATOR'").ToList();
+            return db.Query<Order>("SELECT \"Id\", \"MasterId\", \"UserId\", \"ServiceId\", \"Address\", \"Decription\", \"StartDate\", \"EndDate\", \"Status\", \"StatusColor\", \"Comment\", \"Picture\" FROM \"Orders\" WHERE \"Status\" LIKE 'WAIT_OPERATOR' OR \"Status\" LIKE 'NOT_AGREE'").ToList();
         }
 
         public List<Order> GetOrdersByUserId(int userId)

@@ -8,6 +8,8 @@ namespace ServicesContracts.ServiceInterfaces
 {
     public interface IOrderService
     {
+        string GetAndConvertPictureToBase64(int orderId);
+
         void FinishedOrderByMaster(int orderId, HttpContext httpContext);
 
         void TakeOrderByMaster(int orderId, HttpContext httpContext);
@@ -38,8 +40,10 @@ namespace ServicesContracts.ServiceInterfaces
 
         Task AddPictureToOrder(IFormFile uploadedFile, int orderId, HttpContext httpContext);
 
-        (string, string, string) GetPictureFromOrder(int orderId, HttpContext httpContext);
+        (string, string, string) GetPictureFromOrder(int orderId);
 
         int CreateOrderByClient(Order order, HttpContext httpContext);
+
+        void AddMasterAccess(int orderId, HttpContext httpContext);
     }
 }
