@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using ServicesContracts.Models;
 using ServicesContracts.ServiceInterfaces;
 using System; 
@@ -38,6 +39,7 @@ namespace CoordinationOfServiceDeliveryAPI.Controllers
             }
         }
 
+        [Authorize(Roles = "ADMIN, MASTER")]
         [HttpGet("get-me")]
         public UserFull GetMe()
         {

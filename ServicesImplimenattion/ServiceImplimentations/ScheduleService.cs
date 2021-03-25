@@ -4,6 +4,7 @@ using RepositoryContractsDb.Contracts;
 using RepositoryContractsDb.Models;
 using ServicesContracts.Models;
 using ServicesContracts.ServiceInterfaces;
+using System;
 using System.Collections.Generic;
 
 namespace ServicesImplimentation.ServiceImplimentations
@@ -29,10 +30,13 @@ namespace ServicesImplimentation.ServiceImplimentations
         {
             var authUser = _authUserService.GetLoggedUser(httpContext);
 
-            var masterId = _masterRepository.GetMasterByUserId(authUser.Id).Id;
-            schedule.MasterId = masterId;
-            schedule.Status = ScheduleStatus.READY;
-            _scheduleRepository.CreateSchedule(schedule);
+            if (authUser != default)
+            {
+                var masterId = _masterRepository.GetMasterByUserId(authUser.Id).Id;
+                schedule.MasterId = masterId;
+                schedule.Status = ScheduleStatus.READY;
+                _scheduleRepository.CreateSchedule(schedule);
+            }
         }
 
         public void UpdateSchedule(Schedule schedule, HttpContext httpContext)
@@ -84,6 +88,20 @@ namespace ServicesImplimentation.ServiceImplimentations
             var schedule = _scheduleRepository.GetSchedule(id);
 
             return schedule;
+        }
+
+        public List<Schedule> GetSchedulesByMasterIdAndDate(HttpContext httpContext, DateTime dateTime)
+        {
+            var authUser = _authUserService.GetLoggedUserFull(httpContext);
+            var master = _masterRepository.GetMasterByUserId(authUser.Id);
+            List<Schedule> schedules = null;
+
+            if (master != null)
+            {
+                schedules = _scheduleRepository.GetMastersScheduleByDate(master.Id, dateTime);
+            }
+
+            return schedules;
         }
     }
 }

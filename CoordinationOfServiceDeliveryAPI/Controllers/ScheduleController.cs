@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using RepositoryContractsDb.Models;
 using ServicesContracts.ServiceInterfaces;
+using System;
 using System.Collections.Generic;
 
 namespace CoordinationOfServiceDeliveryAPI.Controllers
@@ -36,6 +37,13 @@ namespace CoordinationOfServiceDeliveryAPI.Controllers
         public List<Schedule> GetSchedules()
         {
             return _scheduleService.GetSchedulesByMasterId(HttpContext);
+        }
+
+        [Authorize(Roles = "ADMIN, MASTER")]
+        [HttpGet("get-masters-schedules-by-string-date")]
+        public List<Schedule> GetMastersScheduleByDate(DateTime date)
+        {
+            return _scheduleService.GetSchedulesByMasterIdAndDate(HttpContext, date);
         }
 
         [Authorize(Roles = "ADMIN, MASTER, CLIENT, OPERATOR")]

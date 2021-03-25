@@ -8,9 +8,7 @@ namespace RepositoryContractsDb.Models
 
         public int MasterId { get; set; }
 
-        public DateTime WorkingHoursFrom { get; set; }
-
-        public DateTime WorkingHoursTo { get; set; }
+        public DateTime WorkingHours { get; set; }
 
         public string Status { get; set; }
     }

@@ -100,47 +100,147 @@ namespace Migrations
                   .Row(new
                   {
                       RoleId = 1,
-                      Login = "master",
+                      Login = "master1",
                       Password = "$2a$13$CttizhvgFMkAVKGROm08wulHGPvmoo/NQgR7mHXsk91NCN.19m3g6",
-                      LastName = "null",
-                      FirstName = "null",
-                      MiddleName = "null"
+                      LastName = "Аавыпа",
+                      FirstName = "Аавыпае",
+                      MiddleName = "Мавыпкаевы"
                   })
+                  .Row(new
+                  {
+                      RoleId = 1,
+                      Login = "master2",
+                      Password = "$2a$13$CttizhvgFMkAVKGROm08wulHGPvmoo/NQgR7mHXsk91NCN.19m3g6",
+                      LastName = "Ламвп",
+                      FirstName = "Гимпаор",
+                      MiddleName = "Зпаор"
+                  })
+                  .Row(new
+                  {
+                      RoleId = 1,
+                      Login = "master3",
+                      Password = "$2a$13$CttizhvgFMkAVKGROm08wulHGPvmoo/NQgR7mHXsk91NCN.19m3g6",
+                      LastName = "Имавр",
+                      FirstName = "Еилоог",
+                      MiddleName = "Умавпив"
+                  })
+                  .Row(new
+                  {
+                      RoleId = 1,
+                      Login = "master4",
+                      Password = "$2a$13$CttizhvgFMkAVKGROm08wulHGPvmoo/NQgR7mHXsk91NCN.19m3g6",
+                      LastName = "Чамвир",
+                      FirstName = "Уавыпа",
+                      MiddleName = "Хамвв"
+                  })
+                  .Row(new
+                  {
+                      RoleId = 1,
+                      Login = "master5",
+                      Password = "$2a$13$CttizhvgFMkAVKGROm08wulHGPvmoo/NQgR7mHXsk91NCN.19m3g6",
+                      LastName = "Юмпало",
+                      FirstName = "Ъампеак",
+                      MiddleName = "Глшглдш"
+                  })
+                  .Row(new
+                  {
+                      RoleId = 1,
+                      Login = "master6",
+                      Password = "$2a$13$CttizhvgFMkAVKGROm08wulHGPvmoo/NQgR7mHXsk91NCN.19m3g6",
+                      LastName = "Ммпр",
+                      FirstName = "Чсв",
+                      MiddleName = "Ьдмпа"
+                  })
+                  .Row(new
+                  {
+                      RoleId = 1,
+                      Login = "master7",
+                      Password = "$2a$13$CttizhvgFMkAVKGROm08wulHGPvmoo/NQgR7mHXsk91NCN.19m3g6",
+                      LastName = "Эмапрп",
+                      FirstName = "Юмпаолр",
+                      MiddleName = "Хамвип"
+                  })
+                  .Row(new
+                  {
+                      RoleId = 1,
+                      Login = "master8",
+                      Password = "$2a$13$CttizhvgFMkAVKGROm08wulHGPvmoo/NQgR7mHXsk91NCN.19m3g6",
+                      LastName = "Эмпаип",
+                      FirstName = "Ксмави",
+                      MiddleName = "Омапври"
+                  })
+                  .Row(new
+                  {
+                      RoleId = 1,
+                      Login = "master9",
+                      Password = "$2a$13$CttizhvgFMkAVKGROm08wulHGPvmoo/NQgR7mHXsk91NCN.19m3g6",
+                      LastName = "Шмавми",
+                      FirstName = "Щмсвами",
+                      MiddleName = "Умпаи"
+                  })
+                  .Row(new
+                  {
+                      RoleId = 1,
+                      Login = "master10",
+                      Password = "$2a$13$CttizhvgFMkAVKGROm08wulHGPvmoo/NQgR7mHXsk91NCN.19m3g6",
+                      LastName = "Бмпипа",
+                      FirstName = "Хмавип",
+                      MiddleName = "Ймпеат"
+                  })
+                  .Row(new
+                  {
+                      RoleId = 1,
+                      Login = "master11",
+                      Password = "$2a$13$CttizhvgFMkAVKGROm08wulHGPvmoo/NQgR7mHXsk91NCN.19m3g6",
+                      LastName = "Йалепи",
+                      FirstName = "Вмоепар",
+                      MiddleName = "Фмпеир"
+                  })
+                  .Row(new
+                  {
+                      RoleId = 1,
+                      Login = "master12",
+                      Password = "$2a$13$CttizhvgFMkAVKGROm08wulHGPvmoo/NQgR7mHXsk91NCN.19m3g6",
+                      LastName = "Рмавм",
+                      FirstName = "Мопмае",
+                      MiddleName = "Нмсва"
+                  })
+
                   .Row(new
                   {
                       RoleId = 2,
                       Login = "operator",
                       Password = "$2a$13$CttizhvgFMkAVKGROm08wulHGPvmoo/NQgR7mHXsk91NCN.19m3g6",
-                      LastName = "null",
-                      FirstName = "null",
-                      MiddleName = "null"
+                      LastName = "Аапог",
+                      FirstName = "Нпеалшр",
+                      MiddleName = "Усмавргн"
                   })
                   .Row(new
                   {
                       RoleId = 3,
                       Login = "client",
                       Password = "$2a$13$CttizhvgFMkAVKGROm08wulHGPvmoo/NQgR7mHXsk91NCN.19m3g6",
-                      LastName = "null",
-                      FirstName = "null",
-                      MiddleName = "null"
+                      LastName = "Йаврпаора",
+                      FirstName = "Впекаорна",
+                      MiddleName = "Япмарт"
                   })
                   .Row(new
                   {
                       RoleId = 4,
                       Login = "daddy",
                       Password = "$2a$13$CttizhvgFMkAVKGROm08wulHGPvmoo/NQgR7mHXsk91NCN.19m3g6",
-                      LastName = "null",
-                      FirstName = "null",
-                      MiddleName = "null"
+                      LastName = "ВАпроарт",
+                      FirstName = "Випаотра",
+                      MiddleName = "Псмвапив"
                   })
                   .Row(new
                   {
                       RoleId = 5,
                       Login = "admin",
                       Password = "$2a$13$CttizhvgFMkAVKGROm08wulHGPvmoo/NQgR7mHXsk91NCN.19m3g6",
-                      LastName = "null",
-                      FirstName = "null",
-                      MiddleName = "null"
+                      LastName = "Еамвпма",
+                      FirstName = "Чавыпав",
+                      MiddleName = "Змапртоа"
                   });
             }
 
@@ -195,8 +295,19 @@ namespace Migrations
                     .FromTable("Masters").ForeignColumn("SpecializationId")
                     .ToTable("Specializations").PrimaryColumn("Id");
 
-                //Insert.IntoTable("Masters")
-                //  .Row(new { Id = , });
+                Insert.IntoTable("Masters")
+                  .Row(new { UserId = 1, LocationId = 1, SpecializationId = 1})
+                  .Row(new { UserId = 2, LocationId = 2, SpecializationId = 2 })
+                  .Row(new { UserId = 3, LocationId = 3, SpecializationId = 3 })
+                  .Row(new { UserId = 4, LocationId = 4, SpecializationId = 4 })
+                  .Row(new { UserId = 5, LocationId = 5, SpecializationId = 5 })
+                  .Row(new { UserId = 6, LocationId = 6, SpecializationId = 6 })
+                  .Row(new { UserId = 7, LocationId = 7, SpecializationId = 7 })
+                  .Row(new { UserId = 8, LocationId = 8, SpecializationId = 8 })
+                  .Row(new { UserId = 9, LocationId = 1, SpecializationId = 9 })
+                  .Row(new { UserId = 10, LocationId = 2, SpecializationId = 1 })
+                  .Row(new { UserId = 11, LocationId = 3, SpecializationId = 1 })
+                  .Row(new { UserId = 12, LocationId = 4, SpecializationId = 1 });
             }
 
             if (!Schema.Table("Schedules").Exists())
@@ -204,8 +315,7 @@ namespace Migrations
                 Create.Table("Schedules")
                   .WithColumn("Id").AsInt32().NotNullable().PrimaryKey().Identity()
                   .WithColumn("MasterId").AsInt32().NotNullable()
-                  .WithColumn("WorkingHoursFrom").AsDateTime().NotNullable()
-                  .WithColumn("WorkingHoursTo").AsDateTime().NotNullable()
+                  .WithColumn("WorkingHours").AsDateTime().NotNullable()
                   .WithColumn("Status").AsString(15).NotNullable();
 
                 Create.ForeignKey("fk_Schedules_MasterId_Masters_Id")

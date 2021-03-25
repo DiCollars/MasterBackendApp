@@ -1,4 +1,5 @@
 ﻿using RepositoryContractsDb.Models;
+using System;
 using System.Collections.Generic;
 
 namespace RepositoryContractsDb.Contracts
@@ -16,5 +17,7 @@ namespace RepositoryContractsDb.Contracts
         void UpdateSchedule(Schedule schedule);
 
         void DeleteSchedule(int id);
+
+        List<Schedule> GetMastersScheduleByDate(int masterId, DateTime date);
     }
 }

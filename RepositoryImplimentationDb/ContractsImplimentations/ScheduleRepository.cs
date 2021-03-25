@@ -1,6 +1,7 @@
 ﻿using Dapper;
 using RepositoryContractsDb.Contracts;
 using RepositoryContractsDb.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -18,7 +19,7 @@ namespace RepositoryImplimentationDb.ContractsImplimentations
         public void CreateSchedule(Schedule schedule)
         {
             using var db = _sqlRepositoryBase.Connection();
-            var sqlQuery = "INSERT INTO \"Schedules\" (\"MasterId\", \"WorkingHoursFrom\", \"WorkingHoursTo\", \"Status\") VALUES(@MasterId, @WorkingHoursFrom, @WorkingHoursTo, @Status)";
+            var sqlQuery = "INSERT INTO \"Schedules\" (\"MasterId\", \"WorkingHours\", \"Status\") VALUES(@MasterId, @WorkingHours, @Status)";
             db.Execute(sqlQuery, schedule);
         }
 
@@ -32,25 +33,31 @@ namespace RepositoryImplimentationDb.ContractsImplimentations
         public Schedule GetSchedule(int id)
         {
             using var db = _sqlRepositoryBase.Connection();
-            return db.Query<Schedule>("SELECT \"Id\", \"MasterId\", \"WorkingHoursFrom\", \"WorkingHoursTo\", \"Status\" FROM \"Schedules\" WHERE \"Id\" = @id", new { id }).FirstOrDefault();
+            return db.Query<Schedule>("SELECT \"Id\", \"MasterId\", \"WorkingHours\", \"Status\" FROM \"Schedules\" WHERE \"Id\" = @id", new { id }).FirstOrDefault();
         }
 
         public List<Schedule> GetMastersSchedule(int masterId)
         {
             using var db = _sqlRepositoryBase.Connection();
-            return db.Query<Schedule>("SELECT \"Id\", \"MasterId\", \"WorkingHoursFrom\", \"WorkingHoursTo\", \"Status\" FROM \"Schedules\" WHERE \"MasterId\" = @masterId", new { masterId }).ToList();
+            return db.Query<Schedule>("SELECT \"Id\", \"MasterId\", \"WorkingHours\", \"Status\" FROM \"Schedules\" WHERE \"MasterId\" = @masterId", new { masterId }).ToList();
+        }
+
+        public List<Schedule> GetMastersScheduleByDate(int masterId, DateTime date)
+        {
+            using var db = _sqlRepositoryBase.Connection();
+            return db.Query<Schedule>("SELECT \"Id\", \"MasterId\", \"WorkingHours\", \"Status\" FROM \"Schedules\" WHERE \"MasterId\" = @masterId AND  \"WorkingHours\"::date =@date", new { masterId, date }).ToList();
         }
 
         public List<Schedule> GetSchedules()
         {
             using var db = _sqlRepositoryBase.Connection();
-            return db.Query<Schedule>("SELECT \"Id\", \"MasterId\", \"WorkingHoursFrom\", \"WorkingHoursTo\", \"Status\" FROM \"Schedules\"").ToList();
+            return db.Query<Schedule>("SELECT \"Id\", \"MasterId\", \"WorkingHours\", \"Status\" FROM \"Schedules\"").ToList();
         }
 
         public void UpdateSchedule(Schedule schedule)
         {
             using var db = _sqlRepositoryBase.Connection();
-            var sqlQuery = "UPDATE \"Schedules\" SET \"MasterId\" = @MasterId, \"WorkingHoursFrom\" = @WorkingHoursFrom, \"WorkingHoursTo\" = @WorkingHoursTo, \"Status\" = @Status WHERE \"Id\" = @Id";
+            var sqlQuery = "UPDATE \"Schedules\" SET \"MasterId\" = @MasterId, \"WorkingHours\" = @WorkingHours, \"Status\" = @Status WHERE \"Id\" = @Id";
             db.Execute(sqlQuery, schedule);
         }
     }
