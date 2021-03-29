@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using RepositoryContractsDb.Models;
 using ServicesContracts.Models;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -45,5 +46,7 @@ namespace ServicesContracts.ServiceInterfaces
         int CreateOrderByClient(Order order, HttpContext httpContext);
 
         void AddMasterAccess(int orderId, HttpContext httpContext);
+
+        List<OrderShortWithServLong> GetAllOrdersByMasterIdAndDate(HttpContext httpContext, DateTime date);
     }
 }

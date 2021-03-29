@@ -60,5 +60,11 @@ namespace RepositoryImplimentationDb.ContractsImplimentations
             var sqlQuery = "UPDATE \"Schedules\" SET \"MasterId\" = @MasterId, \"WorkingHours\" = @WorkingHours, \"Status\" = @Status WHERE \"Id\" = @Id";
             db.Execute(sqlQuery, schedule);
         }
+
+        public List<Schedule> GetMastersScheduleByDateAndReadyStatus(int masterId, DateTime date)
+        {
+            using var db = _sqlRepositoryBase.Connection();
+            return db.Query<Schedule>("SELECT \"Id\", \"MasterId\", \"WorkingHours\", \"Status\" FROM \"Schedules\" WHERE \"MasterId\" = @masterId AND  \"WorkingHours\"::date =@date AND \"Status\" = 'READY'", new { masterId, date }).ToList();
+        }
     }
 }

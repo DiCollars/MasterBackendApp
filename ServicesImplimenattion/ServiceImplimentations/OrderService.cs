@@ -374,5 +374,46 @@ namespace ServicesImplimentation.ServiceImplimentations
                 _orderRepository.UpdateOrder(orderForChange);
             }
         }
+
+        public List<OrderShortWithServLong> GetAllOrdersByMasterIdAndDate(HttpContext httpContext, DateTime date)
+        {
+            var authUser = _authUserService.GetLoggedUserFull(httpContext);
+            var currentMaster = _masterRepository.GetMasterByUserId(authUser.Id);
+            List<OrderShortWithServLong> mappedOrders = null;
+
+            if (currentMaster != null)
+            {
+                var allOrders = _orderRepository.GetAllOrdersByMasterIdAndDate(currentMaster.Id, date);
+                var allServices = _serviceRepository.GetServices();
+                var allUsers = _userRepository.GetUsers();
+                var allSpecializations = _specializationRepository.GetSpecializations();
+                var allMasters = _masterRepository.GetMasters();
+
+                mappedOrders = (from order in allOrders
+                                join service in allServices on order.ServiceId equals service.Id
+                                join master in allMasters on order.MasterId equals master.Id
+                                join spec in allSpecializations on master.SpecializationId equals spec.Id
+                                join user in allUsers on order.UserId equals user.Id
+                                select new OrderShortWithServLong()
+                                {
+                                    Id = order.Id,
+                                    Comment = order.Comment,
+                                    EndDate = order.EndDate,
+                                    AddressName = order.Address,
+                                    StartDate = order.StartDate,
+                                    Decription = order.Decription,
+                                    StatusColor = order.StatusColor,
+                                    Status = order.Status,
+                                    Picture = order.Picture,
+                                    ServiceCost = service.Cost,
+                                    ServiceName = service.Name,
+                                    Icon = spec.Icon,
+                                    Long = service.Long,
+                                    MasterFullName = $"{user.FirstName} {user.MiddleName} {user.LastName}"
+                                }).ToList();
+            }
+
+            return mappedOrders;
+        }
     }
 }

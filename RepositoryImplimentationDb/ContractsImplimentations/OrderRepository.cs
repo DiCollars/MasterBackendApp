@@ -1,6 +1,7 @@
 ﻿using Dapper;
 using RepositoryContractsDb.Contracts;
 using RepositoryContractsDb.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -46,7 +47,7 @@ namespace RepositoryImplimentationDb.ContractsImplimentations
         public List<Order> GetOrdersByMasterId(int masterId)
         {
             using var db = _sqlRepositoryBase.Connection();
-            return db.Query<Order>("SELECT \"Id\", \"MasterId\", \"UserId\", \"ServiceId\", \"Address\", \"Decription\", \"StartDate\", \"EndDate\", \"Status\", \"StatusColor\", \"Comment\", \"Picture\" FROM \"Orders\" WHERE \"MasterId\" = @masterId AND \"Status\" LIKE 'WAIT_MASTER' OR \"Status\" LIKE 'TAKE' OR \"Status\" LIKE 'FINISHED' OR \"Status\" LIKE 'NOT_AGREE'", new { masterId }).ToList();
+            return db.Query<Order>("SELECT \"Id\", \"MasterId\", \"UserId\", \"ServiceId\", \"Address\", \"Decription\", \"StartDate\", \"EndDate\", \"Status\", \"StatusColor\", \"Comment\", \"Picture\" FROM \"Orders\" WHERE \"MasterId\" = @masterId AND (\"Status\" LIKE 'WAIT_MASTER' OR \"Status\" LIKE 'TAKE' OR \"Status\" LIKE 'FINISHED' OR \"Status\" LIKE 'NOT_AGREE')", new { masterId }).ToList();
         }
 
         public List<Order> GetOrdersForOperator()
@@ -66,6 +67,12 @@ namespace RepositoryImplimentationDb.ContractsImplimentations
             using var db = _sqlRepositoryBase.Connection();
             var sqlQuery = "UPDATE \"Orders\" SET \"MasterId\" = @MasterId, \"UserId\" = @UserId, \"ServiceId\" = @ServiceId, \"Address\" = @Address, \"Decription\" = @Decription, \"StartDate\" = @StartDate, \"EndDate\" = @EndDate, \"Status\" = @Status, \"StatusColor\" = @StatusColor , \"Comment\" = @Comment, \"Picture\" = @Picture WHERE \"Id\" = @Id";
             db.Execute(sqlQuery, order);
+        }
+
+        public List<Order> GetAllOrdersByMasterIdAndDate(int masterId, DateTime date)
+        {
+            using var db = _sqlRepositoryBase.Connection();
+            return db.Query<Order>("SELECT \"Id\", \"MasterId\", \"UserId\", \"ServiceId\", \"Address\", \"Decription\", \"StartDate\", \"EndDate\", \"Status\", \"StatusColor\", \"Comment\", \"Picture\" FROM \"Orders\" WHERE \"MasterId\" = @masterId AND  \"StartDate\"::date =@date AND (\"Status\" LIKE 'WAIT_MASTER' OR \"Status\" LIKE 'TAKE' OR \"Status\" LIKE 'FINISHED' OR \"Status\" LIKE 'NOT_AGREE')", new { masterId, date }).ToList();
         }
     }
 }

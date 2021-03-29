@@ -1,4 +1,5 @@
 ﻿using RepositoryContractsDb.Models;
+using System.Text.Json.Serialization;
 
 namespace ServicesContracts.Models
 {
@@ -8,6 +9,7 @@ namespace ServicesContracts.Models
 
         public string Login { get; set; }
 
+        [JsonIgnore]
         public string Password { get; set; }
 
         public string LastName { get; set; }

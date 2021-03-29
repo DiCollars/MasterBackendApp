@@ -1,4 +1,5 @@
 ﻿using RepositoryContractsDb.Models;
+using System;
 using System.Collections.Generic;
 
 namespace RepositoryContractsDb.Contracts
@@ -20,5 +21,7 @@ namespace RepositoryContractsDb.Contracts
         void UpdateOrder(Order order);
 
         void DeleteOrder(int id);
+
+        List<Order> GetAllOrdersByMasterIdAndDate(int masterId, DateTime date);
     }
 }

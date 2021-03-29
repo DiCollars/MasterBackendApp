@@ -49,6 +49,12 @@ namespace CoordinationOfServiceDeliveryAPI.Controllers
             return _orderService.GetAllOrdersByMasterId(HttpContext);
         }
 
+        [Authorize(Roles = "ADMIN, MASTER")]
+        [HttpGet("get-masters-orders-by-date/{date}")]
+        public List<OrderShortWithServLong> GetOrdersByDate(DateTime date)
+        {
+            return _orderService.GetAllOrdersByMasterIdAndDate(HttpContext, date);
+        }
 
         [Authorize(Roles = "ADMIN, MASTER, CLIENT, OPERATOR")]
         [HttpGet("get-picture-from-order/{orderId}")]

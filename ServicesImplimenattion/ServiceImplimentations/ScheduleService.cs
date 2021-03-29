@@ -103,5 +103,19 @@ namespace ServicesImplimentation.ServiceImplimentations
 
             return schedules;
         }
+
+        public bool IsMastersScheduleDateAvailable(int masterId, DateTime date)
+        {
+            List<Schedule> schedules = null;
+
+            schedules = _scheduleRepository.GetMastersScheduleByDateAndReadyStatus(masterId, date);
+
+            if (schedules.Count != 0)
+            {
+                return true;
+            }
+
+            return false;
+        }
     }
 }

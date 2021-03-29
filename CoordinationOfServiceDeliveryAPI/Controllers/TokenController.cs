@@ -39,7 +39,7 @@ namespace CoordinationOfServiceDeliveryAPI.Controllers
             }
         }
 
-        [Authorize(Roles = "ADMIN, MASTER")]
+        [Authorize(Roles = "ADMIN, MASTER, CLIENT")]
         [HttpGet("get-me")]
         public UserFull GetMe()
         {
