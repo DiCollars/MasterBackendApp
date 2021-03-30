@@ -49,7 +49,7 @@ namespace MigrationLaunch
                 .AddFluentMigratorCore()
                 .ConfigureRunner(rb => rb
                     .AddPostgres()
-                    .WithGlobalConnectionString("User ID=di;Password=0000;Host=localhost;Port=5432;Database=MasterManageDB;")
+                    .WithGlobalConnectionString("User ID=postgres;Password=0000;Host=localhost;Port=5432;Database=MasterManageDB;")
                     .ScanIn(typeof(InitMigration).Assembly).For.Migrations())
                 .AddLogging(lb => lb.AddFluentMigratorConsole())
                 .BuildServiceProvider(false);

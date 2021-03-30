@@ -16,3 +16,12 @@ F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ContractsRepo
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ContractsRepository\obj\Debug\netstandard2.1\RepositoryContractsDb.dll
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ContractsRepository\obj\Debug\netstandard2.1\RepositoryContractsDb.pdb
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ContractsRepository\obj\Debug\netstandard2.1\RepositoryContractsDb.csprojAssemblyReference.cache
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\ContractsRepository\bin\Debug\netstandard2.1\RepositoryContractsDb.deps.json
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\ContractsRepository\bin\Debug\netstandard2.1\RepositoryContractsDb.dll
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\ContractsRepository\bin\Debug\netstandard2.1\RepositoryContractsDb.pdb
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\ContractsRepository\obj\Debug\netstandard2.1\RepositoryContractsDb.csprojAssemblyReference.cache
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\ContractsRepository\obj\Debug\netstandard2.1\RepositoryContractsDb.AssemblyInfoInputs.cache
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\ContractsRepository\obj\Debug\netstandard2.1\RepositoryContractsDb.AssemblyInfo.cs
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\ContractsRepository\obj\Debug\netstandard2.1\RepositoryContractsDb.csproj.CoreCompileInputs.cache
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\ContractsRepository\obj\Debug\netstandard2.1\RepositoryContractsDb.dll
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\ContractsRepository\obj\Debug\netstandard2.1\RepositoryContractsDb.pdb

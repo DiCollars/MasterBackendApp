@@ -7,6 +7,7 @@ using ServicesContracts.Models;
 using ServicesContracts.ServiceInterfaces;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -22,8 +23,9 @@ namespace ServicesImplimentation.ServiceImplimentations
         private readonly IMasterRepository _masterRepository;
         private readonly IUserRepository _userRepository;
         private readonly IWebHostEnvironment _appEnvironment;
+        private readonly IScheduleRepository _scheduleRepository;
 
-        public OrderService(IOrderRepository orderRepository, IAuthUserService authUserService, IServiceRepository serviceRepository, IMasterRepository masterRepository, IUserRepository userRepository, IWebHostEnvironment appEnvironment, ISpecializationRepository specializationRepository)
+        public OrderService(IOrderRepository orderRepository, IAuthUserService authUserService, IServiceRepository serviceRepository, IMasterRepository masterRepository, IUserRepository userRepository, IWebHostEnvironment appEnvironment, ISpecializationRepository specializationRepository, IScheduleRepository scheduleRepository)
         {
             _orderRepository = orderRepository;
             _authUserService = authUserService;
@@ -32,6 +34,7 @@ namespace ServicesImplimentation.ServiceImplimentations
             _userRepository = userRepository;
             _appEnvironment = appEnvironment;
             _specializationRepository = specializationRepository;
+            _scheduleRepository = scheduleRepository;
         }
 
         public void FinishedOrderByMaster(int orderId, HttpContext httpContext)
@@ -227,6 +230,30 @@ namespace ServicesImplimentation.ServiceImplimentations
             {
                 orderForChange.Status = OrderStatus.REJECT;
                 _orderRepository.UpdateOrder(orderForChange);
+
+                var dates = new List<DateTime>();
+
+                for (var dt = orderForChange.StartDate; dt <= orderForChange.EndDate; dt = dt.AddHours(1))
+                {
+                    dates.Add(dt);
+                }
+
+                var startDate = orderForChange.StartDate.Date;
+
+                var schedules = _scheduleRepository.GetMastersScheduleByDate(orderForChange.MasterId, startDate);
+                List<Schedule> newSch = new List<Schedule>();
+
+                for (int i = 0; i < dates.Count; i++)
+                {
+                    var t = schedules.Where(sc => DateTime.Compare(sc.WorkingHours, dates[i]) == 0 ).ToList();
+                    newSch.AddRange(t);
+                }
+
+                foreach (var item in newSch)
+                {
+                    item.Status = ScheduleStatus.READY;
+                    _scheduleRepository.UpdateSchedule(item);
+                }
             }
         }
 

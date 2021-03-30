@@ -10,3 +10,15 @@ F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ServicesContr
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ServicesContracts\obj\Debug\netstandard2.1\ServicesContracts.csproj.CopyComplete
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ServicesContracts\obj\Debug\netstandard2.1\ServicesContracts.dll
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\ServicesContracts\obj\Debug\netstandard2.1\ServicesContracts.pdb
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\ServicesContracts\bin\Debug\netstandard2.1\ServicesContracts.deps.json
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\ServicesContracts\bin\Debug\netstandard2.1\ServicesContracts.dll
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\ServicesContracts\bin\Debug\netstandard2.1\ServicesContracts.pdb
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\ServicesContracts\bin\Debug\netstandard2.1\RepositoryContractsDb.dll
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\ServicesContracts\bin\Debug\netstandard2.1\RepositoryContractsDb.pdb
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\ServicesContracts\obj\Debug\netstandard2.1\ServicesContracts.csprojAssemblyReference.cache
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\ServicesContracts\obj\Debug\netstandard2.1\ServicesContracts.AssemblyInfoInputs.cache
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\ServicesContracts\obj\Debug\netstandard2.1\ServicesContracts.AssemblyInfo.cs
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\ServicesContracts\obj\Debug\netstandard2.1\ServicesContracts.csproj.CoreCompileInputs.cache
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\ServicesContracts\obj\Debug\netstandard2.1\ServicesContracts.csproj.CopyComplete
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\ServicesContracts\obj\Debug\netstandard2.1\ServicesContracts.dll
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\ServicesContracts\obj\Debug\netstandard2.1\ServicesContracts.pdb

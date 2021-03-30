@@ -108,8 +108,8 @@ namespace CoordinationOfServiceDeliveryAPI.Controllers
         }
 
         [Authorize(Roles = "ADMIN, CLIENT")]
-        [HttpPut("reject-order")]
-        public void RejectOrder([FromQuery] int orderId)
+        [HttpPut("reject-order/{orderId}")]
+        public void RejectOrder(int orderId)
         {
             _orderService.RejectOrderByClient(orderId, HttpContext);
         }

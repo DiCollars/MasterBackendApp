@@ -22,3 +22,15 @@ F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\RepositoryImp
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\RepositoryImplimentationDb\obj\Debug\netstandard2.1\RepositoryImplimentationDb.csproj.CopyComplete
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\RepositoryImplimentationDb\obj\Debug\netstandard2.1\RepositoryImplimentationDb.dll
 F:\Stack\Projects\Trainee_education\Tasks\3\3task\MasterBackendApp\RepositoryImplimentationDb\obj\Debug\netstandard2.1\RepositoryImplimentationDb.pdb
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\RepositoryImplimentationDb\bin\Debug\netstandard2.1\RepositoryImplimentationDb.deps.json
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\RepositoryImplimentationDb\bin\Debug\netstandard2.1\RepositoryImplimentationDb.dll
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\RepositoryImplimentationDb\bin\Debug\netstandard2.1\RepositoryImplimentationDb.pdb
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\RepositoryImplimentationDb\bin\Debug\netstandard2.1\RepositoryContractsDb.dll
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\RepositoryImplimentationDb\bin\Debug\netstandard2.1\RepositoryContractsDb.pdb
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\RepositoryImplimentationDb\obj\Debug\netstandard2.1\RepositoryImplimentationDb.csprojAssemblyReference.cache
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\RepositoryImplimentationDb\obj\Debug\netstandard2.1\RepositoryImplimentationDb.AssemblyInfoInputs.cache
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\RepositoryImplimentationDb\obj\Debug\netstandard2.1\RepositoryImplimentationDb.AssemblyInfo.cs
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\RepositoryImplimentationDb\obj\Debug\netstandard2.1\RepositoryImplimentationDb.csproj.CoreCompileInputs.cache
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\RepositoryImplimentationDb\obj\Debug\netstandard2.1\RepositoryImplimentationDb.csproj.CopyComplete
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\RepositoryImplimentationDb\obj\Debug\netstandard2.1\RepositoryImplimentationDb.dll
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\RepositoryImplimentationDb\obj\Debug\netstandard2.1\RepositoryImplimentationDb.pdb
