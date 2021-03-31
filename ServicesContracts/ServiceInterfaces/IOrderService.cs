@@ -25,13 +25,15 @@ namespace ServicesContracts.ServiceInterfaces
 
         List<OrderShort> GetAllOrdersByClientId(HttpContext httpContext);
 
-        void RejectOrderByClient(int orderId, HttpContext httpContext);
+        void RejectOrderByClient(int orderId, string comment, HttpContext httpContext);
 
         void NotDoneOrderByClient(int orderId, HttpContext httpContext);
 
+        void DoneOrderByClient(int orderId, HttpContext httpContext);
+
         void AcceptOrderByClient(int orderId, HttpContext httpContext);
 
-        void NotAcceptOrderByClient(int orderId, HttpContext httpContext);
+        void NotAcceptOrderByClient(int orderId, string comment, HttpContext httpContext);
 
         void UpdateOrder(Order order);
 

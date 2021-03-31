@@ -22,7 +22,7 @@ namespace CoordinationOfServiceDeliveryAPI.Controllers
     public class OrderController : Controller
     {
         private readonly IOrderService _orderService;
-        
+
         public OrderController(IOrderService orderService)
         {
             _orderService = orderService;
@@ -32,7 +32,8 @@ namespace CoordinationOfServiceDeliveryAPI.Controllers
         [HttpPost("create-order")]
         public int CreateOrder([FromBody] Order order)
         {
-             return _orderService.CreateOrderByClient(order, HttpContext);
+            order.StartDate = order.StartDate.Date;
+            return _orderService.CreateOrderByClient(order, HttpContext);
         }
 
         [Authorize(Roles = "ADMIN, CLIENT")]
@@ -109,30 +110,37 @@ namespace CoordinationOfServiceDeliveryAPI.Controllers
 
         [Authorize(Roles = "ADMIN, CLIENT")]
         [HttpPut("reject-order/{orderId}")]
-        public void RejectOrder(int orderId)
+        public void RejectOrder(int orderId, [FromBody] string comment)
         {
-            _orderService.RejectOrderByClient(orderId, HttpContext);
+            _orderService.RejectOrderByClient(orderId, comment, HttpContext);
         }
 
         [Authorize(Roles = "ADMIN, CLIENT")]
-        [HttpPut("not-done-order")]
-        public void NotDoneOrder([FromQuery] int orderId)
+        [HttpPut("not-done-order/{orderId}")]
+        public void NotDoneOrder(int orderId)
         {
             _orderService.NotDoneOrderByClient(orderId, HttpContext);
         }
 
         [Authorize(Roles = "ADMIN, CLIENT")]
-        [HttpPut("accept-order")]
-        public void AcceptOrder([FromQuery] int orderId)
+        [HttpPut("done-order/{orderId}")]
+        public void DoneOrder(int orderId)
+        {
+            _orderService.DoneOrderByClient(orderId, HttpContext);
+        }
+
+        [Authorize(Roles = "ADMIN, CLIENT")]
+        [HttpPut("accept-order/{orderId}")]
+        public void AcceptOrder(int orderId)
         {
             _orderService.AcceptOrderByClient(orderId, HttpContext);
         }
 
         [Authorize(Roles = "ADMIN, CLIENT")]
-        [HttpPut("not-accept-order")]
-        public void NotAcceptOrder([FromQuery] int orderId)
+        [HttpPut("not-accept-order/{orderId}")]
+        public void NotAcceptOrder(int orderId, [FromBody] string comment)
         {
-            _orderService.NotAcceptOrderByClient(orderId, HttpContext);
+            _orderService.NotAcceptOrderByClient(orderId, comment, HttpContext);
         }
 
         [Authorize(Roles = "ADMIN, CLIENT")]

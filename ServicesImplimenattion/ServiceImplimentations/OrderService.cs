@@ -7,7 +7,6 @@ using ServicesContracts.Models;
 using ServicesContracts.ServiceInterfaces;
 using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -214,14 +213,23 @@ namespace ServicesImplimentation.ServiceImplimentations
             order.Status = OrderStatus.WAIT_OPERATOR;
 
             var ordersService = _serviceRepository.GetService(order.ServiceId);
-            order.EndDate = order.StartDate.AddHours(ordersService.Long);
+
+            if (DateTime.Compare(order.StartDate, new DateTime(1901, 1, 31)) == 0)
+            {
+                order.StartDate = new DateTime();
+                order.EndDate = new DateTime();
+            }
+            else
+            {
+                order.EndDate = order.StartDate.AddHours(ordersService.Long);
+            }
 
             var currentOrderId = _orderRepository.CreateOrder(order);
 
             return currentOrderId;
         }
 
-        public void RejectOrderByClient(int orderId, HttpContext httpContext)
+        public void RejectOrderByClient(int orderId, string comment, HttpContext httpContext)
         {
             var authedUser = _authUserService.GetLoggedUser(httpContext);
             var orderForChange = _orderRepository.GetOrder(orderId);
@@ -229,31 +237,8 @@ namespace ServicesImplimentation.ServiceImplimentations
             if (orderForChange.UserId == authedUser.Id)
             {
                 orderForChange.Status = OrderStatus.REJECT;
+                orderForChange.Comment = comment;
                 _orderRepository.UpdateOrder(orderForChange);
-
-                var dates = new List<DateTime>();
-
-                for (var dt = orderForChange.StartDate; dt <= orderForChange.EndDate; dt = dt.AddHours(1))
-                {
-                    dates.Add(dt);
-                }
-
-                var startDate = orderForChange.StartDate.Date;
-
-                var schedules = _scheduleRepository.GetMastersScheduleByDate(orderForChange.MasterId, startDate);
-                List<Schedule> newSch = new List<Schedule>();
-
-                for (int i = 0; i < dates.Count; i++)
-                {
-                    var t = schedules.Where(sc => DateTime.Compare(sc.WorkingHours, dates[i]) == 0 ).ToList();
-                    newSch.AddRange(t);
-                }
-
-                foreach (var item in newSch)
-                {
-                    item.Status = ScheduleStatus.READY;
-                    _scheduleRepository.UpdateSchedule(item);
-                }
             }
         }
 
@@ -264,9 +249,24 @@ namespace ServicesImplimentation.ServiceImplimentations
 
             if (orderForChange.UserId == authedUser.Id)
             {
-                if (orderForChange.Status != OrderStatus.FINISHED)
+                if (orderForChange.Status == OrderStatus.FINISHED)
                 {
                     orderForChange.Status = OrderStatus.NOT_DONE;
+                    _orderRepository.UpdateOrder(orderForChange);
+                }
+            }
+        }
+
+        public void DoneOrderByClient(int orderId, HttpContext httpContext)
+        {
+            var authedUser = _authUserService.GetLoggedUser(httpContext);
+            var orderForChange = _orderRepository.GetOrder(orderId);
+
+            if (orderForChange.UserId == authedUser.Id)
+            {
+                if (orderForChange.Status == OrderStatus.FINISHED)
+                {
+                    orderForChange.Status = OrderStatus.DONE;
                     _orderRepository.UpdateOrder(orderForChange);
                 }
             }
@@ -279,12 +279,12 @@ namespace ServicesImplimentation.ServiceImplimentations
 
             if (orderForChange.UserId == authedUser.Id)
             {
-                orderForChange.Status = OrderStatus.ACCEPTED;
+                orderForChange.Status = OrderStatus.WAIT_MASTER;
                 _orderRepository.UpdateOrder(orderForChange);
             }
         }
 
-        public void NotAcceptOrderByClient(int orderId, HttpContext httpContext)
+        public void NotAcceptOrderByClient(int orderId, string comment, HttpContext httpContext)
         {
             var authedUser = _authUserService.GetLoggedUser(httpContext);
             var orderForChange = _orderRepository.GetOrder(orderId);
@@ -292,6 +292,7 @@ namespace ServicesImplimentation.ServiceImplimentations
             if (orderForChange.UserId == authedUser.Id)
             {
                 orderForChange.Status = OrderStatus.NOT_ACCEPTED;
+                orderForChange.Comment = comment;
                 _orderRepository.UpdateOrder(orderForChange);
             }
         }
