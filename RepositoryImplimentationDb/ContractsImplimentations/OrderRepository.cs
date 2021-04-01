@@ -53,7 +53,7 @@ namespace RepositoryImplimentationDb.ContractsImplimentations
         public List<Order> GetOrdersForOperator()
         {
             using var db = _sqlRepositoryBase.Connection();
-            return db.Query<Order>("SELECT \"Id\", \"MasterId\", \"UserId\", \"ServiceId\", \"Address\", \"Decription\", \"StartDate\", \"EndDate\", \"Status\", \"StatusColor\", \"Comment\", \"Picture\" FROM \"Orders\" WHERE \"Status\" LIKE 'WAIT_OPERATOR' OR \"Status\" LIKE 'NOT_AGREE' OR \"Status\" LIKE 'NOT_ACCEPTED'").ToList();
+            return db.Query<Order>("SELECT \"Id\", \"MasterId\", \"UserId\", \"ServiceId\", \"Address\", \"Decription\", \"StartDate\", \"EndDate\", \"Status\", \"StatusColor\", \"Comment\", \"Picture\" FROM \"Orders\" WHERE \"Status\" LIKE 'WAIT_OPERATOR' OR \"Status\" LIKE 'NOT_AGREE' OR \"Status\" LIKE 'NOT_ACCEPTED' OR \"Status\" LIKE 'REJECT'").ToList();
         }
 
         public List<Order> GetOrdersByUserId(int userId)

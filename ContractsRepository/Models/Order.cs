@@ -8,11 +8,11 @@ namespace RepositoryContractsDb.Models
         [Key]
         public int Id { get; set; }
 
-        public int MasterId { get; set; }
+        public int? MasterId { get; set; }
 
         public int UserId { get; set; }
 
-        public int ServiceId { get; set; }
+        public int? ServiceId { get; set; }
 
         public string Decription { get; set; }
 

@@ -130,6 +130,7 @@ namespace ServicesImplimentation.ServiceImplimentations
                                 join service in allServices on order.ServiceId equals service.Id
                                 join user in allUsers on order.UserId equals user.Id
                                 join master in allMasters on order.MasterId equals master.Id
+                                join userMaster in allUsers on master.UserId equals userMaster.Id
                                 join spec in allSpecializations on master.SpecializationId equals spec.Id
                                 select new OrderShort()
                                 {
@@ -145,8 +146,31 @@ namespace ServicesImplimentation.ServiceImplimentations
                                     ServiceCost = service.Cost,
                                     ServiceName = service.Name,
                                     Icon = spec.Icon,
-                                    MasterFullName = $"{user.FirstName} {user.MiddleName} {user.LastName}"
+                                    MasterFullName = $"{userMaster.FirstName} {userMaster.MiddleName} {userMaster.LastName}",
+                                    ClientFullName = $"{user.FirstName} {user.MiddleName} {user.LastName}"
                                 }).ToList();
+
+            var ordersWithoutMasterAndService = allOrders.Where(o => o.MasterId == null && o.ServiceId == null).ToList();
+
+            if (ordersWithoutMasterAndService.Count != 0)
+            {
+                var mappedOrdersWithoutMasterAndService = (from order in ordersWithoutMasterAndService
+                                                           select new OrderShort()
+                                                           {
+                                                               Id = order.Id,
+                                                               AddressName = order.Address,
+                                                               Comment = order.Comment,
+                                                               EndDate = order.EndDate,
+                                                               StartDate = order.StartDate,
+                                                               Decription = order.Decription,
+                                                               StatusColor = order.StatusColor,
+                                                               Status = order.Status,
+                                                               Picture = order.Picture
+                                                           }).ToList();
+
+                mappedOrders.AddRange(mappedOrdersWithoutMasterAndService);
+                mappedOrders = mappedOrders.Distinct().ToList();
+            }
 
             return mappedOrders;
         }
@@ -195,7 +219,7 @@ namespace ServicesImplimentation.ServiceImplimentations
         {
             var mapper = new Mapper(new MapperConfiguration(cfg => cfg.CreateMap<Order, OrderShort>()));
             var order = _orderRepository.GetOrder(id);
-            var service = _serviceRepository.GetService(order.ServiceId);
+            var service = _serviceRepository.GetService((int)order.ServiceId);
             var user = _userRepository.GetUser(order.UserId);
 
             var mappedOrder = mapper.Map<OrderShort>(order);
@@ -212,7 +236,8 @@ namespace ServicesImplimentation.ServiceImplimentations
             order.UserId = authedUser.Id;
             order.Status = OrderStatus.WAIT_OPERATOR;
 
-            var ordersService = _serviceRepository.GetService(order.ServiceId);
+            order.ServiceId = null;
+            order.MasterId = null;
 
             if (DateTime.Compare(order.StartDate, new DateTime(1901, 1, 31)) == 0)
             {
@@ -221,7 +246,7 @@ namespace ServicesImplimentation.ServiceImplimentations
             }
             else
             {
-                order.EndDate = order.StartDate.AddHours(ordersService.Long);
+                order.EndDate = new DateTime();
             }
 
             var currentOrderId = _orderRepository.CreateOrder(order);
@@ -262,13 +287,10 @@ namespace ServicesImplimentation.ServiceImplimentations
             var authedUser = _authUserService.GetLoggedUser(httpContext);
             var orderForChange = _orderRepository.GetOrder(orderId);
 
-            if (orderForChange.UserId == authedUser.Id)
+            if (orderForChange.Status == OrderStatus.FINISHED)
             {
-                if (orderForChange.Status == OrderStatus.FINISHED)
-                {
-                    orderForChange.Status = OrderStatus.DONE;
-                    _orderRepository.UpdateOrder(orderForChange);
-                }
+                orderForChange.Status = OrderStatus.DONE;
+                _orderRepository.UpdateOrder(orderForChange);
             }
         }
 
@@ -331,9 +353,30 @@ namespace ServicesImplimentation.ServiceImplimentations
                                     Icon = spec.Icon,
                                     MasterFullName = $"{user.FirstName} {user.MiddleName} {user.LastName}"
                                 }).ToList();
+
+                var ordersWithoutMasterAndService = allOrders.Where(o => o.MasterId == null && o.ServiceId == null).ToList();
+
+                if (ordersWithoutMasterAndService.Count != 0)
+                {
+                    var mappedOrdersWithoutMasterAndService = (from order in ordersWithoutMasterAndService
+                                                               select new OrderShort()
+                                                               {
+                                                                   Id = order.Id,
+                                                                   AddressName = order.Address,
+                                                                   Comment = order.Comment,
+                                                                   EndDate = order.EndDate,
+                                                                   StartDate = order.StartDate,
+                                                                   Decription = order.Decription,
+                                                                   StatusColor = order.StatusColor,
+                                                                   Status = order.Status,
+                                                                   Picture = order.Picture
+                                                               }).ToList();
+
+                    mappedOrders.AddRange(mappedOrdersWithoutMasterAndService);
+                }
             }
 
-            return mappedOrders;
+            return mappedOrders.Distinct().ToList();
         }
 
         public async Task AddPictureToOrder(IFormFile uploadedFile, int orderId, HttpContext httpContext)
@@ -439,9 +482,30 @@ namespace ServicesImplimentation.ServiceImplimentations
                                     Long = service.Long,
                                     MasterFullName = $"{user.FirstName} {user.MiddleName} {user.LastName}"
                                 }).ToList();
+
+                var ordersWithoutMasterAndService = allOrders.Where(o => o.MasterId == null && o.ServiceId == null).ToList();
+
+                if (ordersWithoutMasterAndService.Count != 0)
+                {
+                    var mappedOrdersWithoutMasterAndService = (from order in ordersWithoutMasterAndService
+                                                               select new OrderShortWithServLong()
+                                                               {
+                                                                   Id = order.Id,
+                                                                   AddressName = order.Address,
+                                                                   Comment = order.Comment,
+                                                                   EndDate = order.EndDate,
+                                                                   StartDate = order.StartDate,
+                                                                   Decription = order.Decription,
+                                                                   StatusColor = order.StatusColor,
+                                                                   Status = order.Status,
+                                                                   Picture = order.Picture
+                                                               }).ToList();
+
+                    mappedOrders.AddRange(mappedOrdersWithoutMasterAndService);
+                }
             }
 
-            return mappedOrders;
+            return mappedOrders.Distinct().ToList();
         }
     }
 }

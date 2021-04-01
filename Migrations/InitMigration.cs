@@ -332,7 +332,7 @@ namespace Migrations
                   .WithColumn("Id").AsInt32().NotNullable().PrimaryKey().Identity()
                   .WithColumn("MasterId").AsInt32().Nullable()
                   .WithColumn("UserId").AsInt32().Nullable()
-                  .WithColumn("ServiceId").AsInt32().NotNullable()
+                  .WithColumn("ServiceId").AsInt32().Nullable()
                   .WithColumn("Decription").AsString(120).NotNullable()
                   .WithColumn("StartDate").AsDateTime().NotNullable()
                   .WithColumn("EndDate").AsDateTime().NotNullable()

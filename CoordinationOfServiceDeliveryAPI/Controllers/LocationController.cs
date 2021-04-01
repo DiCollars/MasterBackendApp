@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using RepositoryContractsDb.Models;
+using ServicesContracts.Models;
 using ServicesContracts.ServiceInterfaces;
 using System.Collections.Generic;
 
@@ -31,9 +32,9 @@ namespace CoordinationOfServiceDeliveryAPI.Controllers
             return _locationService.GetLocation(id);
         }
 
-        [Authorize(Roles = "ADMIN, MASTER_DADDY")]
+        [Authorize(Roles = "ADMIN, MASTER_DADDY, OPERATOR")]
         [HttpGet("get-locations")]
-        public List<Location> GetLocations()
+        public List<FullLocation> GetLocations()
         {
             return _locationService.GetLocations();
         }

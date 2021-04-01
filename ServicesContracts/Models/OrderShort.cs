@@ -6,11 +6,13 @@ namespace ServicesContracts.Models
     {
         public int Id { get; set; }
 
-        public string MasterFullName { get; set; }
+        public string? MasterFullName { get; set; }
 
-        public string ServiceName { get; set; }
+        public string ClientFullName { get; set; }
 
-        public decimal ServiceCost { get; set; }
+        public string? ServiceName { get; set; }
+
+        public decimal? ServiceCost { get; set; }
 
         public string AddressName { get; set; }
 

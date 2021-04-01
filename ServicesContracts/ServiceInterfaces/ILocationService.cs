@@ -1,4 +1,5 @@
 ﻿using RepositoryContractsDb.Models;
+using ServicesContracts.Models;
 using System.Collections.Generic;
 
 namespace ServicesContracts.ServiceInterfaces
@@ -9,7 +10,7 @@ namespace ServicesContracts.ServiceInterfaces
 
         List<Location> GetInnerLocations(int id);
 
-        List<Location> GetLocations();
+        List<FullLocation> GetLocations();
 
         void UpdateLocation(Location location);
 
