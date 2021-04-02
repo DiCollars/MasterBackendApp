@@ -42,15 +42,44 @@ namespace ServicesImplimentation.ServiceImplimentations
             return _masterRepository.GetMasters();
         }
 
-        public List<MasterFull> GetMastersByServiceId(int SpecializationId)
+        public List<MasterFull> GetMastersByServiceId(int specializationId)
         {
-            var masters = _masterRepository.GetMastersByServiceId(SpecializationId);
+            var masters = _masterRepository.GetMastersByServiceId(specializationId);
             var users = _userRepository.GetUsers();
             var locations = _locationRepository.GetLocations();
-            //var locations = _locationRepository.GetInnerLocations();
             var specializations = _specializationRepository.GetSpecializations();
 
-            if (users != null && masters != null  && specializations != null) //&& locations != null
+            if (users != null && masters != null  && specializations != null)
+            {
+                var result = (from master in masters
+                              join user in users on master.UserId equals user.Id
+                              join location in locations on master.LocationId equals location.Id
+                              join specialization in specializations on master.SpecializationId equals specialization.Id
+                              select new MasterFull
+                              {
+                                  Id = master.Id,
+                                  MasterFullName = $"{user.FirstName} {user.MiddleName} {user.LastName}",
+                                  Icon = specialization.Icon,
+                                  SpecializationName = specialization.SpecializationName,
+                                  SpecializationId = specialization.Id,
+                                  MainLocationId = location.Id,
+                                  Locations = _locationRepository.GetInnerLocations(location.Id)
+                              }).ToList();
+
+                return result;
+            }
+
+            return null;
+        }
+
+        public List<MasterFull> GetMastersByServiceIdAndLocationId(int specializationId, int locationId)
+        {
+            var masters = _masterRepository.GetMastersByServiceIdAndLocationId(specializationId, locationId);
+            var users = _userRepository.GetUsers();
+            var locations = _locationRepository.GetLocations();
+            var specializations = _specializationRepository.GetSpecializations();
+
+            if (users != null && masters != null && specializations != null)
             {
                 var result = (from master in masters
                               join user in users on master.UserId equals user.Id

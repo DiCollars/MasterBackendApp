@@ -50,5 +50,9 @@ namespace ServicesContracts.ServiceInterfaces
         void AddMasterAccess(int orderId, HttpContext httpContext);
 
         List<OrderShortWithServLong> GetAllOrdersByMasterIdAndDate(HttpContext httpContext, DateTime date);
+
+        void DoneOrderByOperator(int orderId, HttpContext httpContext);
+
+        void SendOrderToClientForAgreeingByOperator(int orderId, HttpContext httpContext);
     }
 }

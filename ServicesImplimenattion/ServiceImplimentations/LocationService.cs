@@ -52,7 +52,7 @@ namespace ServicesImplimentation.ServiceImplimentations
                                           LocationName = location.LocationName,
                                           Type = locationType.LocationName,
                                           ParentId = location.LocationId,
-                                          ChildLocation = new List<FullLocation>()
+                                          Children = new List<FullLocation>()
                                       }).ToList();
 
             foreach (var locationWithTypes in locationsWithTypes)
@@ -74,7 +74,7 @@ namespace ServicesImplimentation.ServiceImplimentations
             {
                 if (location.Id == parentId)
                 {
-                    location.ChildLocation.Add(currentChild);
+                    location.Children.Add(currentChild);
                 }
             }
         }

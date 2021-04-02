@@ -13,6 +13,8 @@ namespace RepositoryContractsDb.Contracts
 
         List<Master> GetMastersByServiceId(int SpecializationId);
 
+        List<Master> GetMastersByServiceIdAndLocationId(int specializationId, int locationId);
+
         Master GetMasterByUserId(int Userid);
 
         void UpdateMaster(Master master);

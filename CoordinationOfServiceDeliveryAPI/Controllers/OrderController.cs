@@ -32,7 +32,6 @@ namespace CoordinationOfServiceDeliveryAPI.Controllers
         [HttpPost("create-order")]
         public int CreateOrder([FromBody] Order order)
         {
-            order.StartDate = order.StartDate.Date;
             return _orderService.CreateOrderByClient(order, HttpContext);
         }
 
@@ -155,6 +154,20 @@ namespace CoordinationOfServiceDeliveryAPI.Controllers
         public void UpdateOrder([FromBody] Order order)
         {
             _orderService.UpdateOrder(order);
+        }
+
+        [Authorize(Roles = "ADMIN, OPERATOR")]
+        [HttpPut("send-order-to-client/{orderId}")]
+        public void SendOrderToClientForAgreeing(int orderId)
+        {
+            _orderService.SendOrderToClientForAgreeingByOperator(orderId, HttpContext);
+        }
+
+        [Authorize(Roles = "ADMIN, OPERATOR")]
+        [HttpPut("done-order-by-operator/{orderId}")]
+        public void DoneOrderByOperator(int orderId)
+        {
+            _orderService.DoneOrderByOperator(orderId, HttpContext);
         }
 
         [Authorize(Roles = "ADMIN, OPERATOR")]

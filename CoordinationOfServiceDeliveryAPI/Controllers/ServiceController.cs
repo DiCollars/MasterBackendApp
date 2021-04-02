@@ -31,7 +31,7 @@ namespace CoordinationOfServiceDeliveryAPI.Controllers
             return _serviceService.GetService(id);
         }
 
-        [Authorize(Roles = "ADMIN, CLIENT")]
+        [Authorize(Roles = "ADMIN, OPERATOR")]
         [HttpGet("get-services")]
         public List<Service> GetServices()
         {

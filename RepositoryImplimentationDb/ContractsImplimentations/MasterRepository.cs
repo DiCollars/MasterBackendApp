@@ -47,10 +47,16 @@ namespace RepositoryImplimentationDb.ContractsImplimentations
             return db.Query<Master>("SELECT \"Id\", \"UserId\", \"LocationId\", \"SpecializationId\" FROM \"Masters\"").ToList();
         }
 
-        public List<Master> GetMastersByServiceId(int SpecializationId)
+        public List<Master> GetMastersByServiceId(int specializationId)
         {
             using var db = _sqlRepositoryBase.Connection();
-            return db.Query<Master>("SELECT \"Id\", \"UserId\", \"LocationId\", \"SpecializationId\" FROM \"Masters\" WHERE \"SpecializationId\" = @SpecializationId", new { SpecializationId }).ToList();
+            return db.Query<Master>("SELECT \"Id\", \"UserId\", \"LocationId\", \"SpecializationId\" FROM \"Masters\" WHERE \"SpecializationId\" = @SpecializationId", new { specializationId }).ToList();
+        }
+
+        public List<Master> GetMastersByServiceIdAndLocationId(int specializationId, int locationId)
+        {
+            using var db = _sqlRepositoryBase.Connection();
+            return db.Query<Master>("SELECT \"Id\", \"UserId\", \"LocationId\", \"SpecializationId\" FROM \"Masters\" WHERE \"SpecializationId\" = @SpecializationId AND \"LocationId\" = @locationId", new { specializationId, locationId }).ToList();
         }
 
         public void UpdateMaster(Master master)

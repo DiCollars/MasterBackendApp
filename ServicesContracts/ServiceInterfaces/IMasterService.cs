@@ -12,6 +12,8 @@ namespace ServicesContracts.ServiceInterfaces
 
         List<MasterFull> GetMastersByServiceId(int SpecializationId);
 
+        List<MasterFull> GetMastersByServiceIdAndLocationId(int specializationId, int locationId);
+
         void UpdateMaster(Master master);
 
         void DeleteMaster(int id);

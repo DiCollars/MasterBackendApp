@@ -14,6 +14,6 @@ namespace ServicesContracts.Models
 
         public int? ParentId { get; set; }
 
-        public List<FullLocation> ChildLocation { get; set; }
+        public List<FullLocation> Children { get; set; }
     }
 }

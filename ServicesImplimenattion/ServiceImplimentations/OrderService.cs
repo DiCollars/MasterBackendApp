@@ -246,6 +246,7 @@ namespace ServicesImplimentation.ServiceImplimentations
             }
             else
             {
+                order.StartDate = new DateTime(order.StartDate.Year, order.StartDate.Month, order.StartDate.Day, order.StartDate.TimeOfDay.Hours, 0, 0);
                 order.EndDate = new DateTime();
             }
 
@@ -287,11 +288,28 @@ namespace ServicesImplimentation.ServiceImplimentations
             var authedUser = _authUserService.GetLoggedUser(httpContext);
             var orderForChange = _orderRepository.GetOrder(orderId);
 
-            if (orderForChange.Status == OrderStatus.FINISHED)
+            if (orderForChange.UserId == authedUser.Id)
             {
-                orderForChange.Status = OrderStatus.DONE;
-                _orderRepository.UpdateOrder(orderForChange);
+                if (orderForChange.Status == OrderStatus.FINISHED)
+                {
+                    orderForChange.Status = OrderStatus.DONE;
+                    _orderRepository.UpdateOrder(orderForChange);
+                }
             }
+        }
+
+        public void DoneOrderByOperator(int orderId, HttpContext httpContext)
+        {
+            var orderForChange = _orderRepository.GetOrder(orderId);
+            orderForChange.Status = OrderStatus.DONE;
+            _orderRepository.UpdateOrder(orderForChange);
+        }
+
+        public void SendOrderToClientForAgreeingByOperator(int orderId, HttpContext httpContext)
+        {
+            var orderForChange = _orderRepository.GetOrder(orderId);
+            orderForChange.Status = OrderStatus.WAIT_CLIENT;
+            _orderRepository.UpdateOrder(orderForChange);
         }
 
         public void AcceptOrderByClient(int orderId, HttpContext httpContext)

@@ -46,6 +46,13 @@ namespace CoordinationOfServiceDeliveryAPI.Controllers
             return _masterService.GetMastersByServiceId(serviceId);
         }
 
+        [Authorize(Roles = "ADMIN, OPERATOR")]
+        [HttpGet("get-masters-by-service-and-location")]
+        public List<MasterFull> GetMastersByServiceAndLocation([FromQuery] int serviceId, [FromQuery] int locationId)
+        {
+            return _masterService.GetMastersByServiceIdAndLocationId(serviceId, locationId);
+        }
+
         [Authorize(Roles = "ADMIN")]
         [HttpPut("edit-master")]
         public void EditMaster([FromBody] Master master)
