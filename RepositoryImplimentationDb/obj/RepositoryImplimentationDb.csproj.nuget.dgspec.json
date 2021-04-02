@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\RepositoryImplimentationDb\\RepositoryImplimentationDb.csproj": {}
+    "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\MasterBackendApp\\RepositoryImplimentationDb\\RepositoryImplimentationDb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\ContractsRepository\\RepositoryContractsDb.csproj": {
+    "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\MasterBackendApp\\ContractsRepository\\RepositoryContractsDb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\ContractsRepository\\RepositoryContractsDb.csproj",
+        "projectUniqueName": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\MasterBackendApp\\ContractsRepository\\RepositoryContractsDb.csproj",
         "projectName": "RepositoryContractsDb",
-        "projectPath": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\ContractsRepository\\RepositoryContractsDb.csproj",
+        "projectPath": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\MasterBackendApp\\ContractsRepository\\RepositoryContractsDb.csproj",
         "packagesPath": "C:\\Users\\QPD_D\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\ContractsRepository\\obj\\",
+        "outputPath": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\MasterBackendApp\\ContractsRepository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\QPD_D\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -68,14 +68,14 @@
         }
       }
     },
-    "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\RepositoryImplimentationDb\\RepositoryImplimentationDb.csproj": {
+    "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\MasterBackendApp\\RepositoryImplimentationDb\\RepositoryImplimentationDb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\RepositoryImplimentationDb\\RepositoryImplimentationDb.csproj",
+        "projectUniqueName": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\MasterBackendApp\\RepositoryImplimentationDb\\RepositoryImplimentationDb.csproj",
         "projectName": "RepositoryImplimentationDb",
-        "projectPath": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\RepositoryImplimentationDb\\RepositoryImplimentationDb.csproj",
+        "projectPath": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\MasterBackendApp\\RepositoryImplimentationDb\\RepositoryImplimentationDb.csproj",
         "packagesPath": "C:\\Users\\QPD_D\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\RepositoryImplimentationDb\\obj\\",
+        "outputPath": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\MasterBackendApp\\RepositoryImplimentationDb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\QPD_D\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -92,8 +92,8 @@
           "netstandard2.1": {
             "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\ContractsRepository\\RepositoryContractsDb.csproj": {
-                "projectPath": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\ContractsRepository\\RepositoryContractsDb.csproj"
+              "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\MasterBackendApp\\ContractsRepository\\RepositoryContractsDb.csproj": {
+                "projectPath": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\MasterBackendApp\\ContractsRepository\\RepositoryContractsDb.csproj"
               }
             }
           }

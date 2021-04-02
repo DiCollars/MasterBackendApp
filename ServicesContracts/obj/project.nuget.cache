@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Soknn3ZD7Ul7uYhevD9sXpD965zY6wQj77+wEKO/be2RbfdMBADMn/+ImPlAc+5g4gwEFgxRuYagxx3MB7XymQ==",
+  "dgSpecHash": "VDlBB5sKBwhrTMPF36M7A59g+5svMKpFxJ5oRT/7re6BUwKhuhRKg9XO6lg9TJ0yJo4Y3C0zkjvi9PyJCAbomA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\ServicesContracts\\ServicesContracts.csproj",
+  "projectFilePath": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\MasterBackendApp\\ServicesContracts\\ServicesContracts.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\QPD_D\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
     "C:\\Users\\QPD_D\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

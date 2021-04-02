@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DFUhnvZ99WtHwW7yIIDXINVCtRh4wcsHeqLMT9L0QmDeYDdFdSnWtULJXmzOmS3iE6X8JudsC8PYNCTpw4c/pg==",
+  "dgSpecHash": "QwuT5lqlaU8KDpUydSJlKQtgaY+8Q7OefASiSU+KZtyQmAhFVCKZXSTNkoY4Qd1dtpzjIT5U2+qmHO/3LVFOgA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\RepositoryImplimentationDb\\RepositoryImplimentationDb.csproj",
+  "projectFilePath": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\MasterBackendApp\\RepositoryImplimentationDb\\RepositoryImplimentationDb.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\QPD_D\\.nuget\\packages\\dapper\\2.0.78\\dapper.2.0.78.nupkg.sha512",
     "C:\\Users\\QPD_D\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

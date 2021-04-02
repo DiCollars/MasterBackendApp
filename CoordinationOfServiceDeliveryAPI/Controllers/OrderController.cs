@@ -80,8 +80,8 @@ namespace CoordinationOfServiceDeliveryAPI.Controllers
         }
 
         [Authorize(Roles = "ADMIN, MASTER, CLIENT, OPERATOR")]
-        [HttpGet("get-order")]
-        public OrderShort GetOrder([FromQuery] int id)
+        [HttpGet("get-order/{id}")]
+        public OrderShort GetOrder(int id)
         {
             return _orderService.GetByOrderId(id);
         }

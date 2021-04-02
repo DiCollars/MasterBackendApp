@@ -26,3 +26,17 @@ C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\Migrations\obj\Debug\netstandard2.
 C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\Migrations\obj\Debug\netstandard2.1\Migrations.csproj.CopyComplete
 C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\Migrations\obj\Debug\netstandard2.1\Migrations.dll
 C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\Migrations\obj\Debug\netstandard2.1\Migrations.pdb
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\MasterBackendApp\Migrations\bin\Debug\netstandard2.1\Migrations.deps.json
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\MasterBackendApp\Migrations\bin\Debug\netstandard2.1\Migrations.dll
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\MasterBackendApp\Migrations\bin\Debug\netstandard2.1\Migrations.pdb
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\MasterBackendApp\Migrations\bin\Debug\netstandard2.1\RepositoryContractsDb.dll
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\MasterBackendApp\Migrations\bin\Debug\netstandard2.1\RepositoryImplimentationDb.dll
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\MasterBackendApp\Migrations\bin\Debug\netstandard2.1\RepositoryImplimentationDb.pdb
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\MasterBackendApp\Migrations\bin\Debug\netstandard2.1\RepositoryContractsDb.pdb
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\MasterBackendApp\Migrations\obj\Debug\netstandard2.1\Migrations.csprojAssemblyReference.cache
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\MasterBackendApp\Migrations\obj\Debug\netstandard2.1\Migrations.AssemblyInfoInputs.cache
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\MasterBackendApp\Migrations\obj\Debug\netstandard2.1\Migrations.AssemblyInfo.cs
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\MasterBackendApp\Migrations\obj\Debug\netstandard2.1\Migrations.csproj.CoreCompileInputs.cache
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\MasterBackendApp\Migrations\obj\Debug\netstandard2.1\Migrations.csproj.CopyComplete
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\MasterBackendApp\Migrations\obj\Debug\netstandard2.1\Migrations.dll
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\MasterBackendApp\Migrations\obj\Debug\netstandard2.1\Migrations.pdb

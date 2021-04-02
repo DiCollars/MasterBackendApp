@@ -5219,11 +5219,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\MigrationLaunch\\MigrationLaunch.csproj",
+      "projectUniqueName": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\MasterBackendApp\\MigrationLaunch\\MigrationLaunch.csproj",
       "projectName": "MigrationLaunch",
-      "projectPath": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\MigrationLaunch\\MigrationLaunch.csproj",
+      "projectPath": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\MasterBackendApp\\MigrationLaunch\\MigrationLaunch.csproj",
       "packagesPath": "C:\\Users\\QPD_D\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\MigrationLaunch\\obj\\",
+      "outputPath": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\MasterBackendApp\\MigrationLaunch\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\QPD_D\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5240,8 +5240,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\Migrations\\Migrations.csproj": {
-              "projectPath": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\Migrations\\Migrations.csproj"
+            "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\MasterBackendApp\\Migrations\\Migrations.csproj": {
+              "projectPath": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\MasterBackendApp\\Migrations\\Migrations.csproj"
             }
           }
         }

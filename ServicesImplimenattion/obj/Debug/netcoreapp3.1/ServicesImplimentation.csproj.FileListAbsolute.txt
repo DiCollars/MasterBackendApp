@@ -26,3 +26,17 @@ C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\ServicesImplimenattion\obj\Debug\n
 C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\ServicesImplimenattion\obj\Debug\netcoreapp3.1\ServicesImplimentation.csproj.CopyComplete
 C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\ServicesImplimenattion\obj\Debug\netcoreapp3.1\ServicesImplimentation.dll
 C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\ServicesImplimenattion\obj\Debug\netcoreapp3.1\ServicesImplimentation.pdb
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\MasterBackendApp\ServicesImplimenattion\bin\Debug\netcoreapp3.1\ServicesImplimentation.deps.json
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\MasterBackendApp\ServicesImplimenattion\bin\Debug\netcoreapp3.1\ServicesImplimentation.dll
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\MasterBackendApp\ServicesImplimenattion\bin\Debug\netcoreapp3.1\ServicesImplimentation.pdb
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\MasterBackendApp\ServicesImplimenattion\bin\Debug\netcoreapp3.1\RepositoryContractsDb.dll
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\MasterBackendApp\ServicesImplimenattion\bin\Debug\netcoreapp3.1\ServicesContracts.dll
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\MasterBackendApp\ServicesImplimenattion\bin\Debug\netcoreapp3.1\RepositoryContractsDb.pdb
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\MasterBackendApp\ServicesImplimenattion\bin\Debug\netcoreapp3.1\ServicesContracts.pdb
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\MasterBackendApp\ServicesImplimenattion\obj\Debug\netcoreapp3.1\ServicesImplimentation.csprojAssemblyReference.cache
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\MasterBackendApp\ServicesImplimenattion\obj\Debug\netcoreapp3.1\ServicesImplimentation.AssemblyInfoInputs.cache
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\MasterBackendApp\ServicesImplimenattion\obj\Debug\netcoreapp3.1\ServicesImplimentation.AssemblyInfo.cs
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\MasterBackendApp\ServicesImplimenattion\obj\Debug\netcoreapp3.1\ServicesImplimentation.csproj.CoreCompileInputs.cache
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\MasterBackendApp\ServicesImplimenattion\obj\Debug\netcoreapp3.1\ServicesImplimentation.csproj.CopyComplete
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\MasterBackendApp\ServicesImplimenattion\obj\Debug\netcoreapp3.1\ServicesImplimentation.dll
+C:\Users\QPD_D\Desktop\Stack\MasterBackendApp\MasterBackendApp\ServicesImplimenattion\obj\Debug\netcoreapp3.1\ServicesImplimentation.pdb

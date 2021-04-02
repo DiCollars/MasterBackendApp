@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pIEGu9uvSqL++ZXBT0omfkD6Btpt3Zr69fdpSAVOpt4tACCPwPMMqKEk4QaGmJYk9D243+W9jWevsSWxmCMZ7A==",
+  "dgSpecHash": "73mr+VJrj9gxuWuwHuZDjuzudLs/HT5KBfbk0g2NUusDKw6WUx75nOY1oJkrhlf1c7AiGbEDUwNSkGrZgUGxPA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\MigrationLaunch\\MigrationLaunch.csproj",
+  "projectFilePath": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\MasterBackendApp\\MigrationLaunch\\MigrationLaunch.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\QPD_D\\.nuget\\packages\\dapper\\2.0.78\\dapper.2.0.78.nupkg.sha512",
     "C:\\Users\\QPD_D\\.nuget\\packages\\fluentmigrator\\3.2.15\\fluentmigrator.3.2.15.nupkg.sha512",

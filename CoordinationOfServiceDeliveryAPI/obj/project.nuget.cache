@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nFb2oZVs3DQZqNMdi/RxKaCxLNHSEBbB19I8RoUYGIlUigF95vqDyogvsoEQfzzI2DEeUH+8iBJGViLdLBYunw==",
+  "dgSpecHash": "2plM4fXH3WA3E4zqK8kQtL7nQi+zOmzIZWqiryP1kLcsTlfEqUnkgvFi4FpXlJ485ZIJgyDE4JuaoqsF9a86yw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\CoordinationOfServiceDeliveryAPI\\CoordinationOfServiceDeliveryAPI.csproj",
+  "projectFilePath": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\MasterBackendApp\\CoordinationOfServiceDeliveryAPI\\CoordinationOfServiceDeliveryAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\QPD_D\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\QPD_D\\.nuget\\packages\\bcrypt.net-next\\4.0.2\\bcrypt.net-next.4.0.2.nupkg.sha512",

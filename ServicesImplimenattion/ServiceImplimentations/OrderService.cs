@@ -219,13 +219,29 @@ namespace ServicesImplimentation.ServiceImplimentations
         {
             var mapper = new Mapper(new MapperConfiguration(cfg => cfg.CreateMap<Order, OrderShort>()));
             var order = _orderRepository.GetOrder(id);
-            var service = _serviceRepository.GetService((int)order.ServiceId);
-            var user = _userRepository.GetUser(order.UserId);
 
             var mappedOrder = mapper.Map<OrderShort>(order);
-            mappedOrder.ServiceCost = service.Cost;
-            mappedOrder.ServiceName = service.Name;
-            mappedOrder.MasterFullName = $"{user.FirstName} {user.MiddleName} {user.LastName}";
+
+            if (order.ServiceId != null)
+            {
+                var service = _serviceRepository.GetService((int)order.ServiceId);
+                mappedOrder.ServiceCost = service.Cost;
+                mappedOrder.ServiceName = service.Name;
+            }
+
+            if (order.MasterId != null)
+            {
+                var master = _masterRepository.GetMaster((int)order.MasterId);
+                var specialization = _specializationRepository.GetSpecialization(master.SpecializationId);
+                var userMaster = _userRepository.GetUser(master.UserId);
+
+                mappedOrder.MasterFullName = $"{userMaster.FirstName} {userMaster.MiddleName} {userMaster.LastName}";
+                mappedOrder.Icon = specialization.Icon;
+            }
+            
+            var user = _userRepository.GetUser(order.UserId);
+            mappedOrder.ClientFullName = $"{user.FirstName} {user.MiddleName} {user.LastName}";
+            mappedOrder.AddressName = order.Address;
 
             return mappedOrder;
         }

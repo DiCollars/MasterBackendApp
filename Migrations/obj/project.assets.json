@@ -4300,11 +4300,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\Migrations\\Migrations.csproj",
+      "projectUniqueName": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\MasterBackendApp\\Migrations\\Migrations.csproj",
       "projectName": "Migrations",
-      "projectPath": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\Migrations\\Migrations.csproj",
+      "projectPath": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\MasterBackendApp\\Migrations\\Migrations.csproj",
       "packagesPath": "C:\\Users\\QPD_D\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\Migrations\\obj\\",
+      "outputPath": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\MasterBackendApp\\Migrations\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\QPD_D\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4321,8 +4321,8 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "projectReferences": {
-            "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\RepositoryImplimentationDb\\RepositoryImplimentationDb.csproj": {
-              "projectPath": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\RepositoryImplimentationDb\\RepositoryImplimentationDb.csproj"
+            "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\MasterBackendApp\\RepositoryImplimentationDb\\RepositoryImplimentationDb.csproj": {
+              "projectPath": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\MasterBackendApp\\RepositoryImplimentationDb\\RepositoryImplimentationDb.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "N+ySuecRlMqSIVXsmr+RIAZDC415JEWKlXGVjZfYhS8HM3RuDPP8NUU3tALt1/b9akEBhVGBRJ/iQD6+otuFkg==",
+  "dgSpecHash": "3OcxbsD6g6pRg8QyywwtTpiGwrEAHzpyQ2h+dffI0gPdMuTwLDQ8i1l3m8LGrYev60+DJifo7fkhtAKwcETHSA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\ContractsRepository\\RepositoryContractsDb.csproj",
+  "projectFilePath": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\MasterBackendApp\\ContractsRepository\\RepositoryContractsDb.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\QPD_D\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\5.0.0\\microsoft.bcl.asyncinterfaces.5.0.0.nupkg.sha512",
     "C:\\Users\\QPD_D\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",

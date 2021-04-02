@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TNL9ORqBP/eweynxkw76QDVCTdcogQpIKafcPweQCmrdDBb5FOY139QLW0hjMFCZwJlj/ZthAdesIepuZSJGfQ==",
+  "dgSpecHash": "JCo3+l6nDnycDdPCnLpYDy02ObkkL35UfaR0WMrrb1BnOvA+Fx6QBPjmxbbpLgQk/epCScbWP4ItS1rg+EqFNg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\ServicesImplimenattion\\ServicesImplimentation.csproj",
+  "projectFilePath": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\MasterBackendApp\\ServicesImplimenattion\\ServicesImplimentation.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\QPD_D\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\QPD_D\\.nuget\\packages\\bcrypt.net-next\\4.0.2\\bcrypt.net-next.4.0.2.nupkg.sha512",
