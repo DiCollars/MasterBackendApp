@@ -43,10 +43,17 @@ namespace CoordinationOfServiceDeliveryAPI.Controllers
         [HttpGet("get-masters-schedules-by-string-date/{date}")]
         public List<Schedule> GetMastersScheduleByDate(DateTime date)
         {
-            return _scheduleService.GetSchedulesByMasterIdAndDate(HttpContext, date);
+            return _scheduleService.GetSchedulesByDate(HttpContext, date);
         }
 
-        [Authorize(Roles = "ADMIN, MASTER, CLIENT")]
+        [Authorize(Roles = "ADMIN, OPERATOR")]
+        [HttpGet("get-masters-schedules-by-string-date-and-master-id/{date}/{masterId}")]
+        public List<Schedule> GetMastersScheduleByDateAndMasterId(DateTime date, int masterId)
+        {
+            return _scheduleService.GetSchedulesByMasterIdAndDate(masterId, date);
+        }
+
+        [Authorize(Roles = "ADMIN, MASTER, CLIENT, OPERATOR")]
         [HttpGet("is-masters-schedules-date-available")]
         public bool IsMastersScheduleDateAvailable([FromQuery]DateTime date, [FromQuery]int masterId)
         {

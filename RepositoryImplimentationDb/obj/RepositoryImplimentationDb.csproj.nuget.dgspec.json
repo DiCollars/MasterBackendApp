@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\MasterBackendApp\\RepositoryImplimentationDb\\RepositoryImplimentationDb.csproj": {}
+    "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\3task\\MasterBackendApp\\RepositoryImplimentationDb\\RepositoryImplimentationDb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\MasterBackendApp\\ContractsRepository\\RepositoryContractsDb.csproj": {
+    "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\3task\\MasterBackendApp\\ContractsRepository\\RepositoryContractsDb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\MasterBackendApp\\ContractsRepository\\RepositoryContractsDb.csproj",
+        "projectUniqueName": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\3task\\MasterBackendApp\\ContractsRepository\\RepositoryContractsDb.csproj",
         "projectName": "RepositoryContractsDb",
-        "projectPath": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\MasterBackendApp\\ContractsRepository\\RepositoryContractsDb.csproj",
-        "packagesPath": "C:\\Users\\QPD_D\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\MasterBackendApp\\ContractsRepository\\obj\\",
+        "projectPath": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\3task\\MasterBackendApp\\ContractsRepository\\RepositoryContractsDb.csproj",
+        "packagesPath": "C:\\Users\\Di\\.nuget\\packages\\",
+        "outputPath": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\3task\\MasterBackendApp\\ContractsRepository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\QPD_D\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Di\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -64,21 +64,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\MasterBackendApp\\RepositoryImplimentationDb\\RepositoryImplimentationDb.csproj": {
+    "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\3task\\MasterBackendApp\\RepositoryImplimentationDb\\RepositoryImplimentationDb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\MasterBackendApp\\RepositoryImplimentationDb\\RepositoryImplimentationDb.csproj",
+        "projectUniqueName": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\3task\\MasterBackendApp\\RepositoryImplimentationDb\\RepositoryImplimentationDb.csproj",
         "projectName": "RepositoryImplimentationDb",
-        "projectPath": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\MasterBackendApp\\RepositoryImplimentationDb\\RepositoryImplimentationDb.csproj",
-        "packagesPath": "C:\\Users\\QPD_D\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\MasterBackendApp\\RepositoryImplimentationDb\\obj\\",
+        "projectPath": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\3task\\MasterBackendApp\\RepositoryImplimentationDb\\RepositoryImplimentationDb.csproj",
+        "packagesPath": "C:\\Users\\Di\\.nuget\\packages\\",
+        "outputPath": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\3task\\MasterBackendApp\\RepositoryImplimentationDb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\QPD_D\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Di\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -92,8 +92,8 @@
           "netstandard2.1": {
             "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\MasterBackendApp\\ContractsRepository\\RepositoryContractsDb.csproj": {
-                "projectPath": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp\\MasterBackendApp\\ContractsRepository\\RepositoryContractsDb.csproj"
+              "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\3task\\MasterBackendApp\\ContractsRepository\\RepositoryContractsDb.csproj": {
+                "projectPath": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\3task\\MasterBackendApp\\ContractsRepository\\RepositoryContractsDb.csproj"
               }
             }
           }
@@ -136,7 +136,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

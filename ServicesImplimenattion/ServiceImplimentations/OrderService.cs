@@ -255,7 +255,7 @@ namespace ServicesImplimentation.ServiceImplimentations
             order.ServiceId = null;
             order.MasterId = null;
 
-            if (DateTime.Compare(order.StartDate, new DateTime(1901, 1, 31)) == 0)
+            if (DateTime.Compare(order.StartDate.Date, new DateTime(1901, 1, 31)) == 0)
             {
                 order.StartDate = new DateTime();
                 order.EndDate = new DateTime();

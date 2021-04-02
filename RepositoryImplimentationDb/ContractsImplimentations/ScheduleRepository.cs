@@ -44,8 +44,10 @@ namespace RepositoryImplimentationDb.ContractsImplimentations
 
         public List<Schedule> GetMastersScheduleByDate(int masterId, DateTime date)
         {
+            DateTimeOffset Date = date;
+
             using var db = _sqlRepositoryBase.Connection();
-            return db.Query<Schedule>("SELECT \"Id\", \"MasterId\", \"WorkingHours\", \"Status\" FROM \"Schedules\" WHERE \"MasterId\" = @masterId AND  \"WorkingHours\"::date =@date", new { masterId, date }).ToList();
+            return db.Query<Schedule>("SELECT \"Id\", \"MasterId\", \"WorkingHours\", \"Status\" FROM \"Schedules\" WHERE \"MasterId\" = @masterId AND  (\"WorkingHours\"::date = @date)", new { masterId, date = Date }).ToList();
         }
 
         public List<Schedule> GetSchedules()
@@ -63,8 +65,10 @@ namespace RepositoryImplimentationDb.ContractsImplimentations
 
         public List<Schedule> GetMastersScheduleByDateAndReadyStatus(int masterId, DateTime date)
         {
+            DateTimeOffset Date = date;
+
             using var db = _sqlRepositoryBase.Connection();
-            return db.Query<Schedule>("SELECT \"Id\", \"MasterId\", \"WorkingHours\", \"Status\" FROM \"Schedules\" WHERE \"MasterId\" = @masterId AND  \"WorkingHours\"::date =@date AND \"Status\" = 'READY'", new { masterId, date }).ToList();
+            return db.Query<Schedule>("SELECT \"Id\", \"MasterId\", \"WorkingHours\", \"Status\" FROM \"Schedules\" WHERE \"MasterId\" = @masterId AND (\"WorkingHours\" = @date)", new { masterId, date = Date }).ToList();
         }
     }
 }

@@ -90,7 +90,7 @@ namespace ServicesImplimentation.ServiceImplimentations
             return schedule;
         }
 
-        public List<Schedule> GetSchedulesByMasterIdAndDate(HttpContext httpContext, DateTime dateTime)
+        public List<Schedule> GetSchedulesByDate(HttpContext httpContext, DateTime dateTime)
         {
             var authUser = _authUserService.GetLoggedUserFull(httpContext);
             var master = _masterRepository.GetMasterByUserId(authUser.Id);
@@ -104,11 +104,24 @@ namespace ServicesImplimentation.ServiceImplimentations
             return schedules;
         }
 
+        public List<Schedule> GetSchedulesByMasterIdAndDate(int masterId, DateTime dateTime)
+        {
+            var master = _masterRepository.GetMaster(masterId);
+            List<Schedule> schedules = null;
+
+            if (master != null)
+            {
+                schedules = _scheduleRepository.GetMastersScheduleByDate(master.Id, dateTime);
+            }
+
+            return schedules;
+        }
+
         public bool IsMastersScheduleDateAvailable(int masterId, DateTime date)
         {
             List<Schedule> schedules = null;
-
-            schedules = _scheduleRepository.GetMastersScheduleByDateAndReadyStatus(masterId, date);
+            var dateWithoutMinutes = new DateTime(date.Year, date.Month, date.Day, date.TimeOfDay.Hours, 0, 0);
+            schedules = _scheduleRepository.GetMastersScheduleByDateAndReadyStatus(masterId, dateWithoutMinutes);
 
             if (schedules.Count != 0)
             {

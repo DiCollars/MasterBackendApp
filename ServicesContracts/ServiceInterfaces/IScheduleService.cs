@@ -15,7 +15,9 @@ namespace ServicesContracts.ServiceInterfaces
 
         List<Schedule> GetSchedulesByMasterId(HttpContext httpContext);
 
-        List<Schedule> GetSchedulesByMasterIdAndDate(HttpContext httpContext, DateTime dateTime);
+        List<Schedule> GetSchedulesByDate(HttpContext httpContext, DateTime dateTime);
+
+        List<Schedule> GetSchedulesByMasterIdAndDate(int masterId, DateTime dateTime);
 
         bool IsMastersScheduleDateAvailable(int masterId, DateTime date);
 
