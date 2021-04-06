@@ -23,8 +23,9 @@ namespace ServicesImplimentation.ServiceImplimentations
         private readonly IUserRepository _userRepository;
         private readonly IWebHostEnvironment _appEnvironment;
         private readonly IScheduleRepository _scheduleRepository;
+        private readonly IScheduleService _scheduleService;
 
-        public OrderService(IOrderRepository orderRepository, IAuthUserService authUserService, IServiceRepository serviceRepository, IMasterRepository masterRepository, IUserRepository userRepository, IWebHostEnvironment appEnvironment, ISpecializationRepository specializationRepository, IScheduleRepository scheduleRepository)
+        public OrderService(IOrderRepository orderRepository, IAuthUserService authUserService, IServiceRepository serviceRepository, IMasterRepository masterRepository, IUserRepository userRepository, IWebHostEnvironment appEnvironment, ISpecializationRepository specializationRepository, IScheduleRepository scheduleRepository, IScheduleService scheduleService)
         {
             _orderRepository = orderRepository;
             _authUserService = authUserService;
@@ -34,6 +35,7 @@ namespace ServicesImplimentation.ServiceImplimentations
             _appEnvironment = appEnvironment;
             _specializationRepository = specializationRepository;
             _scheduleRepository = scheduleRepository;
+            _scheduleService = scheduleService;
         }
 
         public void FinishedOrderByMaster(int orderId, HttpContext httpContext)
@@ -70,6 +72,26 @@ namespace ServicesImplimentation.ServiceImplimentations
 
             if (orderForChange.MasterId == currentMaster.Id)
             {
+                var service = _serviceRepository.GetService((int)orderForChange.ServiceId);
+                List<DateTime> orderSchedules = new List<DateTime>();
+                orderSchedules.Add(orderForChange.StartDate);
+                for (int i = 1; i <= service.Long - 1; i++)
+                {
+                    orderSchedules.Add(orderForChange.StartDate.AddHours(i));
+                }
+
+                var schedules = new List<Schedule>();
+                for (int i = 0; i < orderSchedules.Count; i++)
+                {
+                    schedules.AddRange(_scheduleService.GetSchedulesByMasterIdAndDateHours((int)orderForChange.MasterId, orderSchedules[i]));
+                }
+
+                for (int i = 0; i < schedules.Count; i++)
+                {
+                    schedules[i].Status = ScheduleStatus.BUSY;
+                    _scheduleService.UpdateScheduleForOperatorOrAdmin(schedules[i]);
+                }
+
                 orderForChange.Status = OrderStatus.TAKE;
                 _orderRepository.UpdateOrder(orderForChange);
             }
@@ -238,7 +260,7 @@ namespace ServicesImplimentation.ServiceImplimentations
                 mappedOrder.MasterFullName = $"{userMaster.FirstName} {userMaster.MiddleName} {userMaster.LastName}";
                 mappedOrder.Icon = specialization.Icon;
             }
-            
+
             var user = _userRepository.GetUser(order.UserId);
             mappedOrder.ClientFullName = $"{user.FirstName} {user.MiddleName} {user.LastName}";
             mappedOrder.AddressName = order.Address;
@@ -299,6 +321,33 @@ namespace ServicesImplimentation.ServiceImplimentations
             }
         }
 
+        public void DoneOrderByOperator(int orderId, string comment)
+        {
+            var orderForChange = _orderRepository.GetOrder(orderId);
+
+            if (orderForChange.Status == OrderStatus.WAIT_OPERATOR || orderForChange.Status == OrderStatus.REJECT || orderForChange.Status == OrderStatus.NOT_AGREE)
+            {
+                orderForChange.Status = OrderStatus.DONE;
+                orderForChange.Comment = comment;
+                _orderRepository.UpdateOrder(orderForChange);
+            }
+        }
+
+        public void HandleOrderByOperatorForClient(Order order)
+        {
+            var orderForChange = _orderRepository.GetOrder(order.Id);
+
+            orderForChange.MasterId = order.MasterId;
+            orderForChange.ServiceId = order.ServiceId;
+            orderForChange.StartDate = new DateTime(order.StartDate.Year, order.StartDate.Month, order.StartDate.Day, order.StartDate.TimeOfDay.Hours, 0, 0);
+
+            var service = _serviceRepository.GetService((int)orderForChange.ServiceId);
+            orderForChange.EndDate = orderForChange.StartDate.AddHours(service.Long - 1);
+            orderForChange.Status = OrderStatus.WAIT_CLIENT;
+
+            _orderRepository.UpdateOrder(orderForChange);
+        }
+
         public void DoneOrderByClient(int orderId, HttpContext httpContext)
         {
             var authedUser = _authUserService.GetLoggedUser(httpContext);
@@ -312,13 +361,6 @@ namespace ServicesImplimentation.ServiceImplimentations
                     _orderRepository.UpdateOrder(orderForChange);
                 }
             }
-        }
-
-        public void DoneOrderByOperator(int orderId, HttpContext httpContext)
-        {
-            var orderForChange = _orderRepository.GetOrder(orderId);
-            orderForChange.Status = OrderStatus.DONE;
-            _orderRepository.UpdateOrder(orderForChange);
         }
 
         public void SendOrderToClientForAgreeingByOperator(int orderId, HttpContext httpContext)

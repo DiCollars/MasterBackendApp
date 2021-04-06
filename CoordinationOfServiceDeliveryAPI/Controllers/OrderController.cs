@@ -122,10 +122,24 @@ namespace CoordinationOfServiceDeliveryAPI.Controllers
         }
 
         [Authorize(Roles = "ADMIN, CLIENT")]
-        [HttpPut("done-order/{orderId}")]
-        public void DoneOrder(int orderId)
+        [HttpPut("done-order-by-client/{orderId}")]
+        public void DoneOrderByClient(int orderId)
         {
             _orderService.DoneOrderByClient(orderId, HttpContext);
+        }
+
+        [Authorize(Roles = "ADMIN, OPERATOR")]
+        [HttpPut("done-order-by-operator/{orderId}")]
+        public void DoneOrderByOperator(int orderId, [FromBody] string comment)
+        {
+            _orderService.DoneOrderByOperator(orderId, comment);
+        }
+
+        [Authorize(Roles = "ADMIN, OPERATOR")]
+        [HttpPut("handle-order-for-client")]
+        public void HandleOrderByOperatorForClient([FromBody] Order order)
+        {
+            _orderService.HandleOrderByOperatorForClient(order);
         }
 
         [Authorize(Roles = "ADMIN, CLIENT")]
@@ -161,13 +175,6 @@ namespace CoordinationOfServiceDeliveryAPI.Controllers
         public void SendOrderToClientForAgreeing(int orderId)
         {
             _orderService.SendOrderToClientForAgreeingByOperator(orderId, HttpContext);
-        }
-
-        [Authorize(Roles = "ADMIN, OPERATOR")]
-        [HttpPut("done-order-by-operator/{orderId}")]
-        public void DoneOrderByOperator(int orderId)
-        {
-            _orderService.DoneOrderByOperator(orderId, HttpContext);
         }
 
         [Authorize(Roles = "ADMIN, OPERATOR")]

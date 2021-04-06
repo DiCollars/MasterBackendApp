@@ -17,6 +17,8 @@ namespace ServicesContracts.ServiceInterfaces
 
         void NotAgreeOrderByMaster(int orderId, HttpContext httpContext);
 
+        void HandleOrderByOperatorForClient(Order order);
+
         List<OrderShort> GetAllOrdersByMasterId(HttpContext httpContext);
 
         OrderShort GetByOrderId(int id);
@@ -30,6 +32,8 @@ namespace ServicesContracts.ServiceInterfaces
         void NotDoneOrderByClient(int orderId, HttpContext httpContext);
 
         void DoneOrderByClient(int orderId, HttpContext httpContext);
+
+        void DoneOrderByOperator(int orderId, string comment);
 
         void AcceptOrderByClient(int orderId, HttpContext httpContext);
 
@@ -50,8 +54,6 @@ namespace ServicesContracts.ServiceInterfaces
         void AddMasterAccess(int orderId, HttpContext httpContext);
 
         List<OrderShortWithServLong> GetAllOrdersByMasterIdAndDate(HttpContext httpContext, DateTime date);
-
-        void DoneOrderByOperator(int orderId, HttpContext httpContext);
 
         void SendOrderToClientForAgreeingByOperator(int orderId, HttpContext httpContext);
     }

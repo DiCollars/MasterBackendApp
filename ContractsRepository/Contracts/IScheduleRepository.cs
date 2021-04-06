@@ -21,5 +21,7 @@ namespace RepositoryContractsDb.Contracts
         List<Schedule> GetMastersScheduleByDate(int masterId, DateTime date);
 
         List<Schedule> GetMastersScheduleByDateAndReadyStatus(int masterId, DateTime date);
+
+        List<Schedule> GetMastersScheduleByDateHours(int masterId, DateTime date);
     }
 }

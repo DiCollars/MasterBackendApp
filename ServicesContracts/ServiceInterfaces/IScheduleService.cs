@@ -11,6 +11,8 @@ namespace ServicesContracts.ServiceInterfaces
 
         void UpdateSchedule(Schedule schedule, HttpContext httpContext);
 
+        void UpdateScheduleForOperatorOrAdmin(Schedule schedule);
+
         void DeleteSchedule(int id, HttpContext httpContext);
 
         List<Schedule> GetSchedulesByMasterId(HttpContext httpContext);
@@ -24,5 +26,7 @@ namespace ServicesContracts.ServiceInterfaces
         List<Schedule> GetSchedules();
 
         Schedule GetSchedule(int id);
+
+        List<Schedule> GetSchedulesByMasterIdAndDateHours(int masterId, DateTime dateTime);
     }
 }

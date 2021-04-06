@@ -50,6 +50,11 @@ namespace ServicesImplimentation.ServiceImplimentations
             }
         }
 
+        public void UpdateScheduleForOperatorOrAdmin(Schedule schedule)
+        {
+            _scheduleRepository.UpdateSchedule(schedule);
+        }
+
         public void DeleteSchedule(int id, HttpContext httpContext)
         {
             var authUser = _authUserService.GetLoggedUserFull(httpContext);
@@ -116,6 +121,20 @@ namespace ServicesImplimentation.ServiceImplimentations
 
             return schedules;
         }
+
+        public List<Schedule> GetSchedulesByMasterIdAndDateHours(int masterId, DateTime dateTime)
+        {
+            var master = _masterRepository.GetMaster(masterId);
+            List<Schedule> schedules = null;
+
+            if (master != null)
+            {
+                schedules = _scheduleRepository.GetMastersScheduleByDateHours(master.Id, dateTime);
+            }
+
+            return schedules;
+        }
+
 
         public bool IsMastersScheduleDateAvailable(int masterId, DateTime date)
         {

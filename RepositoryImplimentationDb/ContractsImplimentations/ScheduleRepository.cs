@@ -47,7 +47,15 @@ namespace RepositoryImplimentationDb.ContractsImplimentations
             DateTimeOffset Date = date;
 
             using var db = _sqlRepositoryBase.Connection();
-            return db.Query<Schedule>("SELECT \"Id\", \"MasterId\", \"WorkingHours\", \"Status\" FROM \"Schedules\" WHERE \"MasterId\" = @masterId AND  (\"WorkingHours\"::date = @date)", new { masterId, date = Date }).ToList();
+            return db.Query<Schedule>("SELECT \"Id\", \"MasterId\", \"WorkingHours\", \"Status\" FROM \"Schedules\" WHERE \"MasterId\" = @masterId AND  (\"WorkingHours\"::date = @date)", new { masterId, date }).ToList();
+        }
+
+        public List<Schedule> GetMastersScheduleByDateHours(int masterId, DateTime date)
+        {
+            DateTimeOffset Date = date;
+
+            using var db = _sqlRepositoryBase.Connection();
+            return db.Query<Schedule>("SELECT \"Id\", \"MasterId\", \"WorkingHours\", \"Status\" FROM \"Schedules\" WHERE \"MasterId\" = @masterId AND  (\"WorkingHours\" = @date)", new { masterId, date = Date }).ToList();
         }
 
         public List<Schedule> GetSchedules()

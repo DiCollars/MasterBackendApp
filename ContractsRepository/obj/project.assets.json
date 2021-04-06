@@ -441,19 +441,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Di\\.nuget\\packages\\": {}
+    "C:\\Users\\QPD_D\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\3task\\MasterBackendApp\\ContractsRepository\\RepositoryContractsDb.csproj",
+      "projectUniqueName": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp2\\MasterBackendApp\\ContractsRepository\\RepositoryContractsDb.csproj",
       "projectName": "RepositoryContractsDb",
-      "projectPath": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\3task\\MasterBackendApp\\ContractsRepository\\RepositoryContractsDb.csproj",
-      "packagesPath": "C:\\Users\\Di\\.nuget\\packages\\",
-      "outputPath": "F:\\Stack\\Projects\\Trainee_education\\Tasks\\3\\3task\\MasterBackendApp\\ContractsRepository\\obj\\",
+      "projectPath": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp2\\MasterBackendApp\\ContractsRepository\\RepositoryContractsDb.csproj",
+      "packagesPath": "C:\\Users\\QPD_D\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\QPD_D\\Desktop\\Stack\\MasterBackendApp2\\MasterBackendApp\\ContractsRepository\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Di\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\QPD_D\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -503,7 +503,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
